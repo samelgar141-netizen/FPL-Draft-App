@@ -1,0 +1,5 @@
+requests
+pandas
+json
+numpy
+os
