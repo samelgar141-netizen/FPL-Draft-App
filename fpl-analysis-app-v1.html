@@ -709,7 +709,7 @@ function renderSquadStrength() {
 // CHART: TOP UNDRAFTED PLAYERS
 // ══════════════════════════════════════════════════════
 function renderUndrafted() {
-  const draftedSet = new Set(CHOICES.map(c => c.element));
+  const draftedSet = new Set(CHOICES.map(c => +c.element));
   const undrafted = Object.entries(PLAYERS)
     .filter(([id]) => !draftedSet.has(parseInt(id)))
     .map(([id, p]) => ({id: parseInt(id), ...p}))
@@ -1161,7 +1161,7 @@ function renderHub(entryId) {
   const bt = byTeam();
   const originalPicks  = bt[entryId] || [];
   const ownerMap       = buildOwnerMap();
-  const teamOriginalSet = new Set(originalPicks.map(c => c.element));
+  const teamOriginalSet = new Set(originalPicks.map(c => +c.element));
 
   // Players acquired via trade: currently owned here but not originally drafted here
   const acquiredPicks = Object.entries(ELEMENT_STATUS)
