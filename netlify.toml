@@ -1,3 +1,8 @@
 [build]
   command = ""
   publish = "."
+
+[[redirects]]
+  from = "/"
+  to = "/fpl-analysis-app-v1.html"
+  status = 200
