@@ -243,9 +243,18 @@
   </div>
 
   <div id="page-snake" class="page">
+    <div class="filter-bar">
+      <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)">Show players:</span>
+      <button class="fbtn active" onclick="filterSnake('all',this)">All</button>
+      <button class="fbtn" onclick="filterSnake('drafted',this)">Drafted only</button>
+    </div>
     <div class="card">
       <div class="card-title">Snake draft visualisation — each row = one round · hover for details</div>
       <div id="snake-viz"></div>
+    </div>
+    <div class="card" style="margin-top:1.25rem">
+      <div class="card-title">Draft rank vs points delivered — by position</div>
+      <div id="snake-rank-pts"></div>
     </div>
   </div>
 
@@ -545,6 +554,8 @@ function renderAll() {
   initHub();
   initLeagueTable();
   initTransferAnalysis();
+  renderSnakeRankPts();
+  ttInit();
 }
 
 // ══════════════════════════════════════════════════════
@@ -1179,6 +1190,12 @@ function renderHub(entryId) {
   renderHubForm(allPicks, entryId, ownerMap);
   renderHubScatter(allPicks, entryId, ownerMap);
   renderHubDraftValue(allPicks, entryId, ownerMap);
+  // New charts using MATCHES + PLAYER_SCORES
+  renderHubGwScores(entryId);
+  renderHubPtsVsOpponent(entryId);
+  renderHubPtsVsAverage(entryId);
+  renderHubTransfersByGw(entryId);
+  renderHubTeamValue(entryId);
 }
 
 // ── Helpers ────────────────────────────────────────────
@@ -1414,6 +1431,576 @@ function renderHubDraftValue(allPicks, entryId, ownerMap) {
     `R1\u2192R15 then trade-ins (\u25b2). Bar = FPL pts delivered. <span style="color:var(--text2)">\u25c6 = round average across all teams</span>.</div>` +
     `<svg width="100%" viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg"><g transform="translate(${LW},${MT})">${g}</g></svg>`;
 }
+
+
+// ══════════════════════════════════════════════════════
+// SHARED CHART HELPERS
+// ══════════════════════════════════════════════════════
+
+function hBarChart(rows, opts) {
+  opts = opts || {};
+  if (!rows.length) return '<div style="color:var(--text3);font-size:12px;padding:1rem">No data.</div>';
+  var maxVal = Math.max.apply(null, rows.map(function(r){return r.val;}));
+  maxVal = maxVal || 1;
+  var ML = 130, maxW = opts.maxW || 460, MR = 50, rowH = 24, gap = 5, MT = 6;
+  var W = ML + maxW + MR;
+  var H = rows.length * (rowH + gap) + MT * 2;
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  rows.forEach(function(r, i) {
+    var y = MT + i * (rowH + gap);
+    var w = (r.val / maxVal) * maxW;
+    var col = r.color || 'var(--green)';
+    var label = r.name.length > 15 ? r.name.slice(0,14) + '\u2026' : r.name;
+    svg += '<rect x="' + ML + '" y="' + y + '" width="' + w.toFixed(1) + '" height="' + rowH + '" fill="' + col + '" opacity="0.75" rx="3"/>';
+    svg += '<text x="' + (ML-6) + '" y="' + (y+rowH/2+4).toFixed(1) + '" text-anchor="end" font-size="11" fill="var(--text)" font-family="Syne,sans-serif" font-weight="600">' + label + '</text>';
+    svg += '<text x="' + (ML+w+5).toFixed(1) + '" y="' + (y+rowH/2+4).toFixed(1) + '" font-size="11" fill="var(--text2)" font-family="DM Mono,monospace">' + r.val + '</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+function hBarChartDivergent(rows) {
+  if (!rows.length) return '<div style="color:var(--text3);font-size:12px;padding:1rem">No data.</div>';
+  var maxAbs = Math.max.apply(null, rows.map(function(r){return Math.abs(r.val);}));
+  maxAbs = maxAbs || 1;
+  var ML = 130, halfW = 200, MR = 55, rowH = 24, gap = 5, MT = 6;
+  var W = ML + halfW * 2 + MR;
+  var sorted = rows.slice().sort(function(a,b){return b.val - a.val;});
+  var H = sorted.length * (rowH + gap) + MT * 2;
+  var cx = ML + halfW;
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  svg += '<line x1="' + cx + '" y1="' + MT + '" x2="' + cx + '" y2="' + (H-MT) + '" stroke="var(--border2)" stroke-width="1.5"/>';
+  sorted.forEach(function(r, i) {
+    var y = MT + i * (rowH + gap);
+    var w = (Math.abs(r.val) / maxAbs) * halfW;
+    var col = r.val >= 0 ? 'var(--green)' : 'var(--red)';
+    var x = r.val >= 0 ? cx : cx - w;
+    var label = r.name.length > 15 ? r.name.slice(0,14) + '\u2026' : r.name;
+    svg += '<rect x="' + x.toFixed(1) + '" y="' + y + '" width="' + w.toFixed(1) + '" height="' + rowH + '" fill="' + col + '" opacity="0.75" rx="3"/>';
+    svg += '<text x="' + (ML-6) + '" y="' + (y+rowH/2+4).toFixed(1) + '" text-anchor="end" font-size="11" fill="var(--text)" font-family="Syne,sans-serif" font-weight="600">' + label + '</text>';
+    var vx = r.val >= 0 ? (cx+w+5).toFixed(1) : (cx-w-5).toFixed(1);
+    var anchor = r.val >= 0 ? 'start' : 'end';
+    var valStr = (r.val > 0 ? '+' : '') + r.val;
+    svg += '<text x="' + vx + '" y="' + (y+rowH/2+4).toFixed(1) + '" text-anchor="' + anchor + '" font-size="11" fill="' + col + '" font-family="DM Mono,monospace">' + valStr + '</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+function divergentBarChart(dataPoints) {
+  if (!dataPoints.length) return '<div style="color:var(--text3);font-size:12px">No data.</div>';
+  var maxAbs = Math.max.apply(null, dataPoints.map(function(d){return Math.abs(d.val);}));
+  maxAbs = maxAbs || 1;
+  var W = 540, H = 200, MT = 20, MB = 28, ML = 28, MR = 8;
+  var plotW = W-ML-MR, halfH = (H-MT-MB)/2;
+  var n = dataPoints.length;
+  var barW = Math.max(3, plotW/n - 2);
+  var midY = MT + halfH;
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  svg += '<line x1="' + ML + '" y1="' + midY.toFixed(1) + '" x2="' + (W-MR) + '" y2="' + midY.toFixed(1) + '" stroke="var(--border2)" stroke-width="1.5"/>';
+  dataPoints.forEach(function(d, i) {
+    var x = ML + i*(plotW/n) + (plotW/n - barW)/2;
+    var h = (Math.abs(d.val)/maxAbs) * halfH * 0.9;
+    var col = d.val >= 0 ? 'var(--green)' : 'var(--red)';
+    var y = d.val >= 0 ? midY - h : midY;
+    var tt = d.tooltip ? '<title>' + d.tooltip + '</title>' : '';
+    svg += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + h.toFixed(1) + '" fill="' + col + '" opacity="0.75" rx="2">' + tt + '</rect>';
+    if (i % Math.max(1, Math.floor(n/8)) === 0 || i === n-1) {
+      svg += '<text x="' + (x+barW/2).toFixed(1) + '" y="' + (H-8) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">' + d.label + '</text>';
+    }
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+// ══════════════════════════════════════════════════════
+// PAGE: LEAGUE TABLE
+// ══════════════════════════════════════════════════════
+
+function initLeagueTable() { renderLeagueTable(); }
+
+function renderLeagueTable() {
+  var view = (document.getElementById('lt-view-select') || {}).value || 'table';
+  var lastX = parseInt((document.getElementById('lt-last-gw') || {}).value) || 38;
+  var titleEl = document.getElementById('lt-card-title');
+  var contentEl = document.getElementById('lt-content');
+  if (!contentEl) return;
+  if (!MATCHES.length) { contentEl.innerHTML = '<div class="loading">No match data \u2014 run the notebook first.</div>'; return; }
+
+  var finished = MATCHES.filter(function(m){ return m.finished; });
+  if (!finished.length) { contentEl.innerHTML = '<div class="loading">No finished matches yet.</div>'; return; }
+  var maxGw = Math.max.apply(null, finished.map(function(m){return m.gw;}));
+  var minGw = Math.max(1, maxGw - lastX + 1);
+  var rows = finished.filter(function(m){ return m.gw >= minGw && m.gw <= maxGw; });
+
+  if (view === 'table') {
+    if (titleEl) titleEl.textContent = 'League standings';
+    contentEl.innerHTML = renderLTTable(rows);
+  } else if (view === 'positions') {
+    if (titleEl) titleEl.textContent = 'League positions over time';
+    contentEl.innerHTML = renderLTPositions(rows, minGw, maxGw);
+  } else {
+    if (titleEl) titleEl.textContent = 'Points vs GW average';
+    contentEl.innerHTML = renderLTVsAverage(rows);
+  }
+}
+
+function renderLTTable(rows) {
+  var teams = {};
+  rows.forEach(function(r) {
+    if (!teams[r.team]) teams[r.team] = { name: r.team_name, gp:0, w:0, d:0, l:0, gf:0, ga:0, pts:0 };
+    var t = teams[r.team];
+    t.gp++; t.gf += r.team_points; t.ga += r.opponent_points;
+    if (r.team_result === 'Win') { t.w++; t.pts += 3; }
+    else if (r.team_result === 'Draw') { t.d++; t.pts += 1; }
+    else t.l++;
+  });
+  var sorted = Object.values(teams).sort(function(a,b){
+    if (b.pts !== a.pts) return b.pts - a.pts;
+    return (b.gf-b.ga) - (a.gf-a.ga);
+  });
+  var html = '<div style="overflow-x:auto"><table class="stat"><thead><tr><th>#</th><th style="text-align:left">Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody>';
+  sorted.forEach(function(t, i) {
+    var gd = t.gf - t.ga;
+    var gdStr = gd > 0 ? '+'+gd : String(gd);
+    var gdCol = gd > 0 ? 'var(--green)' : gd < 0 ? 'var(--red)' : 'var(--text2)';
+    html += '<tr><td><span class="rank rank-' + (i < 3 ? i+1 : 'n') + '">' + (i+1) + '</span></td>';
+    html += '<td style="font-weight:600">' + t.name + '</td>';
+    html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.gp + '</td>';
+    html += '<td style="color:var(--green);font-family:\'DM Mono\',monospace;text-align:center">' + t.w + '</td>';
+    html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.d + '</td>';
+    html += '<td style="color:var(--red);font-family:\'DM Mono\',monospace;text-align:center">' + t.l + '</td>';
+    html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.gf + '</td>';
+    html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.ga + '</td>';
+    html += '<td style="color:' + gdCol + ';font-family:\'DM Mono\',monospace;text-align:center">' + gdStr + '</td>';
+    html += '<td style="font-weight:700;color:var(--green);font-family:\'DM Mono\',monospace;text-align:center">' + t.pts + '</td></tr>';
+  });
+  html += '</tbody></table></div>';
+  return html;
+}
+
+function renderLTPositions(rows, minGw, maxGw) {
+  var teamData = {};
+  rows.forEach(function(r) {
+    if (!teamData[r.team]) teamData[r.team] = { name: r.team_name, pos: {} };
+    teamData[r.team].pos[r.gw] = r.league_position;
+  });
+  var teams = Object.values(teamData);
+  if (!teams.length) return '<div class="loading">No data.</div>';
+  var gws = [];
+  for (var g = minGw; g <= maxGw; g++) gws.push(g);
+  var numT = teams.length;
+  var W=640, H=320, MT=20, MB=30, ML=42, MR=90;
+  var pW=W-ML-MR, pH=H-MT-MB;
+  function xs(gw){ return ML + (gw-minGw)/Math.max(maxGw-minGw,1)*pW; }
+  function ys(p){ return MT + (p-1)/Math.max(numT-1,1)*pH; }
+  var svg = '<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  for (var p=1;p<=numT;p++) {
+    var y=ys(p);
+    svg += '<line x1="'+ML+'" y1="'+y.toFixed(1)+'" x2="'+(W-MR)+'" y2="'+y.toFixed(1)+'" stroke="var(--border)" stroke-width="1"/>';
+    svg += '<text x="'+(ML-4)+'" y="'+(y+4).toFixed(1)+'" text-anchor="end" font-size="10" fill="var(--text3)" font-family="DM Mono,monospace">'+p+'</text>';
+  }
+  gws.filter(function(_,i){return i%5===0||i===gws.length-1;}).forEach(function(gw){
+    svg += '<text x="'+xs(gw).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW'+gw+'</text>';
+  });
+  teams.forEach(function(team, ti) {
+    var idxT = TEAMS_ORDER.findIndex(function(id){return TEAM_NAMES[id]===team.name;});
+    var col = TEAM_COLORS[idxT >= 0 ? idxT : ti] || TEAM_COLORS[ti % TEAM_COLORS.length];
+    var pts = gws.filter(function(gw){return team.pos[gw]!=null;}).map(function(gw){return{gw:gw,p:team.pos[gw]};});
+    if (pts.length < 2) return;
+    var d = pts.map(function(p,i){return (i===0?'M':'L')+xs(p.gw).toFixed(1)+','+ys(p.p).toFixed(1);}).join(' ');
+    svg += '<path d="'+d+'" stroke="'+col+'" stroke-width="2" fill="none" opacity="0.85"/>';
+    var last = pts[pts.length-1];
+    svg += '<circle cx="'+xs(last.gw).toFixed(1)+'" cy="'+ys(last.p).toFixed(1)+'" r="4" fill="'+col+'"/>';
+    var lbl = team.name.length > 10 ? team.name.slice(0,9)+'\u2026' : team.name;
+    svg += '<text x="'+(xs(last.gw)+8).toFixed(1)+'" y="'+(ys(last.p)+4).toFixed(1)+'" font-size="10" fill="'+col+'" font-family="Syne,sans-serif" font-weight="600">'+lbl+'</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+function renderLTVsAverage(rows) {
+  var teamTotals = {};
+  rows.forEach(function(r){
+    if (!teamTotals[r.team]) teamTotals[r.team] = {name:r.team_name, total:0};
+    teamTotals[r.team].total += r.team_points;
+  });
+  var vals = Object.values(teamTotals);
+  if (!vals.length) return '<div class="loading">No data.</div>';
+  var avg = vals.reduce(function(s,t){return s+t.total;},0) / vals.length;
+  var sorted = vals.slice().sort(function(a,b){return b.total-a.total;});
+  var maxVal = Math.max.apply(null, sorted.map(function(t){return t.total;})) || 1;
+  var ML=140, maxW=440, MR=60, rowH=26, gap=5, MT=22;
+  var W=ML+maxW+MR, H=sorted.length*(rowH+gap)+MT+16;
+  var avgX = ML + (avg/maxVal)*maxW;
+  var svg = '<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  svg += '<line x1="'+avgX.toFixed(1)+'" y1="'+MT+'" x2="'+avgX.toFixed(1)+'" y2="'+(H-8)+'" stroke="var(--amber)" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.8"/>';
+  svg += '<text x="'+avgX.toFixed(1)+'" y="'+(MT-5)+'" text-anchor="middle" font-size="9" fill="var(--amber)" font-family="DM Mono,monospace">avg '+Math.round(avg)+'</text>';
+  sorted.forEach(function(t, i) {
+    var y = MT + i*(rowH+gap);
+    var w = (t.total/maxVal)*maxW;
+    var idxT = TEAMS_ORDER.findIndex(function(id){return TEAM_NAMES[id]===t.name;});
+    var col = TEAM_COLORS[idxT >= 0 ? idxT : i] || TEAM_COLORS[i%TEAM_COLORS.length];
+    var label = t.name.length>16?t.name.slice(0,15)+'\u2026':t.name;
+    svg += '<rect x="'+ML+'" y="'+y+'" width="'+w.toFixed(1)+'" height="'+rowH+'" fill="'+col+'" opacity="0.75" rx="3"><title>'+t.name+': '+t.total+' pts (avg '+Math.round(avg)+')</title></rect>';
+    svg += '<text x="'+(ML-6)+'" y="'+(y+rowH/2+4).toFixed(1)+'" text-anchor="end" font-size="11" fill="var(--text)" font-family="Syne,sans-serif" font-weight="600">'+label+'</text>';
+    svg += '<text x="'+(ML+w+6).toFixed(1)+'" y="'+(y+rowH/2+4).toFixed(1)+'" font-size="11" fill="var(--text2)" font-family="DM Mono,monospace">'+t.total+'</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
+// ══════════════════════════════════════════════════════
+// PAGE: TRANSFER ANALYSIS
+// ══════════════════════════════════════════════════════
+
+function initTransferAnalysis() {
+  var sel = document.getElementById('tr-manager-select');
+  if (!sel || !TEAMS_ORDER.length) return;
+  sel.innerHTML = '<option value="all">All managers</option>' +
+    TEAMS_ORDER.map(function(id){return '<option value="'+id+'">'+TEAM_NAMES[id]+'</option>';}).join('');
+  renderTransfers();
+}
+
+function renderTransfers() {
+  var ids = ['tr-made','tr-points-diff','tr-successful','tr-scatter'];
+  if (!TRANSFERS_DATA.length) {
+    ids.forEach(function(id){var el=document.getElementById(id);if(el)el.innerHTML='<div class="loading">No transfer data \u2014 run the notebook first.</div>';});
+    return;
+  }
+  var sel = document.getElementById('tr-manager-select');
+  var filterEntry = sel && sel.value !== 'all' ? parseInt(sel.value) : null;
+  var filtered = filterEntry ? TRANSFERS_DATA.filter(function(t){return t.entry===filterEntry;}) : TRANSFERS_DATA;
+  renderTrMade(filtered);
+  renderTrPointsDiff(filtered);
+  renderTrSuccessful(filtered);
+  renderTrScatter(filtered, filterEntry);
+}
+
+function renderTrMade(transfers) {
+  var el = document.getElementById('tr-made');
+  if (!el) return;
+  var counts = {};
+  transfers.forEach(function(t){
+    var name = TEAM_NAMES[t.entry] || ('Team '+t.entry);
+    counts[name] = (counts[name]||0) + 1;
+  });
+  var sorted = Object.entries(counts).sort(function(a,b){return b[1]-a[1];});
+  if (!sorted.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:1rem">No transfers.</div>';return;}
+  el.innerHTML = hBarChart(sorted.map(function(e){return{name:e[0],val:e[1],color:'var(--blue)'};}), {maxW:360});
+}
+
+function renderTrPointsDiff(transfers) {
+  var el = document.getElementById('tr-points-diff');
+  if (!el) return;
+  var sums = {};
+  transfers.forEach(function(t){
+    var name = TEAM_NAMES[t.entry] || ('Team '+t.entry);
+    sums[name] = (sums[name]||0) + ((t.total_points_in||0)-(t.total_points_out||0));
+  });
+  var sorted = Object.entries(sums).map(function(e){return{name:e[0],val:Math.round(e[1])};});
+  if (!sorted.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:1rem">No data.</div>';return;}
+  el.innerHTML = hBarChartDivergent(sorted);
+}
+
+function renderTrSuccessful(transfers) {
+  var el = document.getElementById('tr-successful');
+  if (!el) return;
+  var counts = {};
+  TEAMS_ORDER.forEach(function(id){counts[TEAM_NAMES[id]]=0;});
+  transfers.forEach(function(t){
+    var name = TEAM_NAMES[t.entry] || ('Team '+t.entry);
+    if ((t.total_points_in||0) > (t.total_points_out||0)) counts[name] = (counts[name]||0)+1;
+  });
+  var sorted = Object.entries(counts).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];});
+  if (!sorted.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:1rem">No successful transfers yet.</div>';return;}
+  el.innerHTML = hBarChart(sorted.map(function(e){return{name:e[0],val:e[1],color:'var(--green)'};}), {maxW:360});
+}
+
+function renderTrScatter(transfers, filterEntry) {
+  var el = document.getElementById('tr-scatter');
+  if (!el) return;
+  if (!transfers.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:1rem">No data.</div>';return;}
+  var W=520, H=260, MT=20, MB=30, ML=45, MR=20;
+  var pW=W-ML-MR, pH=H-MT-MB;
+  var events = transfers.map(function(t){return t.event||0;});
+  var minGw=Math.min.apply(null,events), maxGw=Math.max.apply(null,events);
+  var diffs = transfers.map(function(t){return (t.total_points_in||0)-(t.total_points_out||0);});
+  var maxAbs = Math.max.apply(null, diffs.map(Math.abs)) || 1;
+  function xs(gw){return ML+(gw-minGw)/Math.max(maxGw-minGw,1)*pW;}
+  function ys(d){return MT+pH/2-(d/maxAbs)*(pH/2-8);}
+  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  var y0=ys(0);
+  svg+='<line x1="'+ML+'" y1="'+y0.toFixed(1)+'" x2="'+(W-MR)+'" y2="'+y0.toFixed(1)+'" stroke="var(--border2)" stroke-width="1.5"/>';
+  [maxAbs,0,-maxAbs].forEach(function(v){
+    svg+='<text x="'+(ML-4)+'" y="'+(ys(v)+4).toFixed(1)+'" text-anchor="end" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+(v>0?'+':'')+Math.round(v)+'</text>';
+  });
+  for(var gw=minGw;gw<=maxGw;gw++){
+    if(gw%5===0||gw===minGw||gw===maxGw)
+      svg+='<text x="'+xs(gw).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+gw+'</text>';
+  }
+  transfers.forEach(function(t){
+    var diff=(t.total_points_in||0)-(t.total_points_out||0);
+    var x=xs(t.event||0), y=ys(diff);
+    var entryIdx=TEAMS_ORDER.indexOf(t.entry);
+    var col = filterEntry ? (diff>0?'var(--green)':diff<0?'var(--red)':'var(--text3)') : (TEAM_COLORS[entryIdx]||'var(--blue)');
+    var name=TEAM_NAMES[t.entry]||'';
+    var tip=name+': '+t.web_name_x+' in ('+t.total_points_in+' pts) / '+t.web_name_y+' out ('+t.total_points_out+' pts) = '+(diff>0?'+':'')+diff+' (GW'+t.event+')';
+    svg+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="5" fill="'+col+'" opacity="0.82"><title>'+tip+'</title></circle>';
+  });
+  svg+='</svg>';
+  el.innerHTML=svg;
+}
+
+// ══════════════════════════════════════════════════════
+// MANAGER HUB ADDITIONS
+// ══════════════════════════════════════════════════════
+
+function psForTeam(entryId) {
+  var psId = ID_TO_ENTRY_ID[String(entryId)] || String(entryId);
+  return PLAYER_SCORES.filter(function(r){ return String(r.team_id) === psId; });
+}
+
+function renderHubGwScores(entryId) {
+  var el = document.getElementById('hub-gw-scores');
+  if (!el) return;
+  var tm = MATCHES.filter(function(m){return m.team===entryId && m.finished;}).sort(function(a,b){return a.gw-b.gw;});
+  if (!tm.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No match data.</div>';return;}
+  var maxP=Math.max.apply(null,tm.map(function(m){return m.team_points;}))||1;
+  var W=520,H=180,MT=10,MB=26,ML=28,MR=8;
+  var pW=W-ML-MR,pH=H-MT-MB;
+  var slot=pW/tm.length, barW=Math.max(4,slot-2);
+  function xs(i){return ML+i*slot+(slot-barW)/2;}
+  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  tm.forEach(function(m,i){
+    var x=xs(i), h=(m.team_points/maxP)*pH, y=MT+pH-h;
+    var col=m.team_result==='Win'?'var(--green)':m.team_result==='Lose'?'var(--red)':'var(--amber)';
+    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+col+'" opacity="0.75" rx="2"><title>GW'+m.gw+': '+m.team_points+' pts vs '+m.opponent_name+' ('+m.team_result+')</title></rect>';
+    svg+='<text x="'+(x+barW/2).toFixed(1)+'" y="'+(y-3).toFixed(1)+'" text-anchor="middle" font-size="9" fill="var(--text2)" font-family="DM Mono,monospace">'+m.team_points+'</text>';
+    if(i%Math.max(1,Math.floor(tm.length/7))===0||i===tm.length-1)
+      svg+='<text x="'+(x+barW/2).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+m.gw+'</text>';
+  });
+  svg+='</svg>';
+  el.innerHTML=svg;
+}
+
+function renderHubPtsVsOpponent(entryId) {
+  var el = document.getElementById('hub-pts-vs-opp');
+  if (!el) return;
+  var tm=MATCHES.filter(function(m){return m.team===entryId&&m.finished;}).sort(function(a,b){return a.gw-b.gw;});
+  if (!tm.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No data.</div>';return;}
+  el.innerHTML=divergentBarChart(tm.map(function(m){return{label:'GW'+m.gw,val:m.points_difference,tooltip:'GW'+m.gw+' vs '+m.opponent_name+': '+(m.points_difference>0?'+':'')+m.points_difference+' pts'};}));
+}
+
+function renderHubPtsVsAverage(entryId) {
+  var el = document.getElementById('hub-pts-vs-avg');
+  if (!el) return;
+  var gwAvg={}, gwCnt={};
+  MATCHES.filter(function(m){return m.finished;}).forEach(function(m){
+    gwAvg[m.gw]=(gwAvg[m.gw]||0)+m.team_points;
+    gwCnt[m.gw]=(gwCnt[m.gw]||0)+1;
+  });
+  Object.keys(gwAvg).forEach(function(g){gwAvg[g]/=(gwCnt[g]||1);});
+  var tm=MATCHES.filter(function(m){return m.team===entryId&&m.finished;}).sort(function(a,b){return a.gw-b.gw;});
+  if (!tm.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No data.</div>';return;}
+  el.innerHTML=divergentBarChart(tm.map(function(m){
+    var diff=Math.round(m.team_points-(gwAvg[m.gw]||0));
+    return{label:'GW'+m.gw,val:diff,tooltip:'GW'+m.gw+': '+m.team_points+' pts vs avg '+(gwAvg[m.gw]||0).toFixed(1)+' = '+(diff>0?'+':'')+diff};
+  }));
+}
+
+function renderHubTransfersByGw(entryId) {
+  var el = document.getElementById('hub-transfers-gw');
+  if (!el) return;
+  var myT=TRANSFERS_DATA.filter(function(t){return t.entry===entryId;});
+  if (!myT.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No transfers made.</div>';return;}
+  var byGw={};
+  myT.forEach(function(t){byGw[t.event]=(byGw[t.event]||0)+1;});
+  var finished=MATCHES.filter(function(m){return m.finished;});
+  var maxGw=finished.length?Math.max.apply(null,finished.map(function(m){return m.gw;})):38;
+  var W=520,H=120,MT=8,MB=26,ML=24,MR=8;
+  var pW=W-ML-MR,pH=H-MT-MB;
+  var maxC=Math.max.apply(null,Object.values(byGw))||1;
+  var slot=pW/maxGw, barW=Math.max(3,slot-1);
+  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  for(var g=1;g<=maxGw;g++){
+    var c=byGw[g]||0;
+    if(!c) continue;
+    var x=ML+(g-1)*slot+(slot-barW)/2;
+    var h=(c/maxC)*pH, y=MT+pH-h;
+    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="var(--blue)" opacity="0.75" rx="2"><title>GW'+g+': '+c+' transfer'+(c>1?'s':'')+'</title></rect>';
+    svg+='<text x="'+(x+barW/2).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+g+'</text>';
+  }
+  svg+='</svg>';
+  el.innerHTML=svg;
+}
+
+function renderHubTeamValue(entryId) {
+  var el = document.getElementById('hub-team-value');
+  if (!el) return;
+  var ps=psForTeam(entryId);
+  var valByGw={};
+  ps.filter(function(r){return r.status==='played'&&r.Price!=null;})
+    .forEach(function(r){valByGw[r.gw]=(valByGw[r.gw]||0)+(r.Price||0);});
+  var gws=Object.keys(valByGw).map(Number).sort(function(a,b){return a-b;});
+  if (!gws.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No price data.</div>';return;}
+  var vals=gws.map(function(g){return valByGw[g];});
+  var maxV=Math.max.apply(null,vals)||1, minV=Math.min.apply(null,vals);
+  var W=520,H=180,MT=22,MB=26,ML=46,MR=20;
+  var pW=W-ML-MR,pH=H-MT-MB;
+  function xs(g){return ML+(g-gws[0])/Math.max(gws[gws.length-1]-gws[0],1)*pW;}
+  function ys(v){return MT+pH-((v-minV)/Math.max(maxV-minV,0.1))*pH;}
+  var col=teamColor(entryId);
+  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
+  [minV,(minV+maxV)/2,maxV].forEach(function(v){
+    var y=ys(v);
+    svg+='<line x1="'+ML+'" y1="'+y.toFixed(1)+'" x2="'+(W-MR)+'" y2="'+y.toFixed(1)+'" stroke="var(--border)" stroke-width="1"/>';
+    svg+='<text x="'+(ML-4)+'" y="'+(y+4).toFixed(1)+'" text-anchor="end" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">\u00a3'+v.toFixed(1)+'m</text>';
+  });
+  var d=gws.map(function(g,i){return (i===0?'M':'L')+xs(g).toFixed(1)+','+ys(valByGw[g]).toFixed(1);}).join(' ');
+  svg+='<path d="'+d+'" stroke="'+col+'" stroke-width="2.5" fill="none"/>';
+  gws.forEach(function(g){
+    svg+='<circle cx="'+xs(g).toFixed(1)+'" cy="'+ys(valByGw[g]).toFixed(1)+'" r="3" fill="'+col+'"><title>GW'+g+': \u00a3'+valByGw[g].toFixed(1)+'m</title></circle>';
+  });
+  gws.filter(function(_,i){return i%5===0||i===gws.length-1;}).forEach(function(g){
+    svg+='<text x="'+xs(g).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+g+'</text>';
+  });
+  svg+='</svg>';
+  el.innerHTML='<div style="font-family:\'DM Mono\',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">Starting XI total value by GW</div>'+svg;
+}
+
+// ══════════════════════════════════════════════════════
+// PICK ORDER ADDITIONS
+// ══════════════════════════════════════════════════════
+
+var snakeFilter = 'all';
+
+function filterSnake(val, btn) {
+  snakeFilter = val;
+  document.querySelectorAll('#page-snake .fbtn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderSnakeRankPts();
+}
+
+function renderSnakeRankPts() {
+  var el = document.getElementById('snake-rank-pts');
+  if (!el) return;
+
+  var picks = snakeFilter === 'drafted'
+    ? CHOICES.filter(function(c){ return c.entry != null; })
+    : CHOICES;
+
+  if (!picks.length) {
+    el.innerHTML = '<div class="loading">No draft data loaded.</div>';
+    return;
+  }
+
+  var positions = ['GKP','DEF','MID','FWD'];
+  var posColors = { GKP:'var(--amber)', DEF:'var(--green)', MID:'var(--blue)', FWD:'var(--red)' };
+
+  // Group by position
+  var byPos = { GKP:[], DEF:[], MID:[], FWD:[] };
+  picks.forEach(function(c) {
+    var pos = (PLAYERS[c.element] || {}).pos || POS_MAP[c.element_type] || '?';
+    if (byPos[pos]) byPos[pos].push(c);
+  });
+
+  var W = 560, rowH = 20, gap = 4, MT = 18, ML = 52, MR = 20;
+  var maxPick = CHOICES.length > 0 ? Math.max.apply(null, CHOICES.map(function(c){return c.pick_order||0;})) : 80;
+  var maxPts  = Math.max.apply(null, picks.map(function(c){return (PLAYERS[c.element]||{}).total_points||0;})) || 1;
+  var pW = W - ML - MR;
+  function xs(pick){ return ML + ((pick-1)/Math.max(maxPick-1,1)) * pW; }
+  function ys(pts){  return rowH - (pts/maxPts)*(rowH-4); }
+
+  var totalH = positions.length * (rowH*6 + gap*2 + 24) + MT;
+  var svg = '<svg width="100%" viewBox="0 0 '+W+' '+totalH+'" xmlns="http://www.w3.org/2000/svg">';
+
+  var offsetY = MT;
+  positions.forEach(function(pos) {
+    var group = byPos[pos];
+    if (!group.length) return;
+    var col = posColors[pos] || '#888';
+    // Position label
+    svg += '<text x="0" y="'+(offsetY+10)+'" font-size="11" font-weight="700" fill="'+col+'" font-family="Syne,sans-serif">'+pos+'</text>';
+    var dotH = rowH * 5;
+    var dotOffY = offsetY + 16;
+
+    // Baseline
+    svg += '<line x1="'+ML+'" y1="'+(dotOffY+dotH)+'" x2="'+(W-MR)+'" y2="'+(dotOffY+dotH)+'" stroke="var(--border)" stroke-width="1"/>';
+
+    group.forEach(function(c) {
+      var po = c.pick_order || 1;
+      var pts = (PLAYERS[c.element] || {}).total_points || 0;
+      var x = xs(po);
+      var y = dotOffY + dotH - (pts/maxPts)*dotH*0.9;
+      var name = pName(c.element);
+      var eName = c.entry_name || TEAM_NAMES[c.entry] || '';
+      svg += '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4" fill="'+col+'" opacity="0.78">'
+           + '<title>Pick '+po+': '+name+' ('+eName+') — '+pts+' pts</title></circle>';
+    });
+
+    // X axis tick for every 9 picks (one round)
+    for (var pick=1; pick<=maxPick; pick+=9) {
+      var tx = xs(pick);
+      svg += '<text x="'+tx.toFixed(1)+'" y="'+(dotOffY+dotH+12)+'" text-anchor="middle" font-size="8" fill="var(--text3)" font-family="DM Mono,monospace">R'+(Math.ceil(pick/9))+'</text>';
+    }
+
+    offsetY += dotH + 36;
+  });
+
+  svg += '</svg>';
+  el.innerHTML = svg;
+}
+
+// ══════════════════════════════════════════════════════
+// TOOLTIP SYSTEM
+// ══════════════════════════════════════════════════════
+
+var _tt = null;
+
+function ttInit() {
+  _tt = document.getElementById('tooltip');
+  document.addEventListener('mousemove', function(e) {
+    if (_tt && _tt.classList.contains('visible')) {
+      var x = e.clientX + 14, y = e.clientY + 14;
+      if (x + 290 > window.innerWidth)  x = e.clientX - 300;
+      if (y + 160 > window.innerHeight) y = e.clientY - 100;
+      _tt.style.left = x + 'px';
+      _tt.style.top  = y + 'px';
+    }
+  });
+}
+
+function ttShow(html) {
+  if (!_tt) ttInit();
+  _tt.innerHTML = html;
+  _tt.classList.add('visible');
+}
+
+function ttHide() {
+  if (_tt) _tt.classList.remove('visible');
+}
+
+function ttPlayerGwChart(elementId) {
+  // Mini bar chart of player GW scores
+  var ps = PLAYER_SCORES.filter(function(r){ return String(r.number) === String(elementId) && r.status === 'played'; });
+  if (!ps.length) return '';
+  var sorted = ps.slice().sort(function(a,b){return a.gw-b.gw;});
+  var maxP = Math.max.apply(null, sorted.map(function(r){return r.total_points||0;})) || 1;
+  var W=220, H=60, barW=Math.max(3, W/sorted.length-1);
+  var svg = '<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'">';
+  sorted.forEach(function(r,i) {
+    var h = ((r.total_points||0)/maxP)*(H-12);
+    var x = i*(W/sorted.length) + (W/sorted.length - barW)/2;
+    var y = H-12-h;
+    svg += '<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="var(--green)" opacity="0.7" rx="1"/>';
+    if (sorted.length <= 20 || i%5===0)
+      svg += '<text x="'+(x+barW/2).toFixed(1)+'" y="'+(H-2)+'" text-anchor="middle" font-size="7" fill="var(--text3)" font-family="DM Mono,monospace">'+r.gw+'</text>';
+  });
+  svg += '</svg>';
+  return svg;
+}
+
 
   function showPage(name) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
