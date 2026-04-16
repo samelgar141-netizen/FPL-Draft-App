@@ -468,8 +468,9 @@ async function loadAll() {
     if (playerScores.length > 0) {
       const maxGw = Math.max(...playerScores.map(r => r.gw));
       playerScores.filter(r => r.gw === maxGw && r.number != null).forEach(r => {
-        const leagueId = parseInt(Object.keys(ID_TO_ENTRY_ID).find(k => ID_TO_ENTRY_ID[k] === String(r.team_id)) || 0);
-        ELEMENT_STATUS[r.number] = { element: r.number, owner: leagueId || null, status: 'a', in_accepted_trade: false };
+        // team_id in player_scores == entry_id in gw_and_team == entry in draft_picks
+        const owner = r.team_id != null ? parseInt(r.team_id) : null;
+        ELEMENT_STATUS[r.number] = { element: r.number, owner: owner || null, status: 'a', in_accepted_trade: false };
       });
     }
 
