@@ -431,8 +431,12 @@ async function loadAll() {
         fetch('./gw_and_team.json').then(safeJson('gw_and_team.json')),
       ]);
 
-    // Store new data globals
-    MATCHES        = matches;
+    // Store new data globals — normalise match team/opponent to real entry IDs
+    MATCHES = matches.map(m => ({
+      ...m,
+      team:     m.team_entry_id     ? parseInt(m.team_entry_id)     : m.team,
+      opponent: m.opponent_entry_id ? parseInt(m.opponent_entry_id) : m.opponent,
+    }));
     PLAYER_SCORES  = playerScores;
     TRANSFERS_DATA = xfrData;
     GW_AND_TEAM    = gwAndTeam;
@@ -442,12 +446,12 @@ async function loadAll() {
       if (r.team != null && r.entry_id != null) ID_TO_ENTRY_ID[String(r.team)] = String(r.entry_id);
     });
 
-    // Build league entries from draft picks + matches
+    // Build league entries from draft picks only (matches now uses the same entry IDs)
     const entryMap = {};
     draftPicks.filter(d => d.entry != null).forEach(d => {
       if (!entryMap[d.entry]) entryMap[d.entry] = { entry_id: d.entry, entry_name: d.entry_name };
     });
-    matches.forEach(m => {
+    MATCHES.forEach(m => {
       if (m.team && !entryMap[m.team]) entryMap[m.team] = { entry_id: m.team, entry_name: m.team_name };
     });
     const entries = Object.values(entryMap);
