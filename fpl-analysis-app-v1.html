@@ -423,12 +423,12 @@ async function loadAll() {
 
     const [draftPicks, bootstrap, matches, playerScores, xfrData, gwAndTeam] =
       await Promise.all([
-        fetch('./draft_picks.json').then(safeJson('draft_picks.json')),
-        fetch('./bootstrap.json').then(safeJson('bootstrap.json')),
-        fetch('./matches.json').then(safeJson('matches.json')),
-        fetch('./player_scores.json').then(safeJson('player_scores.json')),
-        fetch('./transfers.json').then(safeJson('transfers.json')),
-        fetch('./gw_and_team.json').then(safeJson('gw_and_team.json')),
+        fetch('./data/draft_picks.json').then(safeJson('draft_picks.json')),
+        fetch('./data/bootstrap.json').then(safeJson('bootstrap.json')),
+        fetch('./data/matches.json').then(safeJson('matches.json')),
+        fetch('./data/player_scores.json').then(safeJson('player_scores.json')),
+        fetch('./data/transfers.json').then(safeJson('transfers.json')),
+        fetch('./data/gw_and_team.json').then(safeJson('gw_and_team.json')),
       ]);
 
     // Store new data globals — normalise match team/opponent to real entry IDs
