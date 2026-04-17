@@ -481,9 +481,9 @@ async function loadAll() {
       if (c.element != null && c.entry != null)
         ELEMENT_STATUS[+c.element] = { element: +c.element, owner: parseInt(c.entry), status: 'a', in_accepted_trade: false };
     });
-    // Step 2: apply approved transfers in GW order
+    // Step 2: apply approved transfers in GW order ('a' = approved; 'di'/'do' = declined/failed)
     [...xfrData]
-      .filter(t => t.result === 'a' || t.result === 'di')
+      .filter(t => t.result === 'a')
       .sort((a, b) => (a.event || 0) - (b.event || 0))
       .forEach(t => {
         const inEl  = t.element_in  != null ? +t.element_in  : null;
@@ -507,7 +507,7 @@ async function loadAll() {
       Object.keys(ELEMENT_STATUS).forEach(el => {
         const n = +el;
         const last = lastGwByPlayer[n];
-        if (last != null && (maxGw - last) >= 8 && ELEMENT_STATUS[n]?.owner != null)
+        if (last != null && (maxGw - last) >= 2 && ELEMENT_STATUS[n]?.owner != null)
           ELEMENT_STATUS[n] = { ...ELEMENT_STATUS[n], owner: null };
       });
     }
