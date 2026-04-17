@@ -474,41 +474,13 @@ async function loadAll() {
 
     WAIVER_ORDER = [...entries].sort((a, b) => a.entry_name.localeCompare(b.entry_name)).map(e => e.entry_id);
 
-    // Element status — derived from draft picks + transfers (more reliable than player_scores GW snapshot)
+    // Element status — read directly from the latest GW of player_scores (ground truth: 10 teams × 15 picks)
     ELEMENT_STATUS = {};
-    // Step 1: seed from original draft picks
-    CHOICES.forEach(c => {
-      if (c.element != null && c.entry != null)
-        ELEMENT_STATUS[+c.element] = { element: +c.element, owner: parseInt(c.entry), status: 'a', in_accepted_trade: false };
-    });
-    // Step 2: apply approved transfers in GW order ('a' = approved; 'di'/'do' = declined/failed)
-    [...xfrData]
-      .filter(t => t.result === 'a')
-      .sort((a, b) => (a.event || 0) - (b.event || 0))
-      .forEach(t => {
-        const inEl  = t.element_in  != null ? +t.element_in  : null;
-        const outEl = t.element_out != null ? +t.element_out : null;
-        const entry = parseInt(t.entry);
-        if (inEl  != null) ELEMENT_STATUS[inEl]  = { element: inEl,  owner: entry, status: 'a', in_accepted_trade: false };
-        if (outEl != null && ELEMENT_STATUS[outEl]?.owner === entry)
-          ELEMENT_STATUS[outEl] = { ...ELEMENT_STATUS[outEl], owner: null }; // released — free agent
-      });
-    // Step 3: mark players absent from player_scores for 8+ GWs as free agents
-    // (catches players removed from the FPL game mid-season with no transfer record)
     if (playerScores.length > 0) {
       const maxGw = Math.max(...playerScores.map(r => r.gw));
-      const lastGwByPlayer = {};
-      playerScores.forEach(r => {
-        if (r.number != null) {
-          const n = +r.number;
-          if (!lastGwByPlayer[n] || r.gw > lastGwByPlayer[n]) lastGwByPlayer[n] = r.gw;
-        }
-      });
-      Object.keys(ELEMENT_STATUS).forEach(el => {
-        const n = +el;
-        const last = lastGwByPlayer[n];
-        if (last != null && (maxGw - last) >= 2 && ELEMENT_STATUS[n]?.owner != null)
-          ELEMENT_STATUS[n] = { ...ELEMENT_STATUS[n], owner: null };
+      playerScores.filter(r => r.gw === maxGw && r.number != null && r.team_id != null).forEach(r => {
+        const owner = parseInt(r.team_id);
+        ELEMENT_STATUS[+r.number] = { element: +r.number, owner: owner || null, status: 'a', in_accepted_trade: false };
       });
     }
 
@@ -1070,13 +1042,9 @@ function sortPS(col) {
 // Build owner map from current element_status (post-trade ownership)
 function buildOwnerMap() {
   const ownerMap = {};
-  // ELEMENT_STATUS is authoritative — includes null for free agents
+  // GW snapshot is authoritative — players absent from it are not on any team
   Object.entries(ELEMENT_STATUS).forEach(([el, s]) => {
-    ownerMap[parseInt(el)] = s.owner ?? null;
-  });
-  // Only fall back to CHOICES for players not tracked in ELEMENT_STATUS at all
-  CHOICES.forEach(c => {
-    if (ownerMap[+c.element] === undefined) ownerMap[+c.element] = c.entry;
+    if (s.owner) ownerMap[parseInt(el)] = s.owner;
   });
   return ownerMap;
 }
