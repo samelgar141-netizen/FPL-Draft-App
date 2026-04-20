@@ -589,23 +589,16 @@ function renderOverview() {
   const numTeams = TEAMS_ORDER.length;
   const numRounds = Math.max(...CHOICES.map(c => c.round), 0);
 
-  const duration = (() => {
-    if (CHOICES.length < 2) return 0;
-    const t0 = new Date(CHOICES[0].choice_time);
-    const t1 = new Date(CHOICES[CHOICES.length-1].choice_time);
-    return Math.round((t1 - t0) / 60000);
+  const draftDate = (() => {
+    const dt = LEAGUE.draft_dt || (CHOICES.length > 0 ? CHOICES[0].choice_time : null);
+    return dt ? new Date(dt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}) : '—';
   })();
-
-  const draftDate = LEAGUE.draft_dt
-    ? new Date(LEAGUE.draft_dt).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'})
-    : '—';
 
   document.getElementById('ov-metrics').innerHTML = `
     <div class="metric"><div class="m-label">Total picks</div><div class="m-val green">${numPicks}</div></div>
     <div class="metric"><div class="m-label">Teams</div><div class="m-val">${numTeams}</div></div>
     <div class="metric"><div class="m-label">Rounds</div><div class="m-val">${numRounds}</div></div>
     <div class="metric"><div class="m-label">Auto-picks</div><div class="m-val">${autoPicks}</div><div class="m-sub">${((autoPicks/numPicks)*100).toFixed(1)}% of draft</div></div>
-    <div class="metric"><div class="m-label">Duration</div><div class="m-val">${duration}m</div><div class="m-sub">full draft time</div></div>
     <div class="metric"><div class="m-label">Draft date</div><div class="m-val" style="font-size:15px">${draftDate}</div></div>
   `;
 
