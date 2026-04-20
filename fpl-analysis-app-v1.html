@@ -434,7 +434,7 @@ async function loadAll() {
       opponent: m.opponent_entry_id ? parseInt(m.opponent_entry_id) : m.opponent,
     }));
     PLAYER_SCORES  = playerScores;
-    TRANSFERS_DATA = xfrData;
+    TRANSFERS_DATA = xfrData.filter(t => t.result === 'a');
     GW_AND_TEAM    = gwAndTeam;
 
     // Build id -> entry_id mapping (internal league id -> FPL entry id string)
