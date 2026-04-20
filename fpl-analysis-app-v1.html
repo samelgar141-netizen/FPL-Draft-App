@@ -311,10 +311,6 @@
       <div class="card"><div class="card-title">Points vs GW average</div><div id="hub-pts-vs-avg"></div></div>
       <div class="card"><div class="card-title">Transfers by GW</div><div id="hub-transfers-gw"></div></div>
     </div>
-    <div class="card" style="margin-top:1.25rem">
-      <div class="card-title">Team value by GW (starting XI)</div>
-      <div id="hub-team-value"></div>
-    </div>
   </div>
 
   <!-- TOOLTIP -->
@@ -381,16 +377,16 @@ let GW_AND_TEAM = [];
 let ID_TO_ENTRY_ID = {};
 
 const TEAM_COLORS = [
-  '#38bdf8', // sky blue
-  '#fb923c', // orange
-  '#4ade80', // emerald
-  '#f472b6', // pink
-  '#a78bfa', // violet
-  '#fbbf24', // amber
-  '#2dd4bf', // teal
-  '#f87171', // rose
-  '#818cf8', // indigo
-  '#86efac', // mint
+  '#f54141', // red
+  '#f5ab40', // orange
+  '#d1f540', // yellow-lime
+  '#62f540', // lime-green
+  '#40f587', // mint
+  '#40f5f5', // cyan
+  '#4087f5', // blue
+  '#6240f5', // indigo
+  '#d040f5', // magenta
+  '#f540ab', // hot pink
 ];
 
 const POS_MAP = { 1:'GKP', 2:'DEF', 3:'MID', 4:'FWD' };
@@ -657,7 +653,7 @@ function renderSquadStrength() {
   const posColors = {GKP:'#f5c842', DEF:'#6ecfba', MID:'#e87b7b', FWD:'#a07dc7', '?':'#bbb'};
 
   const teamData = TEAMS_ORDER.map(id => {
-    const picks = [...(bt[id] || [])].sort((a,b) => (posOrder[pPos(a.element)]||4) - (posOrder[pPos(b.element)]||4));
+    const picks = [...(bt[id] || [])].sort((a,b) => (posOrder[pPos(a.element)] ?? 4) - (posOrder[pPos(b.element)] ?? 4));
     const totalPts = picks.reduce((s,c) => s + pPts(c.element), 0);
     return { id, name: TEAM_NAMES[id], totalPts, picks };
   }).sort((a,b) => b.totalPts - a.totalPts);
@@ -1069,6 +1065,16 @@ function renderPlayerStats() {
     rows.push({ element: c.element, draftRound: c.round, draftPick: c.pick, originalTeam, currentOwner, traded, ...p });
   });
 
+  // Add undrafted players
+  Object.entries(PLAYERS).forEach(([id, p]) => {
+    const elementId = parseInt(id);
+    if (seenElements.has(elementId)) return;
+    if (psFilter !== 'all' && p.pos !== psFilter) return;
+    if (searchVal && !p.name.toLowerCase().includes(searchVal) && !p.short.toLowerCase().includes(searchVal)) return;
+    seenElements.add(elementId);
+    rows.push({ element: elementId, draftRound: null, draftPick: null, originalTeam: null, currentOwner: null, traded: false, ...p });
+  });
+
   // Sort
   rows.sort((a, b) => {
     let va = a[psSort.col], vb = b[psSort.col];
@@ -1104,10 +1110,10 @@ function renderPlayerStats() {
   const tbHtml = rows.map((row, i) => {
     const pos = row.pos;
     const col = teamColor(row.originalTeam);
-    const ownerName = row.currentOwner ? (TEAM_NAMES[row.currentOwner] || row.currentOwner) : '—';
+    const ownerName = row.originalTeam == null ? '<span style="color:var(--text3);font-style:italic">Undrafted</span>' : (row.currentOwner ? (TEAM_NAMES[row.currentOwner] || row.currentOwner) : '—');
     const tradedBadge = row.traded ? `<span class="pill pill-amber" style="margin-left:4px">traded</span>` : '';
     return `<tr>
-      <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)">${row.draftRound}.${row.draftPick}</td>
+      <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)">${row.draftRound != null ? `${row.draftRound}.${row.draftPick}` : '—'}</td>
       <td style="font-weight:600;font-size:13px">${row.short}<span style="font-size:10px;color:var(--text3);font-weight:400;margin-left:4px">${row.name !== row.short ? row.name : ''}</span></td>
       <td><span class="pos pos-${pos}">${pos}</span></td>
       <td style="font-size:12px;color:var(--text2)">${row.club}</td>
@@ -1217,7 +1223,6 @@ function renderHub(entryId) {
   renderHubPtsVsOpponent(entryId);
   renderHubPtsVsAverage(entryId);
   renderHubTransfersByGw(entryId);
-  renderHubTeamValue(entryId);
 }
 
 // ── Helpers ────────────────────────────────────────────
@@ -1783,6 +1788,7 @@ function psForTeam(entryId) {
   return PLAYER_SCORES.filter(function(r){ return String(r.team_id) === psId; });
 }
 
+
 function renderHubGwScores(entryId) {
   var el = document.getElementById('hub-gw-scores');
   if (!el) return;
@@ -1855,40 +1861,6 @@ function renderHubTransfersByGw(entryId) {
   }
   svg+='</svg>';
   el.innerHTML=svg;
-}
-
-function renderHubTeamValue(entryId) {
-  var el = document.getElementById('hub-team-value');
-  if (!el) return;
-  var ps=psForTeam(entryId);
-  var valByGw={};
-  ps.filter(function(r){return r.status==='played'&&r.Price!=null;})
-    .forEach(function(r){valByGw[r.gw]=(valByGw[r.gw]||0)+(r.Price||0);});
-  var gws=Object.keys(valByGw).map(Number).sort(function(a,b){return a-b;});
-  if (!gws.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No price data.</div>';return;}
-  var vals=gws.map(function(g){return valByGw[g];});
-  var maxV=Math.max.apply(null,vals)||1, minV=Math.min.apply(null,vals);
-  var W=520,H=180,MT=22,MB=26,ML=46,MR=20;
-  var pW=W-ML-MR,pH=H-MT-MB;
-  function xs(g){return ML+(g-gws[0])/Math.max(gws[gws.length-1]-gws[0],1)*pW;}
-  function ys(v){return MT+pH-((v-minV)/Math.max(maxV-minV,0.1))*pH;}
-  var col=teamColor(entryId);
-  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
-  [minV,(minV+maxV)/2,maxV].forEach(function(v){
-    var y=ys(v);
-    svg+='<line x1="'+ML+'" y1="'+y.toFixed(1)+'" x2="'+(W-MR)+'" y2="'+y.toFixed(1)+'" stroke="var(--border)" stroke-width="1"/>';
-    svg+='<text x="'+(ML-4)+'" y="'+(y+4).toFixed(1)+'" text-anchor="end" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">\u00a3'+v.toFixed(1)+'m</text>';
-  });
-  var d=gws.map(function(g,i){return (i===0?'M':'L')+xs(g).toFixed(1)+','+ys(valByGw[g]).toFixed(1);}).join(' ');
-  svg+='<path d="'+d+'" stroke="'+col+'" stroke-width="2.5" fill="none"/>';
-  gws.forEach(function(g){
-    svg+='<circle cx="'+xs(g).toFixed(1)+'" cy="'+ys(valByGw[g]).toFixed(1)+'" r="3" fill="'+col+'"><title>GW'+g+': \u00a3'+valByGw[g].toFixed(1)+'m</title></circle>';
-  });
-  gws.filter(function(_,i){return i%5===0||i===gws.length-1;}).forEach(function(g){
-    svg+='<text x="'+xs(g).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+g+'</text>';
-  });
-  svg+='</svg>';
-  el.innerHTML='<div style="font-family:\'DM Mono\',monospace;font-size:10px;color:var(--text3);margin-bottom:4px">Starting XI total value by GW</div>'+svg;
 }
 
 // ══════════════════════════════════════════════════════
