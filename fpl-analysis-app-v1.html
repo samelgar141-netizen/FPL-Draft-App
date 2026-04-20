@@ -1053,8 +1053,9 @@ function renderPlayerStats() {
   const seenElements = new Set();
   let rows = [];
   CHOICES.forEach(c => {
-    if (seenElements.has(c.element)) return;
-    seenElements.add(c.element);
+    const key = String(c.element);
+    if (seenElements.has(key)) return;
+    seenElements.add(key);
     const p = PLAYERS[c.element];
     if (!p) return;
     if (psFilter !== 'all' && p.pos !== psFilter) return;
@@ -1067,12 +1068,11 @@ function renderPlayerStats() {
 
   // Add undrafted players
   Object.entries(PLAYERS).forEach(([id, p]) => {
-    const elementId = parseInt(id);
-    if (seenElements.has(elementId)) return;
+    if (seenElements.has(id)) return;
     if (psFilter !== 'all' && p.pos !== psFilter) return;
     if (searchVal && !p.name.toLowerCase().includes(searchVal) && !p.short.toLowerCase().includes(searchVal)) return;
-    seenElements.add(elementId);
-    rows.push({ element: elementId, draftRound: null, draftPick: null, originalTeam: null, currentOwner: null, traded: false, ...p });
+    seenElements.add(id);
+    rows.push({ element: parseInt(id), draftRound: null, draftPick: null, originalTeam: null, currentOwner: null, traded: false, ...p });
   });
 
   // Sort
