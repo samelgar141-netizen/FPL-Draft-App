@@ -186,6 +186,10 @@
   <button class="tab" onclick="showPage('hub')">Manager Hub</button>
   <button class="tab" onclick="showPage('league')">League Table</button>
   <button class="tab" onclick="showPage('transfers')">Transfer Analysis</button>
+  <button class="tab" onclick="showPage('h2h')">Head to Head</button>
+  <button class="tab" onclick="showPage('fixtures')">Fixtures</button>
+  <button class="tab" onclick="showPage('worm')">Worm Chart</button>
+  <button class="tab" onclick="showPage('funfacts')">Fun Facts</button>
 </nav>
 
 <main>
@@ -353,6 +357,55 @@
     </div>
   </div>
 
+  <!-- PAGE: HEAD TO HEAD -->
+  <div id="page-h2h" class="page">
+    <div class="filter-bar">
+      <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)">Team A</span>
+      <select id="h2h-team-a" class="tr-select" onchange="renderH2H()">
+        <option value="">Select team…</option>
+      </select>
+      <span style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-left:12px">vs</span>
+      <select id="h2h-team-b" class="tr-select" onchange="renderH2H()" style="margin-left:12px">
+        <option value="">Select team…</option>
+      </select>
+    </div>
+    <div class="metrics" id="h2h-summary"></div>
+    <div class="grid2">
+      <div class="card"><div class="card-title">Match history</div><div id="h2h-table"></div></div>
+      <div class="card"><div class="card-title">Points per game</div><div id="h2h-chart"></div></div>
+    </div>
+  </div>
+
+  <!-- PAGE: FIXTURES -->
+  <div id="page-fixtures" class="page">
+    <div class="card" style="margin-bottom:1.5rem">
+      <div class="card-title">Upcoming fixtures — colour = opponent strength</div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:0.75rem;font-family:'DM Mono',monospace">
+        <span style="background:rgba(239,68,68,0.25);border:1px solid var(--red);padding:2px 8px;border-radius:3px;margin-right:8px">Tough (top 3)</span>
+        <span style="background:rgba(245,158,11,0.25);border:1px solid var(--amber);padding:2px 8px;border-radius:3px;margin-right:8px">Mid (4–7)</span>
+        <span style="background:rgba(34,197,94,0.18);border:1px solid var(--green);padding:2px 8px;border-radius:3px">Easy (bottom 3)</span>
+      </div>
+      <div id="fix-grid" style="overflow-x:auto"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Remaining schedule difficulty (avg opponent pts)</div>
+      <div id="fix-difficulty"></div>
+    </div>
+  </div>
+
+  <!-- PAGE: WORM CHART -->
+  <div id="page-worm" class="page">
+    <div class="card">
+      <div class="card-title">League position by gameweek</div>
+      <div id="worm-chart"></div>
+      <div id="worm-legend" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:1rem"></div>
+    </div>
+  </div>
+
+  <!-- PAGE: FUN FACTS -->
+  <div id="page-funfacts" class="page">
+    <div class="metrics" id="funfacts-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+  </div>
 
 </main>
 
@@ -577,6 +630,10 @@ function renderAll() {
   initLeagueTable();
   initTransferAnalysis();
   renderSnakeRankPts();
+  initH2H();
+  initFixtures();
+  renderWorm();
+  renderFunFacts();
   ttInit();
 }
 
@@ -1988,6 +2045,346 @@ function ttPlayerGwChart(elementId) {
   return svg;
 }
 
+
+// ══════════════════════════════════════════════════════
+// PAGE: FUN FACTS
+// ══════════════════════════════════════════════════════
+
+function renderFunFacts() {
+  var el = document.getElementById('funfacts-grid');
+  if (!el) return;
+  var fin = MATCHES.filter(function(m) { return m.finished && m.team_points > 0; });
+  if (!fin.length) { el.innerHTML = '<div class="loading">No data.</div>'; return; }
+
+  function ffCard(emoji, title, val, sub, accentColor) {
+    return '<div class="metric" style="flex-direction:column;align-items:flex-start;gap:4px;padding:1.1rem 1.2rem;min-height:100px">' +
+      '<div style="font-size:22px;line-height:1">' + emoji + '</div>' +
+      '<div class="m-label" style="margin-top:4px">' + title + '</div>' +
+      '<div class="m-val" style="font-size:20px;color:' + accentColor + ';line-height:1.2">' + val + '</div>' +
+      '<div class="m-sub" style="font-size:11px;color:var(--text3)">' + sub + '</div>' +
+    '</div>';
+  }
+
+  function longestStreak(results, target) {
+    var max = 0, cur = 0;
+    results.forEach(function(r) { r === target ? (cur++, max = Math.max(max, cur)) : (cur = 0); });
+    return max;
+  }
+
+  // 1. Highest single-GW team score
+  var bigScore = fin.reduce(function(best, m) { return m.team_points > best.team_points ? m : best; }, fin[0]);
+  // 2. Lowest single-GW team score (> 0)
+  var lowScore = fin.reduce(function(best, m) { return m.team_points < best.team_points ? m : best; }, fin[0]);
+  // 3. Biggest win margin
+  var wins = fin.filter(function(m) { return m.team_result === 'Win'; });
+  var bigWin = wins.length ? wins.reduce(function(best, m) { return (m.points_difference || 0) > (best.points_difference || 0) ? m : best; }, wins[0]) : null;
+  // 4. Tightest win
+  var tightWin = wins.length ? wins.reduce(function(best, m) { return (m.points_difference || 0) < (best.points_difference || 0) ? m : best; }, wins[0]) : null;
+  // 5. Highest losing score
+  var losses = fin.filter(function(m) { return m.team_result === 'Lose'; });
+  var highLoss = losses.length ? losses.reduce(function(best, m) { return m.team_points > best.team_points ? m : best; }, losses[0]) : null;
+  // 6. Lowest winning score
+  var lowWin = wins.length ? wins.reduce(function(best, m) { return m.team_points < best.team_points ? m : best; }, wins[0]) : null;
+  // 7 & 8. Streaks per team
+  var bestWinStreak = { team: '', len: 0 }, bestLoseStreak = { team: '', len: 0 };
+  TEAMS_ORDER.forEach(function(id) {
+    var results = fin.filter(function(m) { return m.team === id; })
+                     .sort(function(a, b) { return a.gw - b.gw; })
+                     .map(function(m) { return m.team_result; });
+    var ws = longestStreak(results, 'Win');
+    var ls = longestStreak(results, 'Lose');
+    if (ws > bestWinStreak.len)  { bestWinStreak  = { team: TEAM_NAMES[id] || id, len: ws }; }
+    if (ls > bestLoseStreak.len) { bestLoseStreak = { team: TEAM_NAMES[id] || id, len: ls }; }
+  });
+  // 9. Most consistent (lowest std-dev of weekly points)
+  var consistency = TEAMS_ORDER.map(function(id) {
+    var pts = fin.filter(function(m) { return m.team === id; }).map(function(m) { return m.team_points; });
+    if (pts.length < 2) return { team: TEAM_NAMES[id] || id, sd: 999 };
+    var mean = pts.reduce(function(s, v) { return s + v; }, 0) / pts.length;
+    var sd = Math.sqrt(pts.reduce(function(s, v) { return s + Math.pow(v - mean, 2); }, 0) / pts.length);
+    return { team: TEAM_NAMES[id] || id, sd: Math.round(sd) };
+  }).sort(function(a, b) { return a.sd - b.sd; })[0];
+  // 10. Most wins overall
+  var winCounts = {};
+  TEAMS_ORDER.forEach(function(id) {
+    winCounts[id] = fin.filter(function(m) { return m.team === id && m.team_result === 'Win'; }).length;
+  });
+  var mostWinsId = TEAMS_ORDER.reduce(function(best, id) { return winCounts[id] > winCounts[best] ? id : best; }, TEAMS_ORDER[0]);
+  // 11. Best individual player GW score
+  var bestPlayer = null;
+  if (PLAYER_SCORES.length) {
+    var played = PLAYER_SCORES.filter(function(r) { return r.status === 'played' && r.total_points != null; });
+    if (played.length) bestPlayer = played.reduce(function(best, r) { return r.total_points > best.total_points ? r : best; }, played[0]);
+  }
+  // 12. Average score per GW (league total)
+  var gwGroups = {};
+  fin.forEach(function(m) {
+    if (!gwGroups[m.gw]) gwGroups[m.gw] = [];
+    gwGroups[m.gw].push(m.team_points);
+  });
+  var gwAvgs = Object.keys(gwGroups).map(function(gw) {
+    var pts = gwGroups[gw];
+    return { gw: parseInt(gw), avg: pts.reduce(function(s, v) { return s + v; }, 0) / pts.length };
+  });
+  var highAvgGw = gwAvgs.reduce(function(best, g) { return g.avg > best.avg ? g : best; }, gwAvgs[0]);
+  var lowAvgGw  = gwAvgs.reduce(function(best, g) { return g.avg < best.avg ? g : best; }, gwAvgs[0]);
+
+  el.innerHTML = [
+    ffCard('🏆', 'Highest single GW score', bigScore.team_points,
+      bigScore.team_name + ' vs ' + bigScore.opponent_name + ' — GW' + bigScore.gw, 'var(--green)'),
+    ffCard('💀', 'Lowest single GW score', lowScore.team_points,
+      lowScore.team_name + ' vs ' + lowScore.opponent_name + ' — GW' + lowScore.gw, 'var(--red)'),
+    bigWin ? ffCard('💥', 'Biggest winning margin', '+' + (bigWin.points_difference || 0) + ' pts',
+      bigWin.team_name + ' ' + (bigWin.team_points||0) + ' – ' + (bigWin.opponent_points||0) + ' ' + bigWin.opponent_name + ' (GW' + bigWin.gw + ')', 'var(--green)') : '',
+    tightWin ? ffCard('😬', 'Tightest win', '+' + (tightWin.points_difference || 0) + ' pts',
+      tightWin.team_name + ' ' + (tightWin.team_points||0) + ' – ' + (tightWin.opponent_points||0) + ' ' + tightWin.opponent_name + ' (GW' + tightWin.gw + ')', 'var(--amber)') : '',
+    highLoss ? ffCard('🤦', 'Highest losing score', highLoss.team_points,
+      highLoss.team_name + ' ' + (highLoss.team_points||0) + ' – ' + (highLoss.opponent_points||0) + ' ' + highLoss.opponent_name + ' (GW' + highLoss.gw + ')', 'var(--amber)') : '',
+    lowWin ? ffCard('😅', 'Lowest winning score', lowWin.team_points,
+      lowWin.team_name + ' ' + (lowWin.team_points||0) + ' – ' + (lowWin.opponent_points||0) + ' ' + lowWin.opponent_name + ' (GW' + lowWin.gw + ')', 'var(--amber)') : '',
+    bestWinStreak.len ? ffCard('🔥', 'Longest winning streak', bestWinStreak.len + ' games',
+      bestWinStreak.team, 'var(--green)') : '',
+    bestLoseStreak.len ? ffCard('📉', 'Longest losing streak', bestLoseStreak.len + ' games',
+      bestLoseStreak.team, 'var(--red)') : '',
+    consistency ? ffCard('🎯', 'Most consistent scorer', '±' + consistency.sd + ' pts SD',
+      consistency.team + ' — lowest week-to-week variance', 'var(--blue)') : '',
+    ffCard('🏅', 'Most wins this season', winCounts[mostWinsId] + ' wins',
+      TEAM_NAMES[mostWinsId] || mostWinsId, 'var(--green)'),
+    bestPlayer ? ffCard('⭐', 'Best individual GW score', bestPlayer.total_points + ' pts',
+      (bestPlayer.web_name || '?') + ' — GW' + bestPlayer.gw + ' (' + (TEAM_NAMES[bestPlayer.team_id] || '') + ')', 'var(--amber)') : '',
+    highAvgGw ? ffCard('📈', 'Highest-scoring GW (league avg)', Math.round(highAvgGw.avg) + ' avg pts',
+      'GW' + highAvgGw.gw + ' — lowest was GW' + lowAvgGw.gw + ' (' + Math.round(lowAvgGw.avg) + ' avg)', 'var(--purple)') : '',
+  ].join('');
+}
+
+// ══════════════════════════════════════════════════════
+// PAGE: WORM CHART
+// ══════════════════════════════════════════════════════
+
+function renderWorm() {
+  var el = document.getElementById('worm-chart');
+  var leg = document.getElementById('worm-legend');
+  if (!el) return;
+  var finished = MATCHES.filter(function(m) { return m.finished; });
+  if (!finished.length) { el.innerHTML = '<div class="loading">No data.</div>'; return; }
+  // One row per team per gw: use team_entry_id perspective
+  var teamGw = {};
+  finished.forEach(function(m) {
+    var id = m.team;
+    if (!teamGw[id]) teamGw[id] = {};
+    teamGw[id][m.gw] = m.league_position;
+  });
+  var gwList = [];
+  finished.forEach(function(m) { if (gwList.indexOf(m.gw) < 0) gwList.push(m.gw); });
+  gwList.sort(function(a, b) { return a - b; });
+  var minGw = gwList[0], maxGw = gwList[gwList.length - 1];
+  var numT = TEAMS_ORDER.length || 10;
+  var W = 700, H = 380, MT = 20, MB = 36, ML = 44, MR = 16;
+  var pW = W - ML - MR, pH = H - MT - MB;
+  function xs(gw) { return ML + (gw - minGw) / Math.max(maxGw - minGw, 1) * pW; }
+  function ys(p)  { return MT + (p - 1) / Math.max(numT - 1, 1) * pH; }
+  var ordinals = ['','1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th'];
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  // Horizontal grid lines + y-axis labels
+  for (var p = 1; p <= numT; p++) {
+    var gy = ys(p);
+    svg += '<line x1="' + ML + '" y1="' + gy.toFixed(1) + '" x2="' + (W - MR) + '" y2="' + gy.toFixed(1) + '" stroke="var(--border)" stroke-width="1"/>';
+    svg += '<text x="' + (ML - 5) + '" y="' + (gy + 4).toFixed(1) + '" text-anchor="end" font-size="10" fill="var(--text3)" font-family="DM Mono,monospace">' + (ordinals[p] || p) + '</text>';
+  }
+  // X-axis GW labels (every 4 GWs)
+  gwList.forEach(function(gw, i) {
+    if (i % 4 === 0 || i === gwList.length - 1) {
+      svg += '<text x="' + xs(gw).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW' + gw + '</text>';
+    }
+  });
+  // Lines + dots per team
+  TEAMS_ORDER.forEach(function(id, ti) {
+    var col = TEAM_COLORS[ti] || '#888';
+    var pts = gwList.filter(function(gw) { return teamGw[id] && teamGw[id][gw] != null; })
+                    .map(function(gw) { return { gw: gw, p: teamGw[id][gw] }; });
+    if (pts.length < 2) return;
+    var d = pts.map(function(pt, i) { return (i === 0 ? 'M' : 'L') + xs(pt.gw).toFixed(1) + ',' + ys(pt.p).toFixed(1); }).join(' ');
+    svg += '<path d="' + d + '" stroke="' + col + '" stroke-width="2.5" fill="none" opacity="0.9"/>';
+    pts.forEach(function(pt) {
+      svg += '<circle cx="' + xs(pt.gw).toFixed(1) + '" cy="' + ys(pt.p).toFixed(1) + '" r="3.5" fill="' + col + '" opacity="0.9"><title>' + (TEAM_NAMES[id] || id) + ' — GW' + pt.gw + ': ' + (ordinals[pt.p] || pt.p) + '</title></circle>';
+    });
+  });
+  svg += '</svg>';
+  el.innerHTML = svg;
+  // Legend
+  leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
+    var col = TEAM_COLORS[ti] || '#888';
+    return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:Syne,sans-serif;color:var(--text2)">' +
+      '<span style="width:18px;height:3px;background:' + col + ';border-radius:2px;flex-shrink:0"></span>' +
+      (TEAM_NAMES[id] || id) + '</span>';
+  }).join('');
+}
+
+// ══════════════════════════════════════════════════════
+// PAGE: FIXTURES
+// ══════════════════════════════════════════════════════
+
+function initFixtures() {
+  var finished = MATCHES.filter(function(m) { return m.finished; });
+  var upcoming = MATCHES.filter(function(m) { return !m.finished; });
+  if (!upcoming.length) {
+    document.getElementById('fix-grid').innerHTML = '<div style="color:var(--text3);font-size:12px;padding:1rem">No upcoming fixtures.</div>';
+    document.getElementById('fix-difficulty').innerHTML = '';
+    return;
+  }
+  var currentGw = finished.length ? Math.max.apply(null, finished.map(function(m) { return m.gw; })) : 0;
+  // Team strength: cumulative result points at latest finished gw
+  var strengthMap = {};
+  TEAMS_ORDER.forEach(function(id) {
+    var rows = finished.filter(function(m) { return m.team === id; });
+    if (!rows.length) { strengthMap[id] = 0; return; }
+    var latest = rows.reduce(function(best, m) { return m.gw > best.gw ? m : best; }, rows[0]);
+    strengthMap[id] = latest.cumulative_result_points || 0;
+  });
+  var sortedByStrength = TEAMS_ORDER.slice().sort(function(a, b) { return strengthMap[b] - strengthMap[a]; });
+  var strengthRank = {};
+  sortedByStrength.forEach(function(id, i) { strengthRank[id] = i + 1; }); // 1=strongest
+  function diffColor(opponentId) {
+    var rank = strengthRank[opponentId] || 5;
+    if (rank <= 3) return 'rgba(239,68,68,0.22)';
+    if (rank <= 7) return 'rgba(245,158,11,0.22)';
+    return 'rgba(34,197,94,0.15)';
+  }
+  function diffBorder(opponentId) {
+    var rank = strengthRank[opponentId] || 5;
+    if (rank <= 3) return '1px solid rgba(239,68,68,0.5)';
+    if (rank <= 7) return '1px solid rgba(245,158,11,0.4)';
+    return '1px solid rgba(34,197,94,0.4)';
+  }
+  // Build fixture lookup: gw -> { teamId -> opponentId }
+  var gwList = [];
+  var fixLookup = {};
+  upcoming.forEach(function(m) {
+    if (!fixLookup[m.gw]) { fixLookup[m.gw] = {}; gwList.push(m.gw); }
+    fixLookup[m.gw][m.team] = m.opponent;
+  });
+  gwList = gwList.filter(function(gw, i, a) { return a.indexOf(gw) === i; }).sort(function(a, b) { return a - b; });
+  // Fixture grid table
+  var html = '<table style="border-collapse:collapse;font-size:11px;font-family:\'DM Mono\',monospace;width:100%"><thead><tr>' +
+    '<th style="padding:6px 8px;color:var(--text3);text-align:left;white-space:nowrap">GW</th>';
+  TEAMS_ORDER.forEach(function(id) {
+    html += '<th style="padding:6px 4px;color:' + teamColor(id) + ';text-align:center;white-space:nowrap;font-family:Syne,sans-serif;font-size:10px">' + (TEAM_NAMES[id] || id) + '</th>';
+  });
+  html += '</tr></thead><tbody>';
+  gwList.forEach(function(gw) {
+    html += '<tr><td style="padding:5px 8px;color:var(--text2);font-weight:600">GW' + gw + '</td>';
+    TEAMS_ORDER.forEach(function(id) {
+      var oppId = fixLookup[gw] && fixLookup[gw][id];
+      if (oppId) {
+        var oppName = TEAM_NAMES[oppId] || '?';
+        var short = oppName.length > 8 ? oppName.slice(0, 7) + '…' : oppName;
+        html += '<td style="padding:4px 3px;text-align:center"><span style="display:inline-block;padding:3px 5px;border-radius:3px;background:' + diffColor(oppId) + ';border:' + diffBorder(oppId) + ';white-space:nowrap" title="vs ' + oppName + ' (rank ' + (strengthRank[oppId]||'?') + ')">' + short + '</span></td>';
+      } else {
+        html += '<td style="padding:4px 3px;text-align:center;color:var(--text3)">—</td>';
+      }
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('fix-grid').innerHTML = html;
+  // Schedule difficulty bar chart
+  var diffRows = TEAMS_ORDER.map(function(id) {
+    var oppIds = [];
+    gwList.forEach(function(gw) {
+      if (fixLookup[gw] && fixLookup[gw][id]) oppIds.push(fixLookup[gw][id]);
+    });
+    var avgStrength = oppIds.length ? oppIds.reduce(function(s, oid) { return s + (strengthMap[oid] || 0); }, 0) / oppIds.length : 0;
+    return { name: TEAM_NAMES[id] || String(id), val: Math.round(avgStrength), color: teamColor(id) };
+  }).sort(function(a, b) { return b.val - a.val; });
+  document.getElementById('fix-difficulty').innerHTML = hBarChart(diffRows, { maxW: 420 });
+}
+
+// ══════════════════════════════════════════════════════
+// PAGE: HEAD TO HEAD
+// ══════════════════════════════════════════════════════
+
+function initH2H() {
+  var selA = document.getElementById('h2h-team-a');
+  var selB = document.getElementById('h2h-team-b');
+  if (!selA || !selB || !TEAMS_ORDER.length) return;
+  var opts = TEAMS_ORDER.map(function(id) {
+    return '<option value="' + id + '">' + (TEAM_NAMES[id] || id) + '</option>';
+  }).join('');
+  selA.innerHTML = '<option value="">Select team…</option>' + opts;
+  selB.innerHTML = '<option value="">Select team…</option>' + opts;
+  if (TEAMS_ORDER.length >= 2) {
+    selA.value = String(TEAMS_ORDER[0]);
+    selB.value = String(TEAMS_ORDER[1]);
+    renderH2H();
+  }
+}
+
+function renderH2H() {
+  var teamA = parseInt(document.getElementById('h2h-team-a').value);
+  var teamB = parseInt(document.getElementById('h2h-team-b').value);
+  var summaryEl = document.getElementById('h2h-summary');
+  var tableEl   = document.getElementById('h2h-table');
+  var chartEl   = document.getElementById('h2h-chart');
+  if (!teamA || !teamB) {
+    summaryEl.innerHTML = '<div class="loading">Select two teams above.</div>';
+    tableEl.innerHTML = ''; chartEl.innerHTML = ''; return;
+  }
+  if (teamA === teamB) {
+    summaryEl.innerHTML = '<div class="loading">Select two different teams.</div>';
+    tableEl.innerHTML = ''; chartEl.innerHTML = ''; return;
+  }
+  var matches = MATCHES.filter(function(m) {
+    return m.finished && m.team === teamA && m.opponent === teamB;
+  }).sort(function(a, b) { return a.gw - b.gw; });
+  var nameA = TEAM_NAMES[teamA] || 'Team A';
+  var nameB = TEAM_NAMES[teamB] || 'Team B';
+  var colA = teamColor(teamA);
+  var colB = teamColor(teamB);
+  var wins   = matches.filter(function(m) { return m.team_result === 'Win';  }).length;
+  var draws  = matches.filter(function(m) { return m.team_result === 'Draw'; }).length;
+  var losses = matches.filter(function(m) { return m.team_result === 'Lose'; }).length;
+  var ptsA = matches.reduce(function(s, m) { return s + (m.team_points || 0); }, 0);
+  var ptsB = matches.reduce(function(s, m) { return s + (m.opponent_points || 0); }, 0);
+  summaryEl.innerHTML =
+    '<div class="metric"><div class="m-label">' + nameA + ' wins</div><div class="m-val" style="color:' + colA + '">' + wins + '</div></div>' +
+    '<div class="metric"><div class="m-label">Draws</div><div class="m-val" style="color:var(--amber)">' + draws + '</div></div>' +
+    '<div class="metric"><div class="m-label">' + nameB + ' wins</div><div class="m-val" style="color:' + colB + '">' + losses + '</div></div>' +
+    '<div class="metric"><div class="m-label">' + nameA + ' pts</div><div class="m-val" style="color:' + colA + '">' + ptsA + '</div></div>' +
+    '<div class="metric"><div class="m-label">' + nameB + ' pts</div><div class="m-val" style="color:' + colB + '">' + ptsB + '</div></div>';
+  if (!matches.length) {
+    tableEl.innerHTML = '<div style="color:var(--text3);padding:1rem;font-size:12px">No matches played yet.</div>';
+    chartEl.innerHTML = ''; return;
+  }
+  var tbl = '<table class="standings-table" style="width:100%"><thead><tr>' +
+    '<th>GW</th><th style="color:' + colA + '">' + nameA + '</th>' +
+    '<th style="color:' + colB + '">' + nameB + '</th><th>Result</th></tr></thead><tbody>';
+  matches.forEach(function(m) {
+    var rc = m.team_result === 'Win' ? 'var(--green)' : m.team_result === 'Draw' ? 'var(--amber)' : 'var(--red)';
+    tbl += '<tr><td style="font-family:\'DM Mono\',monospace;font-size:11px;color:var(--text3)">GW' + m.gw + '</td>' +
+      '<td style="font-weight:700;font-family:\'DM Mono\',monospace;color:' + colA + '">' + (m.team_points || 0) + '</td>' +
+      '<td style="font-weight:700;font-family:\'DM Mono\',monospace;color:' + colB + '">' + (m.opponent_points || 0) + '</td>' +
+      '<td style="color:' + rc + ';font-size:11px;font-weight:600">' + m.team_result + '</td></tr>';
+  });
+  tbl += '</tbody></table>';
+  tableEl.innerHTML = tbl;
+  var barW = 18, barGap = 4, groupGap = 14, MT = 20, MB = 28, ML = 8, MR = 8;
+  var groupW = barW * 2 + barGap;
+  var W = ML + MR + matches.length * (groupW + groupGap);
+  var plotH = 130;
+  var H = plotH + MT + MB;
+  var maxPts = Math.max.apply(null, matches.map(function(m) { return Math.max(m.team_points || 0, m.opponent_points || 0); })) || 1;
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  matches.forEach(function(m, i) {
+    var gx = ML + i * (groupW + groupGap);
+    var hA = ((m.team_points || 0) / maxPts) * plotH;
+    var hB = ((m.opponent_points || 0) / maxPts) * plotH;
+    svg += '<rect x="' + gx + '" y="' + (MT + plotH - hA).toFixed(1) + '" width="' + barW + '" height="' + hA.toFixed(1) + '" fill="' + colA + '" opacity="0.82" rx="2"><title>' + nameA + ' GW' + m.gw + ': ' + (m.team_points||0) + ' pts</title></rect>';
+    svg += '<rect x="' + (gx + barW + barGap) + '" y="' + (MT + plotH - hB).toFixed(1) + '" width="' + barW + '" height="' + hB.toFixed(1) + '" fill="' + colB + '" opacity="0.82" rx="2"><title>' + nameB + ' GW' + m.gw + ': ' + (m.opponent_points||0) + ' pts</title></rect>';
+    svg += '<text x="' + (gx + groupW / 2).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW' + m.gw + '</text>';
+  });
+  svg += '</svg>';
+  chartEl.innerHTML = svg;
+}
 
   function showPage(name) {
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
