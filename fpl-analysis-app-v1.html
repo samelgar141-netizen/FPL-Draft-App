@@ -313,7 +313,7 @@
     </div>
     <div class="grid2" style="margin-top:1.25rem">
       <div class="card"><div class="card-title">Points vs GW average</div><div id="hub-pts-vs-avg"></div></div>
-      <div class="card"><div class="card-title">Transfers by GW</div><div id="hub-transfers-gw"></div></div>
+      <div class="card"><div class="card-title">Record vs each opponent</div><div id="hub-h2h-record"></div></div>
     </div>
   </div>
 
@@ -1283,7 +1283,7 @@ function renderHub(entryId) {
   renderHubGwScores(entryId);
   renderHubPtsVsOpponent(entryId);
   renderHubPtsVsAverage(entryId);
-  renderHubTransfersByGw(entryId);
+  renderHubH2HRecord(entryId);
 }
 
 // ── Helpers ────────────────────────────────────────────
@@ -1898,30 +1898,51 @@ function renderHubPtsVsAverage(entryId) {
   }));
 }
 
-function renderHubTransfersByGw(entryId) {
-  var el = document.getElementById('hub-transfers-gw');
+function renderHubH2HRecord(entryId) {
+  var el = document.getElementById('hub-h2h-record');
   if (!el) return;
-  var myT=TRANSFERS_DATA.filter(function(t){return t.entry===entryId;});
-  if (!myT.length){el.innerHTML='<div style="color:var(--text3);font-size:12px;padding:0.5rem">No transfers made.</div>';return;}
-  var byGw={};
-  myT.forEach(function(t){byGw[t.event]=(byGw[t.event]||0)+1;});
-  var finished=MATCHES.filter(function(m){return m.finished;});
-  var maxGw=finished.length?Math.max.apply(null,finished.map(function(m){return m.gw;})):38;
-  var W=520,H=120,MT=8,MB=26,ML=24,MR=8;
-  var pW=W-ML-MR,pH=H-MT-MB;
-  var maxC=Math.max.apply(null,Object.values(byGw))||1;
-  var slot=pW/maxGw, barW=Math.max(3,slot-1);
-  var svg='<svg width="100%" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">';
-  for(var g=1;g<=maxGw;g++){
-    var c=byGw[g]||0;
-    if(!c) continue;
-    var x=ML+(g-1)*slot+(slot-barW)/2;
-    var h=(c/maxC)*pH, y=MT+pH-h;
-    svg+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="var(--blue)" opacity="0.75" rx="2"><title>GW'+g+': '+c+' transfer'+(c>1?'s':'')+'</title></rect>';
-    svg+='<text x="'+(x+barW/2).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">'+g+'</text>';
-  }
-  svg+='</svg>';
-  el.innerHTML=svg;
+  var finished = MATCHES.filter(function(m) { return m.finished && m.team === entryId; });
+  if (!finished.length) { el.innerHTML = '<div style="color:var(--text3);font-size:12px;padding:0.5rem">No data.</div>'; return; }
+
+  // Build record vs each opponent
+  var opponents = {};
+  finished.forEach(function(m) {
+    var opp = m.opponent;
+    if (!opponents[opp]) opponents[opp] = { name: m.opponent_name, p: 0, w: 0, d: 0, l: 0, gd: 0, pts: 0 };
+    var r = opponents[opp];
+    r.p++;
+    r.gd += (m.points_difference || 0);
+    if (m.team_result === 'Win')       { r.w++; r.pts += 3; }
+    else if (m.team_result === 'Draw') { r.d++; r.pts += 1; }
+    else                               { r.l++; }
+  });
+
+  var rows = Object.values(opponents).sort(function(a, b) {
+    return b.pts !== a.pts ? b.pts - a.pts : b.gd - a.gd;
+  });
+
+  var html = '<table class="standings-table" style="width:100%;font-size:12px"><thead><tr>' +
+    '<th style="text-align:left">Opponent</th>' +
+    '<th>P</th><th>W</th><th>D</th><th>L</th>' +
+    '<th>GD</th><th style="color:var(--green)">Pts</th>' +
+    '</tr></thead><tbody>';
+
+  rows.forEach(function(r) {
+    var gdStr = (r.gd > 0 ? '+' : '') + r.gd;
+    var gdCol = r.gd > 0 ? 'var(--green)' : r.gd < 0 ? 'var(--red)' : 'var(--text3)';
+    var oppCol = teamColor(Object.keys(opponents).find(function(id) { return opponents[id] === r; }));
+    html += '<tr>' +
+      '<td style="font-weight:600"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:' + oppCol + ';margin-right:6px"></span>' + r.name + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;color:var(--text2)">' + r.p + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;color:var(--green)">' + r.w + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;color:var(--amber)">' + r.d + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;color:var(--red)">' + r.l + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;color:' + gdCol + '">' + gdStr + '</td>' +
+      '<td style="font-family:\'DM Mono\',monospace;text-align:center;font-weight:700;color:var(--green)">' + r.pts + '</td>' +
+      '</tr>';
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
 }
 
 // ══════════════════════════════════════════════════════
