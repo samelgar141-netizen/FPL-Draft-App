@@ -400,7 +400,7 @@
         <div class="card-title" id="worm-title" style="margin-bottom:0">League position by gameweek</div>
         <div style="display:flex;gap:6px">
           <button class="fbtn active" id="worm-btn-pos" onclick="switchWormView('position')">League Position</button>
-          <button class="fbtn" id="worm-btn-pts" onclick="switchWormView('points')">Cumulative Points</button>
+          <button class="fbtn" id="worm-btn-pts" onclick="switchWormView('points')">Cumulative League Points</button>
         </div>
       </div>
       <div id="worm-chart"></div>
@@ -2175,7 +2175,7 @@ function switchWormView(view) {
   document.getElementById('worm-btn-pts').classList.toggle('active', view === 'points');
   document.getElementById('worm-title').textContent = view === 'position'
     ? 'League position by gameweek'
-    : 'Cumulative points by gameweek';
+    : 'Cumulative league points by gameweek';
   if (view === 'position') renderWorm(); else renderWormPoints();
 }
 
@@ -2249,7 +2249,7 @@ function renderWormPoints() {
   finished.forEach(function(m) {
     var id = m.team;
     if (!teamGw[id]) teamGw[id] = {};
-    teamGw[id][m.gw] = m.cumulative_team_points || 0;
+    teamGw[id][m.gw] = m.cumulative_result_points || 0;
   });
   var gwList = [];
   finished.forEach(function(m) { if (gwList.indexOf(m.gw) < 0) gwList.push(m.gw); });
