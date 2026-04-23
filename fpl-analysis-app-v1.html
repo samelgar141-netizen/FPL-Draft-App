@@ -404,7 +404,12 @@
         </div>
       </div>
       <div id="worm-chart"></div>
-      <div id="worm-legend" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:1rem"></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:1rem;flex-wrap:wrap">
+        <span style="font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;flex-shrink:0">Filter:</span>
+        <button class="fbtn active" onclick="wormSelectAll()" style="font-size:10px;padding:3px 8px">All</button>
+        <button class="fbtn" onclick="wormSelectNone()" style="font-size:10px;padding:3px 8px">None</button>
+        <div id="worm-legend" style="display:flex;flex-wrap:wrap;gap:6px"></div>
+      </div>
     </div>
   </div>
 
@@ -2168,6 +2173,51 @@ function renderFunFacts() {
 // ══════════════════════════════════════════════════════
 
 var wormView = 'position';
+var wormSelectedTeams = new Set();
+
+function initWormFilter() {
+  wormSelectedTeams = new Set(TEAMS_ORDER.map(String));
+  var leg = document.getElementById('worm-legend');
+  if (!leg) return;
+  leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
+    var col = TEAM_COLORS[ti] || '#888';
+    var name = TEAM_NAMES[id] || id;
+    return '<button id="worm-tb-' + id + '" onclick="toggleWormTeam(' + id + ')" ' +
+      'style="display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:12px;border:1.5px solid ' + col + ';background:' + col + '22;color:var(--text);font-size:11px;font-family:Syne,sans-serif;cursor:pointer;transition:opacity .15s">' +
+      '<span style="width:10px;height:10px;border-radius:50%;background:' + col + ';flex-shrink:0"></span>' + name +
+      '</button>';
+  }).join('');
+}
+
+function toggleWormTeam(id) {
+  var key = String(id);
+  if (wormSelectedTeams.has(key)) {
+    wormSelectedTeams.delete(key);
+  } else {
+    wormSelectedTeams.add(key);
+  }
+  var btn = document.getElementById('worm-tb-' + id);
+  if (btn) btn.style.opacity = wormSelectedTeams.has(key) ? '1' : '0.3';
+  if (wormView === 'position') renderWorm(true); else renderWormPoints(true);
+}
+
+function wormSelectAll() {
+  wormSelectedTeams = new Set(TEAMS_ORDER.map(String));
+  TEAMS_ORDER.forEach(function(id) {
+    var btn = document.getElementById('worm-tb-' + id);
+    if (btn) btn.style.opacity = '1';
+  });
+  if (wormView === 'position') renderWorm(true); else renderWormPoints(true);
+}
+
+function wormSelectNone() {
+  wormSelectedTeams.clear();
+  TEAMS_ORDER.forEach(function(id) {
+    var btn = document.getElementById('worm-tb-' + id);
+    if (btn) btn.style.opacity = '0.3';
+  });
+  if (wormView === 'position') renderWorm(true); else renderWormPoints(true);
+}
 
 function switchWormView(view) {
   wormView = view;
@@ -2176,16 +2226,15 @@ function switchWormView(view) {
   document.getElementById('worm-title').textContent = view === 'position'
     ? 'League position by gameweek'
     : 'Cumulative league points by gameweek';
-  if (view === 'position') renderWorm(); else renderWormPoints();
+  if (view === 'position') renderWorm(true); else renderWormPoints(true);
 }
 
-function renderWorm() {
+function renderWorm(skipFilterInit) {
   var el = document.getElementById('worm-chart');
-  var leg = document.getElementById('worm-legend');
   if (!el) return;
   var finished = MATCHES.filter(function(m) { return m.finished; });
   if (!finished.length) { el.innerHTML = '<div class="loading">No data.</div>'; return; }
-  // One row per team per gw: use team_entry_id perspective
+  if (!skipFilterInit) initWormFilter();
   var teamGw = {};
   finished.forEach(function(m) {
     var id = m.team;
@@ -2203,20 +2252,17 @@ function renderWorm() {
   function ys(p)  { return MT + (p - 1) / Math.max(numT - 1, 1) * pH; }
   var ordinals = ['','1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th'];
   var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
-  // Horizontal grid lines + y-axis labels
   for (var p = 1; p <= numT; p++) {
     var gy = ys(p);
     svg += '<line x1="' + ML + '" y1="' + gy.toFixed(1) + '" x2="' + (W - MR) + '" y2="' + gy.toFixed(1) + '" stroke="var(--border)" stroke-width="1"/>';
     svg += '<text x="' + (ML - 5) + '" y="' + (gy + 4).toFixed(1) + '" text-anchor="end" font-size="10" fill="var(--text3)" font-family="DM Mono,monospace">' + (ordinals[p] || p) + '</text>';
   }
-  // X-axis GW labels (every 4 GWs)
   gwList.forEach(function(gw, i) {
-    if (i % 4 === 0 || i === gwList.length - 1) {
+    if (i % 4 === 0 || i === gwList.length - 1)
       svg += '<text x="' + xs(gw).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW' + gw + '</text>';
-    }
   });
-  // Lines + dots per team
   TEAMS_ORDER.forEach(function(id, ti) {
+    if (!wormSelectedTeams.has(String(id))) return;
     var col = TEAM_COLORS[ti] || '#888';
     var pts = gwList.filter(function(gw) { return teamGw[id] && teamGw[id][gw] != null; })
                     .map(function(gw) { return { gw: gw, p: teamGw[id][gw] }; });
@@ -2229,22 +2275,14 @@ function renderWorm() {
   });
   svg += '</svg>';
   el.innerHTML = svg;
-  // Legend
-  leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
-    var col = TEAM_COLORS[ti] || '#888';
-    return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:Syne,sans-serif;color:var(--text2)">' +
-      '<span style="width:18px;height:3px;background:' + col + ';border-radius:2px;flex-shrink:0"></span>' +
-      (TEAM_NAMES[id] || id) + '</span>';
-  }).join('');
 }
 
-function renderWormPoints() {
+function renderWormPoints(skipFilterInit) {
   var el = document.getElementById('worm-chart');
-  var leg = document.getElementById('worm-legend');
   if (!el) return;
   var finished = MATCHES.filter(function(m) { return m.finished; });
   if (!finished.length) { el.innerHTML = '<div class="loading">No data.</div>'; return; }
-  // One row per team per gw
+  if (!skipFilterInit) initWormFilter();
   var teamGw = {};
   finished.forEach(function(m) {
     var id = m.team;
@@ -2276,8 +2314,8 @@ function renderWormPoints() {
       svg += '<text x="' + xs(gw).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW' + gw + '</text>';
     }
   });
-  // Lines + dots per team
   TEAMS_ORDER.forEach(function(id, ti) {
+    if (!wormSelectedTeams.has(String(id))) return;
     var col = TEAM_COLORS[ti] || '#888';
     var pts = gwList.filter(function(gw) { return teamGw[id] && teamGw[id][gw] != null; })
                     .map(function(gw) { return { gw: gw, v: teamGw[id][gw] }; });
@@ -2290,13 +2328,6 @@ function renderWormPoints() {
   });
   svg += '</svg>';
   el.innerHTML = svg;
-  // Legend (shared with position chart)
-  leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
-    var col = TEAM_COLORS[ti] || '#888';
-    return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:Syne,sans-serif;color:var(--text2)">' +
-      '<span style="width:18px;height:3px;background:' + col + ';border-radius:2px;flex-shrink:0"></span>' +
-      (TEAM_NAMES[id] || id) + '</span>';
-  }).join('');
 }
 
 // ══════════════════════════════════════════════════════
