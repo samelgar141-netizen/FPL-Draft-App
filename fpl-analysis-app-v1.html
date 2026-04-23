@@ -1636,22 +1636,32 @@ function renderLeagueTable() {
 function renderLTTable(rows) {
   var teams = {};
   rows.forEach(function(r) {
-    if (!teams[r.team]) teams[r.team] = { name: r.team_name, gp:0, w:0, d:0, l:0, gf:0, ga:0, pts:0 };
+    if (!teams[r.team]) teams[r.team] = { name: r.team_name, gp:0, w:0, d:0, l:0, gf:0, ga:0, pts:0, history:[] };
     var t = teams[r.team];
     t.gp++; t.gf += r.team_points; t.ga += r.opponent_points;
     if (r.team_result === 'Win') { t.w++; t.pts += 3; }
     else if (r.team_result === 'Draw') { t.d++; t.pts += 1; }
     else t.l++;
+    t.history.push({ gw: r.gw, result: r.team_result, tf: r.team_points, ta: r.opponent_points, opp: r.opponent_name });
   });
   var sorted = Object.values(teams).sort(function(a,b){
     if (b.pts !== a.pts) return b.pts - a.pts;
     return (b.gf-b.ga) - (a.gf-a.ga);
   });
-  var html = '<div style="overflow-x:auto"><table class="stat"><thead><tr><th>#</th><th style="text-align:left">Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody>';
+  var html = '<div style="overflow-x:auto"><table class="stat"><thead><tr><th>#</th><th style="text-align:left">Team</th><th>GP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th><th>Last 5</th></tr></thead><tbody>';
   sorted.forEach(function(t, i) {
     var gd = t.gf - t.ga;
     var gdStr = gd > 0 ? '+'+gd : String(gd);
     var gdCol = gd > 0 ? 'var(--green)' : gd < 0 ? 'var(--red)' : 'var(--text2)';
+    // Last 5 results — most recent last (right = newest)
+    var last5 = t.history.slice().sort(function(a,b){return a.gw-b.gw;}).slice(-5);
+    var dotsHtml = '<span style="display:inline-flex;gap:3px;align-items:center">';
+    last5.forEach(function(h) {
+      var bg = h.result === 'Win' ? '#22c55e' : h.result === 'Draw' ? '#f59e0b' : '#ef4444';
+      var tip = 'GW' + h.gw + ': ' + h.result + ' ' + h.tf + '–' + h.ta + ' vs ' + h.opp;
+      dotsHtml += '<span title="' + tip + '" style="display:inline-block;width:14px;height:14px;border-radius:3px;background:' + bg + ';cursor:default"></span>';
+    });
+    dotsHtml += '</span>';
     html += '<tr><td><span class="rank rank-' + (i < 3 ? i+1 : 'n') + '">' + (i+1) + '</span></td>';
     html += '<td style="font-weight:600">' + t.name + '</td>';
     html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.gp + '</td>';
@@ -1661,7 +1671,8 @@ function renderLTTable(rows) {
     html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.gf + '</td>';
     html += '<td style="font-family:\'DM Mono\',monospace;text-align:center">' + t.ga + '</td>';
     html += '<td style="color:' + gdCol + ';font-family:\'DM Mono\',monospace;text-align:center">' + gdStr + '</td>';
-    html += '<td style="font-weight:700;color:var(--green);font-family:\'DM Mono\',monospace;text-align:center">' + t.pts + '</td></tr>';
+    html += '<td style="font-weight:700;color:var(--green);font-family:\'DM Mono\',monospace;text-align:center">' + t.pts + '</td>';
+    html += '<td style="text-align:center">' + dotsHtml + '</td></tr>';
   });
   html += '</tbody></table></div>';
   return html;
