@@ -188,7 +188,7 @@
   <button class="tab" onclick="showPage('transfers')">Transfer Analysis</button>
   <button class="tab" onclick="showPage('h2h')">Head to Head</button>
   <button class="tab" onclick="showPage('fixtures')">Fixtures</button>
-  <button class="tab" onclick="showPage('worm')">Worm Chart</button>
+  <button class="tab" onclick="showPage('worm')">Historic League Table</button>
   <button class="tab" onclick="showPage('funfacts')">Fun Facts</button>
 </nav>
 
@@ -393,10 +393,16 @@
     </div>
   </div>
 
-  <!-- PAGE: WORM CHART -->
+  <!-- PAGE: HISTORIC LEAGUE TABLE -->
   <div id="page-worm" class="page">
     <div class="card">
-      <div class="card-title">League position by gameweek</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px">
+        <div class="card-title" id="worm-title" style="margin-bottom:0">League position by gameweek</div>
+        <div style="display:flex;gap:6px">
+          <button class="fbtn active" id="worm-btn-pos" onclick="switchWormView('position')">League Position</button>
+          <button class="fbtn" id="worm-btn-pts" onclick="switchWormView('points')">Cumulative Points</button>
+        </div>
+      </div>
       <div id="worm-chart"></div>
       <div id="worm-legend" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:1rem"></div>
     </div>
@@ -2161,6 +2167,18 @@ function renderFunFacts() {
 // PAGE: WORM CHART
 // ══════════════════════════════════════════════════════
 
+var wormView = 'position';
+
+function switchWormView(view) {
+  wormView = view;
+  document.getElementById('worm-btn-pos').classList.toggle('active', view === 'position');
+  document.getElementById('worm-btn-pts').classList.toggle('active', view === 'points');
+  document.getElementById('worm-title').textContent = view === 'position'
+    ? 'League position by gameweek'
+    : 'Cumulative points by gameweek';
+  if (view === 'position') renderWorm(); else renderWormPoints();
+}
+
 function renderWorm() {
   var el = document.getElementById('worm-chart');
   var leg = document.getElementById('worm-legend');
@@ -2212,6 +2230,67 @@ function renderWorm() {
   svg += '</svg>';
   el.innerHTML = svg;
   // Legend
+  leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
+    var col = TEAM_COLORS[ti] || '#888';
+    return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:Syne,sans-serif;color:var(--text2)">' +
+      '<span style="width:18px;height:3px;background:' + col + ';border-radius:2px;flex-shrink:0"></span>' +
+      (TEAM_NAMES[id] || id) + '</span>';
+  }).join('');
+}
+
+function renderWormPoints() {
+  var el = document.getElementById('worm-chart');
+  var leg = document.getElementById('worm-legend');
+  if (!el) return;
+  var finished = MATCHES.filter(function(m) { return m.finished; });
+  if (!finished.length) { el.innerHTML = '<div class="loading">No data.</div>'; return; }
+  // One row per team per gw
+  var teamGw = {};
+  finished.forEach(function(m) {
+    var id = m.team;
+    if (!teamGw[id]) teamGw[id] = {};
+    teamGw[id][m.gw] = m.cumulative_team_points || 0;
+  });
+  var gwList = [];
+  finished.forEach(function(m) { if (gwList.indexOf(m.gw) < 0) gwList.push(m.gw); });
+  gwList.sort(function(a, b) { return a - b; });
+  var minGw = gwList[0], maxGw = gwList[gwList.length - 1];
+  var allPts = [];
+  TEAMS_ORDER.forEach(function(id) { gwList.forEach(function(gw) { if (teamGw[id] && teamGw[id][gw] != null) allPts.push(teamGw[id][gw]); }); });
+  var maxPts = Math.max.apply(null, allPts) || 1;
+  var W = 700, H = 380, MT = 20, MB = 36, ML = 50, MR = 16;
+  var pW = W - ML - MR, pH = H - MT - MB;
+  function xs(gw) { return ML + (gw - minGw) / Math.max(maxGw - minGw, 1) * pW; }
+  function ys(pts) { return MT + pH - (pts / maxPts) * pH; }
+  var svg = '<svg width="100%" viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg">';
+  // Horizontal grid lines + y-axis labels (5 ticks)
+  for (var t = 0; t <= 4; t++) {
+    var tickPts = Math.round((maxPts / 4) * t);
+    var gy = ys(tickPts);
+    svg += '<line x1="' + ML + '" y1="' + gy.toFixed(1) + '" x2="' + (W - MR) + '" y2="' + gy.toFixed(1) + '" stroke="var(--border)" stroke-width="1"/>';
+    svg += '<text x="' + (ML - 5) + '" y="' + (gy + 4).toFixed(1) + '" text-anchor="end" font-size="10" fill="var(--text3)" font-family="DM Mono,monospace">' + tickPts + '</text>';
+  }
+  // X-axis GW labels
+  gwList.forEach(function(gw, i) {
+    if (i % 4 === 0 || i === gwList.length - 1) {
+      svg += '<text x="' + xs(gw).toFixed(1) + '" y="' + (H - 10) + '" text-anchor="middle" font-size="9" fill="var(--text3)" font-family="DM Mono,monospace">GW' + gw + '</text>';
+    }
+  });
+  // Lines + dots per team
+  TEAMS_ORDER.forEach(function(id, ti) {
+    var col = TEAM_COLORS[ti] || '#888';
+    var pts = gwList.filter(function(gw) { return teamGw[id] && teamGw[id][gw] != null; })
+                    .map(function(gw) { return { gw: gw, v: teamGw[id][gw] }; });
+    if (pts.length < 2) return;
+    var d = pts.map(function(pt, i) { return (i === 0 ? 'M' : 'L') + xs(pt.gw).toFixed(1) + ',' + ys(pt.v).toFixed(1); }).join(' ');
+    svg += '<path d="' + d + '" stroke="' + col + '" stroke-width="2.5" fill="none" opacity="0.9"/>';
+    pts.forEach(function(pt) {
+      svg += '<circle cx="' + xs(pt.gw).toFixed(1) + '" cy="' + ys(pt.v).toFixed(1) + '" r="3.5" fill="' + col + '" opacity="0.9"><title>' + (TEAM_NAMES[id] || id) + ' — GW' + pt.gw + ': ' + pt.v + ' pts</title></circle>';
+    });
+  });
+  svg += '</svg>';
+  el.innerHTML = svg;
+  // Legend (shared with position chart)
   leg.innerHTML = TEAMS_ORDER.map(function(id, ti) {
     var col = TEAM_COLORS[ti] || '#888';
     return '<span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:Syne,sans-serif;color:var(--text2)">' +
