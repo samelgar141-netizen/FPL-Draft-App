@@ -77,7 +77,7 @@
   .pos-FWD { background: rgba(239,68,68,0.20); color: var(--red); }
 
   /* TEAM GRID */
-  .teams-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 1.25rem; }
+  .teams-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.25rem; }
   .team-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
   .team-card-head { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
   .team-card-name { font-weight: 700; font-size: 14px; }
@@ -136,26 +136,6 @@
   .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
   @media(max-width:900px){ .grid3 { grid-template-columns: 1fr 1fr; } }
   @media(max-width:600px){ .grid3 { grid-template-columns: 1fr; } }
-
-  /* TABLE SCROLL WRAPPERS */
-  #hub-h2h-record, #lt-table, #h2h-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-
-  /* MOBILE BREAKPOINT — 600px */
-  @media(max-width:600px){
-    header { padding: 1rem 1rem 0.75rem; }
-    nav    { padding: 0.5rem 0.75rem; }
-    main   { padding: 1rem; }
-    .card  { padding: 1rem; }
-    h1     { font-size: 18px; }
-    .m-val { font-size: 18px; }
-    .tab   { padding: 5px 10px; font-size: 12px; }
-    .search-box { width: 140px; }
-  }
-
-  /* MOBILE BREAKPOINT — 480px: let tabs wrap rather than scroll */
-  @media(max-width:480px){
-    nav { flex-wrap: wrap; overflow-x: unset; }
-  }
 
   /* TEAM STRENGTH BARS */
   .strength-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--border); }
