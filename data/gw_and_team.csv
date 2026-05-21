@@ -6,8 +6,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 1,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 1,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 1,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-1,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-1,322478,seans team,322000,sean,kelly,sk,2,9
+1,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+1,322478,seans team,322000,sean,kelly,sk,3,9
 1,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 2,296586,AL XI,295705,Aaron,Long,AL,5,1
 2,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -16,8 +16,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 2,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 2,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 2,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-2,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-2,322478,seans team,322000,sean,kelly,sk,2,9
+2,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+2,322478,seans team,322000,sean,kelly,sk,3,9
 2,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 3,296586,AL XI,295705,Aaron,Long,AL,5,1
 3,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -26,8 +26,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 3,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 3,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 3,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-3,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-3,322478,seans team,322000,sean,kelly,sk,2,9
+3,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+3,322478,seans team,322000,sean,kelly,sk,3,9
 3,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 4,296586,AL XI,295705,Aaron,Long,AL,5,1
 4,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -36,8 +36,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 4,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 4,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 4,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-4,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-4,322478,seans team,322000,sean,kelly,sk,2,9
+4,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+4,322478,seans team,322000,sean,kelly,sk,3,9
 4,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 5,296586,AL XI,295705,Aaron,Long,AL,5,1
 5,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -46,8 +46,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 5,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 5,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 5,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-5,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-5,322478,seans team,322000,sean,kelly,sk,2,9
+5,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+5,322478,seans team,322000,sean,kelly,sk,3,9
 5,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 6,296586,AL XI,295705,Aaron,Long,AL,5,1
 6,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -56,8 +56,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 6,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 6,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 6,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-6,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-6,322478,seans team,322000,sean,kelly,sk,2,9
+6,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+6,322478,seans team,322000,sean,kelly,sk,3,9
 6,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 7,296586,AL XI,295705,Aaron,Long,AL,5,1
 7,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -66,8 +66,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 7,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 7,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 7,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-7,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-7,322478,seans team,322000,sean,kelly,sk,2,9
+7,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+7,322478,seans team,322000,sean,kelly,sk,3,9
 7,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 8,296586,AL XI,295705,Aaron,Long,AL,5,1
 8,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -76,8 +76,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 8,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 8,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 8,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-8,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-8,322478,seans team,322000,sean,kelly,sk,2,9
+8,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+8,322478,seans team,322000,sean,kelly,sk,3,9
 8,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 9,296586,AL XI,295705,Aaron,Long,AL,5,1
 9,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -86,8 +86,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 9,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 9,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 9,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-9,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-9,322478,seans team,322000,sean,kelly,sk,2,9
+9,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+9,322478,seans team,322000,sean,kelly,sk,3,9
 9,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 10,296586,AL XI,295705,Aaron,Long,AL,5,1
 10,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -96,8 +96,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 10,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 10,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 10,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-10,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-10,322478,seans team,322000,sean,kelly,sk,2,9
+10,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+10,322478,seans team,322000,sean,kelly,sk,3,9
 10,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 11,296586,AL XI,295705,Aaron,Long,AL,5,1
 11,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -106,8 +106,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 11,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 11,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 11,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-11,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-11,322478,seans team,322000,sean,kelly,sk,2,9
+11,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+11,322478,seans team,322000,sean,kelly,sk,3,9
 11,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 12,296586,AL XI,295705,Aaron,Long,AL,5,1
 12,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -116,8 +116,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 12,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 12,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 12,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-12,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-12,322478,seans team,322000,sean,kelly,sk,2,9
+12,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+12,322478,seans team,322000,sean,kelly,sk,3,9
 12,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 13,296586,AL XI,295705,Aaron,Long,AL,5,1
 13,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -126,8 +126,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 13,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 13,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 13,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-13,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-13,322478,seans team,322000,sean,kelly,sk,2,9
+13,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+13,322478,seans team,322000,sean,kelly,sk,3,9
 13,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 14,296586,AL XI,295705,Aaron,Long,AL,5,1
 14,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -136,8 +136,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 14,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 14,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 14,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-14,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-14,322478,seans team,322000,sean,kelly,sk,2,9
+14,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+14,322478,seans team,322000,sean,kelly,sk,3,9
 14,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 15,296586,AL XI,295705,Aaron,Long,AL,5,1
 15,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -146,8 +146,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 15,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 15,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 15,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-15,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-15,322478,seans team,322000,sean,kelly,sk,2,9
+15,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+15,322478,seans team,322000,sean,kelly,sk,3,9
 15,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 16,296586,AL XI,295705,Aaron,Long,AL,5,1
 16,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -156,8 +156,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 16,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 16,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 16,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-16,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-16,322478,seans team,322000,sean,kelly,sk,2,9
+16,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+16,322478,seans team,322000,sean,kelly,sk,3,9
 16,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 17,296586,AL XI,295705,Aaron,Long,AL,5,1
 17,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -166,8 +166,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 17,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 17,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 17,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-17,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-17,322478,seans team,322000,sean,kelly,sk,2,9
+17,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+17,322478,seans team,322000,sean,kelly,sk,3,9
 17,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 18,296586,AL XI,295705,Aaron,Long,AL,5,1
 18,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -176,8 +176,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 18,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 18,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 18,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-18,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-18,322478,seans team,322000,sean,kelly,sk,2,9
+18,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+18,322478,seans team,322000,sean,kelly,sk,3,9
 18,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 19,296586,AL XI,295705,Aaron,Long,AL,5,1
 19,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -186,8 +186,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 19,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 19,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 19,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-19,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-19,322478,seans team,322000,sean,kelly,sk,2,9
+19,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+19,322478,seans team,322000,sean,kelly,sk,3,9
 19,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 20,296586,AL XI,295705,Aaron,Long,AL,5,1
 20,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -196,8 +196,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 20,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 20,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 20,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-20,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-20,322478,seans team,322000,sean,kelly,sk,2,9
+20,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+20,322478,seans team,322000,sean,kelly,sk,3,9
 20,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 21,296586,AL XI,295705,Aaron,Long,AL,5,1
 21,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -206,8 +206,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 21,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 21,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 21,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-21,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-21,322478,seans team,322000,sean,kelly,sk,2,9
+21,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+21,322478,seans team,322000,sean,kelly,sk,3,9
 21,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 22,296586,AL XI,295705,Aaron,Long,AL,5,1
 22,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -216,8 +216,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 22,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 22,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 22,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-22,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-22,322478,seans team,322000,sean,kelly,sk,2,9
+22,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+22,322478,seans team,322000,sean,kelly,sk,3,9
 22,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 23,296586,AL XI,295705,Aaron,Long,AL,5,1
 23,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -226,8 +226,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 23,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 23,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 23,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-23,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-23,322478,seans team,322000,sean,kelly,sk,2,9
+23,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+23,322478,seans team,322000,sean,kelly,sk,3,9
 23,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 24,296586,AL XI,295705,Aaron,Long,AL,5,1
 24,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -236,8 +236,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 24,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 24,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 24,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-24,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-24,322478,seans team,322000,sean,kelly,sk,2,9
+24,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+24,322478,seans team,322000,sean,kelly,sk,3,9
 24,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 25,296586,AL XI,295705,Aaron,Long,AL,5,1
 25,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -246,8 +246,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 25,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 25,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 25,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-25,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-25,322478,seans team,322000,sean,kelly,sk,2,9
+25,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+25,322478,seans team,322000,sean,kelly,sk,3,9
 25,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 26,296586,AL XI,295705,Aaron,Long,AL,5,1
 26,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -256,8 +256,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 26,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 26,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 26,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-26,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-26,322478,seans team,322000,sean,kelly,sk,2,9
+26,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+26,322478,seans team,322000,sean,kelly,sk,3,9
 26,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 27,296586,AL XI,295705,Aaron,Long,AL,5,1
 27,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -266,8 +266,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 27,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 27,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 27,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-27,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-27,322478,seans team,322000,sean,kelly,sk,2,9
+27,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+27,322478,seans team,322000,sean,kelly,sk,3,9
 27,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 28,296586,AL XI,295705,Aaron,Long,AL,5,1
 28,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -276,8 +276,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 28,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 28,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 28,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-28,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-28,322478,seans team,322000,sean,kelly,sk,2,9
+28,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+28,322478,seans team,322000,sean,kelly,sk,3,9
 28,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 29,296586,AL XI,295705,Aaron,Long,AL,5,1
 29,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -286,8 +286,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 29,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 29,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 29,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-29,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-29,322478,seans team,322000,sean,kelly,sk,2,9
+29,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+29,322478,seans team,322000,sean,kelly,sk,3,9
 29,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 30,296586,AL XI,295705,Aaron,Long,AL,5,1
 30,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -296,8 +296,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 30,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 30,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 30,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-30,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-30,322478,seans team,322000,sean,kelly,sk,2,9
+30,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+30,322478,seans team,322000,sean,kelly,sk,3,9
 30,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 31,296586,AL XI,295705,Aaron,Long,AL,5,1
 31,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -306,8 +306,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 31,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 31,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 31,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-31,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-31,322478,seans team,322000,sean,kelly,sk,2,9
+31,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+31,322478,seans team,322000,sean,kelly,sk,3,9
 31,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 32,296586,AL XI,295705,Aaron,Long,AL,5,1
 32,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -316,8 +316,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 32,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 32,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 32,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-32,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-32,322478,seans team,322000,sean,kelly,sk,2,9
+32,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+32,322478,seans team,322000,sean,kelly,sk,3,9
 32,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 33,296586,AL XI,295705,Aaron,Long,AL,5,1
 33,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -326,8 +326,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 33,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 33,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 33,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-33,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-33,322478,seans team,322000,sean,kelly,sk,2,9
+33,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+33,322478,seans team,322000,sean,kelly,sk,3,9
 33,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 34,296586,AL XI,295705,Aaron,Long,AL,5,1
 34,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -336,8 +336,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 34,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 34,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 34,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-34,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-34,322478,seans team,322000,sean,kelly,sk,2,9
+34,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+34,322478,seans team,322000,sean,kelly,sk,3,9
 34,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 35,296586,AL XI,295705,Aaron,Long,AL,5,1
 35,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -346,8 +346,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 35,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 35,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 35,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-35,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-35,322478,seans team,322000,sean,kelly,sk,2,9
+35,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+35,322478,seans team,322000,sean,kelly,sk,3,9
 35,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 36,296586,AL XI,295705,Aaron,Long,AL,5,1
 36,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -356,8 +356,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 36,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 36,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 36,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-36,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-36,322478,seans team,322000,sean,kelly,sk,2,9
+36,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+36,322478,seans team,322000,sean,kelly,sk,3,9
 36,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 37,296586,AL XI,295705,Aaron,Long,AL,5,1
 37,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -366,8 +366,8 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 37,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 37,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 37,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-37,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-37,322478,seans team,322000,sean,kelly,sk,2,9
+37,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+37,322478,seans team,322000,sean,kelly,sk,3,9
 37,294442,selgar fc,293549,Sam,Elgar,SE,6,10
 38,296586,AL XI,295705,Aaron,Long,AL,5,1
 38,333462,Brumtown bandits,333051,louis,Doherty,lD,1,2
@@ -376,6 +376,6 @@ gw,entry_id,team_name,team,team_player_first_name,team_player_last_name,short_na
 38,295660,Jack Austin,294773,Jack,Austin,JA,4,5
 38,296185,Jack Busst,295302,Jack,Busst,JB,8,6
 38,293094,Paddy,292199,Paddy,Farrell,PF,7,7
-38,295578,TSP Draft,294691,Larry,Sole,LS,3,8
-38,322478,seans team,322000,sean,kelly,sk,2,9
+38,295578,TSP Draft,294691,Larry,Sole,LS,2,8
+38,322478,seans team,322000,sean,kelly,sk,3,9
 38,294442,selgar fc,293549,Sam,Elgar,SE,6,10

@@ -359,23 +359,23 @@ gw,finished,team,team_entry_id,team_name,team_player_first_name,team_player_last
 36,True,294691,295578,TSP Draft,Larry,Sole,322731,323205,Fabian Wealth,James,Reeves,41,70,-29,Lose,0,1295,1481,38,8,7.5,1.0
 36,True,322000,322478,seans team,sean,kelly,294722,295609,Forrest FC,Sam,Forrest,34,41,-7,Lose,0,1347,1404,36,9,9.0,7.5
 36,True,333051,333462,Brumtown bandits,louis,Doherty,293549,294442,selgar fc,Sam,Elgar,27,45,-18,Lose,0,1143,1574,25,10,10.0,5.5
-37,False,322731,323205,Fabian Wealth,James,Reeves,294773,295660,Jack Austin,Jack,Austin,0,0,0,Draw,1,1526,1333,74,1,5.5,5.5
-37,False,294722,295609,Forrest FC,Sam,Forrest,333051,333462,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,1500,1436,70,2,5.5,5.5
-37,False,295302,296185,Jack Busst,Jack,Busst,322000,322478,seans team,sean,kelly,0,0,0,Draw,1,1598,1410,67,3,5.5,5.5
-37,False,292199,293094,Paddy,Paddy,Farrell,295705,296586,AL XI,Aaron,Long,0,0,0,Draw,1,1552,1548,64,4,5.5,5.5
-37,False,293549,294442,selgar fc,Sam,Elgar,294691,295578,TSP Draft,Larry,Sole,0,0,0,Draw,1,1557,1429,59,5,5.5,5.5
-37,False,295705,296586,AL XI,Aaron,Long,292199,293094,Paddy,Paddy,Farrell,0,0,0,Draw,1,1458,1336,59,6,5.5,5.5
-37,False,294773,295660,Jack Austin,Jack,Austin,322731,323205,Fabian Wealth,James,Reeves,0,0,0,Draw,1,1467,1492,52,7,5.5,5.5
-37,False,294691,295578,TSP Draft,Larry,Sole,293549,294442,selgar fc,Sam,Elgar,0,0,0,Draw,1,1295,1481,39,8,5.5,5.5
-37,False,322000,322478,seans team,sean,kelly,295302,296185,Jack Busst,Jack,Busst,0,0,0,Draw,1,1347,1404,37,9,5.5,5.5
-37,False,333051,333462,Brumtown bandits,louis,Doherty,294722,295609,Forrest FC,Sam,Forrest,0,0,0,Draw,1,1143,1574,26,10,5.5,5.5
-38,False,322731,323205,Fabian Wealth,James,Reeves,294722,295609,Forrest FC,Sam,Forrest,0,0,0,Draw,1,1526,1333,75,1,5.5,5.5
-38,False,294722,295609,Forrest FC,Sam,Forrest,322731,323205,Fabian Wealth,James,Reeves,0,0,0,Draw,1,1500,1436,71,2,5.5,5.5
-38,False,295302,296185,Jack Busst,Jack,Busst,295705,296586,AL XI,Aaron,Long,0,0,0,Draw,1,1598,1410,68,3,5.5,5.5
-38,False,292199,293094,Paddy,Paddy,Farrell,293549,294442,selgar fc,Sam,Elgar,0,0,0,Draw,1,1552,1548,65,4,5.5,5.5
-38,False,293549,294442,selgar fc,Sam,Elgar,292199,293094,Paddy,Paddy,Farrell,0,0,0,Draw,1,1557,1429,60,5,5.5,5.5
-38,False,295705,296586,AL XI,Aaron,Long,295302,296185,Jack Busst,Jack,Busst,0,0,0,Draw,1,1458,1336,60,6,5.5,5.5
-38,False,294773,295660,Jack Austin,Jack,Austin,322000,322478,seans team,sean,kelly,0,0,0,Draw,1,1467,1492,53,7,5.5,5.5
-38,False,294691,295578,TSP Draft,Larry,Sole,333051,333462,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,1295,1481,40,8,5.5,5.5
-38,False,322000,322478,seans team,sean,kelly,294773,295660,Jack Austin,Jack,Austin,0,0,0,Draw,1,1347,1404,38,9,5.5,5.5
-38,False,333051,333462,Brumtown bandits,louis,Doherty,294691,295578,TSP Draft,Larry,Sole,0,0,0,Draw,1,1143,1574,27,10,5.5,5.5
+37,True,322731,323205,Fabian Wealth,James,Reeves,294773,295660,Jack Austin,Jack,Austin,51,60,-9,Lose,0,1577,1393,73,1,3.0,1.5
+37,True,294722,295609,Forrest FC,Sam,Forrest,333051,333462,Brumtown bandits,louis,Doherty,28,25,3,Win,3,1528,1461,72,2,9.0,10.0
+37,True,295302,296185,Jack Busst,Jack,Busst,322000,322478,seans team,sean,kelly,36,37,-1,Lose,0,1634,1447,66,3,7.0,6.0
+37,True,292199,293094,Paddy,Paddy,Farrell,295705,296586,AL XI,Aaron,Long,49,41,8,Win,3,1601,1589,66,4,4.0,5.0
+37,True,293549,294442,selgar fc,Sam,Elgar,294691,295578,TSP Draft,Larry,Sole,60,30,30,Win,3,1617,1459,61,5,1.5,8.0
+37,True,295705,296586,AL XI,Aaron,Long,292199,293094,Paddy,Paddy,Farrell,41,49,-8,Lose,0,1499,1385,58,6,5.0,4.0
+37,True,294773,295660,Jack Austin,Jack,Austin,322731,323205,Fabian Wealth,James,Reeves,60,51,9,Win,3,1527,1543,54,7,1.5,3.0
+37,True,322000,322478,seans team,sean,kelly,295302,296185,Jack Busst,Jack,Busst,37,36,1,Win,3,1384,1440,39,8,6.0,7.0
+37,True,294691,295578,TSP Draft,Larry,Sole,293549,294442,selgar fc,Sam,Elgar,30,60,-30,Lose,0,1325,1541,38,9,8.0,1.5
+37,True,333051,333462,Brumtown bandits,louis,Doherty,294722,295609,Forrest FC,Sam,Forrest,25,28,-3,Lose,0,1168,1602,25,10,10.0,9.0
+38,False,322731,323205,Fabian Wealth,James,Reeves,294722,295609,Forrest FC,Sam,Forrest,0,0,0,Draw,1,1577,1393,74,1,5.5,5.5
+38,False,294722,295609,Forrest FC,Sam,Forrest,322731,323205,Fabian Wealth,James,Reeves,0,0,0,Draw,1,1528,1461,73,2,5.5,5.5
+38,False,295302,296185,Jack Busst,Jack,Busst,295705,296586,AL XI,Aaron,Long,0,0,0,Draw,1,1634,1447,67,3,5.5,5.5
+38,False,292199,293094,Paddy,Paddy,Farrell,293549,294442,selgar fc,Sam,Elgar,0,0,0,Draw,1,1601,1589,67,4,5.5,5.5
+38,False,293549,294442,selgar fc,Sam,Elgar,292199,293094,Paddy,Paddy,Farrell,0,0,0,Draw,1,1617,1459,62,5,5.5,5.5
+38,False,295705,296586,AL XI,Aaron,Long,295302,296185,Jack Busst,Jack,Busst,0,0,0,Draw,1,1499,1385,59,6,5.5,5.5
+38,False,294773,295660,Jack Austin,Jack,Austin,322000,322478,seans team,sean,kelly,0,0,0,Draw,1,1527,1543,55,7,5.5,5.5
+38,False,322000,322478,seans team,sean,kelly,294773,295660,Jack Austin,Jack,Austin,0,0,0,Draw,1,1384,1440,40,8,5.5,5.5
+38,False,294691,295578,TSP Draft,Larry,Sole,333051,333462,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,1325,1541,39,9,5.5,5.5
+38,False,333051,333462,Brumtown bandits,louis,Doherty,294691,295578,TSP Draft,Larry,Sole,0,0,0,Draw,1,1168,1602,26,10,5.5,5.5
