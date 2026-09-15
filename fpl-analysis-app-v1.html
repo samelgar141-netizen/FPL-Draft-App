@@ -1130,6 +1130,12 @@ function renderPlayerStats() {
   const searchVal = (document.getElementById('ps-search')?.value || '').toLowerCase();
   const ownerMap = buildOwnerMap();
 
+  // Map element id -> original drafter { name, entryId }
+  const originalDrafterMap = {};
+  CHOICES.forEach(c => {
+    originalDrafterMap[parseInt(c.element)] = { name: c.entry_name || '—', entryId: c.entry };
+  });
+
   // Build rows from all CHOICES (unique players per team pick)
   const seenElements = new Set();
   let rows = [];
@@ -1186,7 +1192,7 @@ function renderPlayerStats() {
     const active = psSort.col === c.key;
     const cls = active ? `sort-${psSort.dir}` : '';
     return `<th class="${cls}" title="${c.title}" onclick="sortPS('${c.key}')">${c.label}</th>`;
-  }).join('') + '<th title="Owner team">Owner</th>';
+  }).join('') + '<th title="Owner team">Owner</th><th title="Player\'s original drafter">Original Drafter</th>';
 
   const tbHtml = rows.map((row, i) => {
     const pos = row.pos;
@@ -1213,6 +1219,12 @@ function renderPlayerStats() {
           ${ownerName}${tradedBadge}
         </span>
       </td>
+      <td style="font-size:12px">${(() => {
+        const d = originalDrafterMap[row.element];
+        if (!d) return '<span style="color:var(--text3);font-style:italic">Undrafted</span>';
+        const dCol = teamColor(d.entryId);
+        return `<span style="display:inline-flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:50%;background:${dCol};flex-shrink:0"></span>${d.name}</span>`;
+      })()}</td>
     </tr>`;
   }).join('');
 
