@@ -1153,13 +1153,15 @@ function renderPlayerStats() {
     rows.push({ element: c.element, draftRound: c.round, draftPick: c.pick, originalTeam, currentOwner, traded, ...p });
   });
 
-  // Add undrafted players
+  // Add undrafted/waiver players (in PLAYERS but not found in CHOICES by element ID)
   Object.entries(PLAYERS).forEach(([id, p]) => {
     if (seenElements.has(id)) return;
     if (psFilter !== 'all' && p.pos !== psFilter) return;
     if (searchVal && !p.name.toLowerCase().includes(searchVal) && !p.short.toLowerCase().includes(searchVal)) return;
     seenElements.add(id);
-    rows.push({ element: parseInt(id), draftRound: null, draftPick: null, originalTeam: null, currentOwner: null, traded: false, ...p });
+    const esEntry = ELEMENT_STATUS[parseInt(id)];
+    const currentOwner = (esEntry && esEntry.owner) || null;
+    rows.push({ element: parseInt(id), draftRound: null, draftPick: null, originalTeam: null, currentOwner, traded: false, ...p });
   });
 
   // Sort
@@ -1197,7 +1199,7 @@ function renderPlayerStats() {
   const tbHtml = rows.map((row, i) => {
     const pos = row.pos;
     const col = teamColor(row.originalTeam);
-    const ownerName = row.originalTeam == null ? '<span style="color:var(--text3);font-style:italic">Undrafted</span>' : (row.currentOwner ? (TEAM_NAMES[row.currentOwner] || row.currentOwner) : '—');
+    const ownerName = row.currentOwner ? (TEAM_NAMES[row.currentOwner] || row.currentOwner) : '<span style="color:var(--text3);font-style:italic">Undrafted</span>';
     const tradedBadge = row.traded ? `<span class="pill pill-amber" style="margin-left:4px">traded</span>` : '';
     return `<tr>
       <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text3)">${row.draftRound != null ? `${row.draftRound}.${row.draftPick}` : '—'}</td>
