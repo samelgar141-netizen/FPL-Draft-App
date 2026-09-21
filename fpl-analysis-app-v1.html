@@ -7,12 +7,13 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #240127; --bg2: #37003c; --bg3: #4a0054; --bg4: #5c0064;
+    --bg: #1a0020; --bg2: #37003c; --bg3: #4a0055; --bg4: #63007a;
     --green: #00ff87; --green-dim: rgba(0,255,135,0.10); --green-border: rgba(0,255,135,0.30);
+    --cyan: #00d4e8; --cyan-dim: rgba(0,212,232,0.10); --cyan-border: rgba(0,212,232,0.35);
     --pink: #e90052; --pink-dim: rgba(233,0,82,0.12); --pink-border: rgba(233,0,82,0.35);
     --amber: #f59e0b; --red: #ff4d4d; --blue: #7dd3fc; --purple: #c084fc;
-    --text: #ffffff; --text2: #cba3d0; --text3: #8b5a91;
-    --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.15);
+    --text: #ffffff; --text2: #c9b8d0; --text3: #8b6a94;
+    --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.18);
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Syne', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
@@ -20,22 +21,22 @@
   /* HEADER */
   header {
     padding: 2rem 2.5rem 1.25rem;
-    border-bottom: 2px solid var(--pink);
-    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);
+    border-bottom: 2px solid var(--cyan);
+    background: linear-gradient(135deg, #37003c 0%, #6a0080 40%, #00a8c8 100%);
     display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
   }
-  .eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--green); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-  .eyebrow::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--pink); border-radius: 50%; animation: blink 2s infinite; }
+  .eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .eyebrow::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; animation: blink 2s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
   h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.025em; color: var(--green); }
   .sub { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text2); margin-top: 4px; }
 
   /* NAV */
-  nav { display: flex; gap: 2px; padding: 0.75rem 2.5rem; border-bottom: 1px solid var(--border); overflow-x: auto; scrollbar-width: none; background: var(--bg2); }
+  nav { display: flex; gap: 2px; padding: 0.75rem 2.5rem; border-bottom: 2px solid var(--pink); overflow-x: auto; scrollbar-width: none; background: var(--bg2); }
   nav::-webkit-scrollbar { display: none; }
   .tab { padding: 7px 16px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--text2); font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
   .tab:hover { color: var(--text); background: var(--bg3); }
-  .tab.active { background: var(--pink-dim); border-color: var(--pink-border); color: var(--pink); }
+  .tab.active { background: var(--cyan-dim); border-color: var(--cyan-border); color: var(--cyan); font-weight: 700; }
 
   /* MAIN */
   main { padding: 2rem 2.5rem; max-width: 1300px; }
@@ -43,7 +44,7 @@
 
   /* METRICS */
   .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-bottom: 2rem; }
-  .metric { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; border-left: 3px solid var(--pink); }
+  .metric { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.1rem 1.25rem; border-left: 3px solid var(--cyan); }
   .m-label { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
   .m-val { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
   .m-val.green { color: var(--green); }
@@ -52,7 +53,7 @@
   /* CARD */
   .card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1.25rem; transition: border-color 0.15s; }
   .card:hover { border-color: var(--border2); }
-  .card-title { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--green); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; }
+  .card-title { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; }
 
   /* DRAFT BOARD */
   .board-wrap { overflow-x: auto; }
@@ -81,7 +82,7 @@
 
   /* TEAM GRID */
   .teams-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 1.25rem; }
-  .team-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; border-top: 2px solid var(--pink); }
+  .team-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; border-top: 2px solid var(--cyan); }
   .team-card-head { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
   .team-card-name { font-weight: 700; font-size: 14px; }
   .team-card-body { padding: 0.75rem 1.25rem; }
@@ -121,7 +122,7 @@
 
   /* LOADING / ERROR */
   .loading { text-align: center; padding: 3rem; color: var(--text2); font-family: 'DM Mono', monospace; font-size: 12px; }
-  .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border2); border-top-color: var(--green); border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 6px; vertical-align: middle; }
+  .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border2); border-top-color: var(--cyan); border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 6px; vertical-align: middle; }
   @keyframes spin { to { transform: rotate(360deg); } }
   .err-box { background: rgba(255,82,82,0.08); border: 1px solid rgba(255,82,82,0.2); border-radius: 10px; padding: 1rem 1.25rem; color: var(--red); font-family: 'DM Mono', monospace; font-size: 12px; }
 
@@ -202,9 +203,9 @@
   .lt-select, .tr-select { padding:6px 14px; background:var(--bg2); border:1px solid var(--border2); border-radius:8px; color:var(--text); font-family:'Syne',sans-serif; font-size:13px; font-weight:600; cursor:pointer; outline:none; appearance:none; -webkit-appearance:none; }
   .gw-input { width:56px; padding:5px 8px; background:var(--bg3); border:1px solid var(--border); border-radius:8px; color:var(--text); font-family:'DM Mono',monospace; font-size:12px; outline:none; text-align:center; }
   /* TOOLTIP */
-  #tooltip { position:fixed; background:var(--bg3); border:1px solid var(--pink-border); border-radius:10px; padding:8px 12px; font-family:'DM Mono',monospace; font-size:11px; color:var(--text); box-shadow:0 4px 24px rgba(0,0,0,0.7); pointer-events:none; z-index:9999; max-width:280px; display:none; line-height:1.5; }
+  #tooltip { position:fixed; background:var(--bg3); border:1px solid var(--cyan-border); border-radius:10px; padding:8px 12px; font-family:'DM Mono',monospace; font-size:11px; color:var(--text); box-shadow:0 4px 24px rgba(0,0,0,0.7); pointer-events:none; z-index:9999; max-width:280px; display:none; line-height:1.5; }
   #tooltip.visible { display:block; }
-  #tooltip .tt-title { font-family:'Syne',sans-serif; font-weight:700; font-size:12px; margin-bottom:4px; color:var(--green); }
+  #tooltip .tt-title { font-family:'Syne',sans-serif; font-weight:700; font-size:12px; margin-bottom:4px; color:var(--cyan); }
   #tooltip .tt-row { color:var(--text2); }
   #tooltip .tt-val { color:var(--green); font-weight:600; }
 </style>
