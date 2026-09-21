@@ -257,11 +257,18 @@
     </div>  </div>
 
   <div id="page-squads" class="page">
-    <div class="filter-bar">
-      <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">Sort squad by:</span>
-      <button class="fbtn active" id="sq-sort-rnd" onclick="setSquadSort('round',this)">Draft round</button>
-      <button class="fbtn" id="sq-sort-pts" onclick="setSquadSort('points',this)">Total points</button>
-      <button class="fbtn" id="sq-sort-pos" onclick="setSquadSort('position',this)">Position</button>
+    <div class="filter-bar" style="flex-wrap:wrap;gap:8px">
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">View:</span>
+        <button class="fbtn active" id="sq-view-drafted" onclick="setSquadsView('drafted',this)">Drafted Squad</button>
+        <button class="fbtn" id="sq-view-current" onclick="setSquadsView('current',this)">Current Squad</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">Sort by:</span>
+        <button class="fbtn active" id="sq-sort-rnd" onclick="setSquadSort('round',this)">Draft round</button>
+        <button class="fbtn" id="sq-sort-pts" onclick="setSquadSort('points',this)">Total points</button>
+        <button class="fbtn" id="sq-sort-pos" onclick="setSquadSort('position',this)">Position</button>
+      </div>
     </div>
     <div class="teams-grid" id="squads-grid"></div>
   </div>
@@ -480,8 +487,9 @@ const POS_CLASS = { GKP:'gkp', DEF:'def', MID:'mid', FWD:'fwd' };
 let psFilter = 'all';
 let psSort = { col: 'total_points', dir: 'desc' };
 
-// Squad sort
+// Squad sort / view
 let squadSort = 'round';
+let squadsView = 'drafted';
 
 // Board filter
 let boardFilter = 'all';
@@ -1006,66 +1014,148 @@ function renderBoardScatter() {
 }
 
   function setSquadSort(mode, btn) {
-  document.querySelectorAll('#page-squads .fbtn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('#page-squads #sq-sort-rnd, #page-squads #sq-sort-pts, #page-squads #sq-sort-pos').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   squadSort = mode;
   renderSquads();
 }
 
+function setSquadsView(mode, btn) {
+  document.querySelectorAll('#sq-view-drafted, #sq-view-current').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  squadsView = mode;
+  // "Draft round" sort only meaningful for drafted view; switch to points for current
+  if (mode === 'current' && squadSort === 'round') {
+    document.getElementById('sq-sort-rnd').classList.remove('active');
+    document.getElementById('sq-sort-pts').classList.add('active');
+    squadSort = 'points';
+  }
+  document.getElementById('sq-sort-rnd').disabled = (mode === 'current');
+  renderSquads();
+}
+
 function renderSquads() {
-  const bt = byTeam();
   const posOrder = {GKP:0,DEF:1,MID:2,FWD:3,'?':4};
 
-  document.getElementById('squads-grid').innerHTML = TEAMS_ORDER.map((id) => {
-    let picks = [...(bt[id] || [])];
-    const col = teamColor(id);
-    const totalPts = picks.reduce((s,c)=>s+pPts(c.element),0);
-    const autoCount = picks.filter(c=>c.was_auto).length;
+  // Build original drafter map for "current" view annotations
+  const originalDrafterMap = {};
+  CHOICES.forEach(c => { originalDrafterMap[parseInt(c.element)] = {name: c.entry_name, entryId: c.entry}; });
 
-    if (squadSort === 'points') {
-      picks.sort((a,b) => pPts(b.element) - pPts(a.element));
-    } else if (squadSort === 'position') {
-      picks.sort((a,b) => (posOrder[pPos(a.element)]||4) - (posOrder[pPos(b.element)]||4) || pPts(b.element)-pPts(a.element));
-    } else {
-      picks.sort((a,b) => a.round - b.round);
-    }
+  let cards;
 
-    const byPos = {GKP:[],DEF:[],MID:[],FWD:[],'?':[]};
-    picks.forEach(c => { const p = pPos(c.element); (byPos[p]||byPos['?']).push(c); });
+  if (squadsView === 'current') {
+    // Build current squads from ELEMENT_STATUS grouped by current owner
+    const currentSquads = {};
+    TEAMS_ORDER.forEach(id => currentSquads[id] = []);
+    Object.entries(ELEMENT_STATUS).forEach(([elStr, s]) => {
+      const el = parseInt(elStr);
+      if (s.owner && currentSquads[s.owner] !== undefined) {
+        currentSquads[s.owner].push({ element: el });
+      }
+    });
 
-    return `<div class="team-card">
-      <div class="team-card-head">
-        <div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span style="width:10px;height:10px;border-radius:50%;background:${col}"></span>
-            <span class="team-card-name">${TEAM_NAMES[id]}</span>
+    cards = TEAMS_ORDER.map(id => {
+      let picks = [...currentSquads[id]];
+      const col = teamColor(id);
+      const totalPts = picks.reduce((s,c) => s + pPts(c.element), 0);
+
+      if (squadSort === 'position') {
+        picks.sort((a,b) => (posOrder[pPos(a.element)]||4) - (posOrder[pPos(b.element)]||4) || pPts(b.element)-pPts(a.element));
+      } else {
+        picks.sort((a,b) => pPts(b.element) - pPts(a.element));
+      }
+
+      const byPos = {GKP:[],DEF:[],MID:[],FWD:[],'?':[]};
+      picks.forEach(c => { const p = pPos(c.element); (byPos[p]||byPos['?']).push(c); });
+
+      return `<div class="team-card">
+        <div class="team-card-head">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:10px;height:10px;border-radius:50%;background:${col}"></span>
+              <span class="team-card-name">${TEAM_NAMES[id]}</span>
+            </div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:3px">
+              ${['GKP','DEF','MID','FWD'].map(p=>`<span style="margin-right:8px">${p}:${(byPos[p]||[]).length}</span>`).join('')}
+            </div>
           </div>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:3px">
-            ${['GKP','DEF','MID','FWD'].map(p=>`<span style="margin-right:8px">${p}:${(byPos[p]||[]).length}</span>`).join('')}
+          <div style="text-align:right">
+            <div style="font-family:'DM Mono',monospace;font-size:15px;color:var(--green);font-weight:700">${totalPts}</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">total pts</div>
           </div>
         </div>
-        <div style="text-align:right">
-          <div style="font-family:'DM Mono',monospace;font-size:15px;color:var(--green);font-weight:700">${totalPts}</div>
-          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">total pts</div>
-          ${autoCount > 0 ? `<div style="font-size:10px;color:var(--amber);margin-top:2px">⚡${autoCount} auto</div>` : ''}
+        <div class="team-card-body">
+          ${picks.map(c => {
+            const pos = pPos(c.element);
+            const pts = pPts(c.element);
+            const club = pClub(c.element);
+            const orig = originalDrafterMap[c.element];
+            const isDifferentOwner = orig && orig.entryId !== id;
+            return `<div class="player-line">
+              <span class="pos pos-${pos}">${pos}</span>
+              <span class="pname">${pName(c.element)}${club?` <span style="color:var(--text3);font-weight:400">${club}</span>`:''}${isDifferentOwner?` <span style="font-size:9px;color:var(--amber);font-style:italic">was ${orig.name}</span>`:''}${!orig?` <span style="font-size:9px;color:var(--text3);font-style:italic">waiver</span>`:''}</span>
+              <span class="pts">${pts}</span>
+            </div>`;
+          }).join('')}
         </div>
-      </div>
-      <div class="team-card-body">
-        ${picks.map(c => {
-          const pos = pPos(c.element);
-          const pts = pPts(c.element);
-          const club = pClub(c.element);
-          return `<div class="player-line">
-            <span class="rnd">R${c.round}</span>
-            <span class="pos pos-${pos}">${pos}</span>
-            <span class="pname">${pName(c.element)}${club?` <span style="color:var(--text3);font-weight:400">${club}</span>`:''}</span>
-            ${c.was_auto?'<span style="font-size:10px;color:var(--amber)">⚡</span>':''}
-            <span class="pts">${pts}</span>
-          </div>`;
-        }).join('')}
-      </div>
-    </div>`;
-  }).join('');
+      </div>`;
+    });
+  } else {
+    // Drafted view (original)
+    const bt = byTeam();
+    cards = TEAMS_ORDER.map(id => {
+      let picks = [...(bt[id] || [])];
+      const col = teamColor(id);
+      const totalPts = picks.reduce((s,c) => s + pPts(c.element), 0);
+      const autoCount = picks.filter(c => c.was_auto).length;
+
+      if (squadSort === 'points') {
+        picks.sort((a,b) => pPts(b.element) - pPts(a.element));
+      } else if (squadSort === 'position') {
+        picks.sort((a,b) => (posOrder[pPos(a.element)]||4) - (posOrder[pPos(b.element)]||4) || pPts(b.element)-pPts(a.element));
+      } else {
+        picks.sort((a,b) => a.round - b.round);
+      }
+
+      const byPos = {GKP:[],DEF:[],MID:[],FWD:[],'?':[]};
+      picks.forEach(c => { const p = pPos(c.element); (byPos[p]||byPos['?']).push(c); });
+
+      return `<div class="team-card">
+        <div class="team-card-head">
+          <div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:10px;height:10px;border-radius:50%;background:${col}"></span>
+              <span class="team-card-name">${TEAM_NAMES[id]}</span>
+            </div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3);margin-top:3px">
+              ${['GKP','DEF','MID','FWD'].map(p=>`<span style="margin-right:8px">${p}:${(byPos[p]||[]).length}</span>`).join('')}
+            </div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-family:'DM Mono',monospace;font-size:15px;color:var(--green);font-weight:700">${totalPts}</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--text3)">total pts</div>
+            ${autoCount > 0 ? `<div style="font-size:10px;color:var(--amber);margin-top:2px">⚡${autoCount} auto</div>` : ''}
+          </div>
+        </div>
+        <div class="team-card-body">
+          ${picks.map(c => {
+            const pos = pPos(c.element);
+            const pts = pPts(c.element);
+            const club = pClub(c.element);
+            return `<div class="player-line">
+              <span class="rnd">R${c.round}</span>
+              <span class="pos pos-${pos}">${pos}</span>
+              <span class="pname">${pName(c.element)}${club?` <span style="color:var(--text3);font-weight:400">${club}</span>`:''}</span>
+              ${c.was_auto?'<span style="font-size:10px;color:var(--amber)">⚡</span>':''}
+              <span class="pts">${pts}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    });
+  }
+
+  document.getElementById('squads-grid').innerHTML = cards.join('');
 }
 
 // ══════════════════════════════════════════════════════
