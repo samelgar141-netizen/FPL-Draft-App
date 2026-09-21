@@ -1,9 +1,10 @@
 name: Refresh FPL Draft Data
 
 on:
-  # Run automatically every Monday at 06:00 UTC (catches all weekend matches)
+  # Run automatically every Tuesday at 11:00 GMT (UTC+1 BST = 10:00 UTC in summer)
+  # Using 11:00 UTC to cover both GMT (winter) and BST (summer = 12:00 BST)
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "0 11 * * 2"
 
   # Also allow manual trigger from GitHub → Actions tab → "Run workflow" button
   workflow_dispatch:
