@@ -1,0 +1,45 @@
+name: Refresh FPL Draft Data
+
+on:
+  # Run automatically every Monday at 06:00 UTC (catches all weekend matches)
+  schedule:
+    - cron: "0 6 * * 1"
+
+  # Also allow manual trigger from GitHub → Actions tab → "Run workflow" button
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests pandas numpy
+
+      - name: Run data refresh script
+        env:
+          FPL_COOKIE: ${{ secrets.FPL_COOKIE }}
+          FPL_TOKEN: ${{ secrets.FPL_TOKEN }}
+        run: python refresh_data.py
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          # Only commit if something actually changed
+          if git diff --cached --quiet; then
+            echo "No data changes — nothing to commit."
+          else
+            GW_LABEL=$(date -u +"%Y-%m-%d")
+            git commit -m "Automated data refresh ${GW_LABEL}"
+            git push origin main
+          fi
