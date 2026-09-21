@@ -599,3 +599,153 @@ team_id,entry_name,player_first_name,player_last_name,gw,number,position,total_p
 252267,Jeeves,James,Reeves,4,630,15.0,0.0,no,Taylor,Harwood-Bellis,Harwood-Bellis,2,2,benched,Taylor Harwood-Bellis,4.5
 252267,Jeeves,James,Reeves,4,631,13.0,1.0,yes,Ibrahim,Mbaye,Mbaye,3,2,benched,Ibrahim Mbaye,6.0
 252265,AL XI,Aaron,Long,4,649,11.0,1.0,yes,Matias,Fernandez-Pardo,Fernandez-Pardo,4,17,played,Ainsley Maitland-Niles,4.5
+252267,Jeeves,James,Reeves,5,1,1.0,1.0,yes,David,Raya Martín,Raya,1,1,played,David Raya Martín,6.0
+252267,Jeeves,James,Reeves,5,4,2.0,1.0,yes,Gabriel,dos Santos Magalhães,Gabriel,2,1,played,Gabriel dos Santos Magalhães,8.0
+252349,Blaine,Blaine,Guiney,5,5,3.0,0.0,yes,Jurriën,Timber,J.Timber,2,1,played,Jurriën Timber,6.5
+252260,selgar fc,Sam,Elgar,5,6,15.0,0.0,no,William,Saliba,Saliba,2,1,benched,William Saliba,5.9
+252262,Forrest FC,Sam,Forrest,5,8,2.0,1.0,yes,Riccardo,Calafiori,Calafiori,2,1,played,Riccardo Calafiori,5.8
+252263,Jack Austin,Jack,Austin,5,10,14.0,0.0,no,Benjamin,White,White,2,1,benched,Benjamin White,5.5
+252259,Brumtown bandits,louis,Doherty,5,12,6.0,2.0,yes,Bukayo,Saka,Saka,3,1,played,Bukayo Saka,9.5
+252264,Jack Busst,Jack,Busst,5,13,7.0,1.0,yes,Declan,Rice,Rice,3,1,played,Declan Rice,7.4
+252349,Blaine,Blaine,Guiney,5,15,7.0,2.0,yes,Martin,Ødegaard,Ødegaard,3,1,played,Martin Ødegaard,6.8
+252259,Brumtown bandits,louis,Doherty,5,25,11.0,1.0,yes,Viktor,Gyökeres,Gyökeres,4,1,played,Viktor Gyökeres,7.2
+252258,Paddy,Paddy,Farrell,5,26,11.0,2.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.6
+252258,Paddy,Paddy,Farrell,5,28,1.0,2.0,yes,Emiliano,Martínez Romero,Martinez,1,6,played,Emiliano Martínez Romero,5.0
+252267,Jeeves,James,Reeves,5,31,4.0,1.0,yes,Ezri,Konsa Ngoyo,Konsa,2,1,played,Ezri Konsa Ngoyo,4.5
+252265,AL XI,Aaron,Long,5,40,6.0,2.0,yes,Morgan,Rogers,Rogers,3,6,played,Morgan Rogers,7.7
+252266,seans team,sean,kelly,5,41,7.0,12.0,yes,Emiliano,Buendía Stati,Buendía,3,2,played,Emiliano Buendía Stati,5.9
+252259,Brumtown bandits,louis,Doherty,5,53,8.0,13.0,yes,Johan,Manzambi,Manzambi,3,2,played,Johan Manzambi,5.9
+252349,Blaine,Blaine,Guiney,5,57,12.0,2.0,yes,Đorđe,Petrović,Petrović,1,3,benched,Đorđe Petrović,4.5
+252259,Brumtown bandits,louis,Doherty,5,61,4.0,2.0,yes,Adrien,Truffert,Truffert,2,3,played,Adrien Truffert,5.5
+252260,selgar fc,Sam,Elgar,5,67,7.0,2.0,yes,Rayan Vitor,Simplício Rocha,Rayan,3,3,played,Rayan Vitor Simplício Rocha,6.4
+252262,Forrest FC,Sam,Forrest,5,68,6.0,2.0,yes,Marcus,Tavernier,Tavernier,3,3,played,Marcus Tavernier,6.1
+252265,AL XI,Aaron,Long,5,69,8.0,2.0,yes,Alex,Scott,Scott,3,3,played,Alex Scott,6.1
+252262,Forrest FC,Sam,Forrest,5,79,10.0,2.0,yes,Francisco Evanilson,de Lima Barbosa,Evanilson,4,3,played,Francisco Evanilson de Lima Barbosa,6.0
+252262,Forrest FC,Sam,Forrest,5,82,1.0,6.0,yes,Caoimhín,Kelleher,Kelleher,1,4,played,Caoimhín Kelleher,5.0
+252265,AL XI,Aaron,Long,5,87,14.0,7.0,yes,Kristoffer,Ajer,Ajer,2,4,benched,Kristoffer Ajer,4.5
+252349,Blaine,Blaine,Guiney,5,94,9.0,9.0,yes,Kevin,Schade,Schade,3,4,played,Kevin Schade,6.1
+252262,Forrest FC,Sam,Forrest,5,106,9.0,5.0,yes,Igor Thiago,Nascimento Rodrigues,Thiago,4,4,played,Igor Thiago Nascimento Rodrigues,7.8
+252263,Jack Austin,Jack,Austin,5,109,12.0,6.0,yes,Bart,Verbruggen,Verbruggen,1,5,benched,Bart Verbruggen,4.5
+252266,seans team,sean,kelly,5,112,4.0,6.0,yes,Jan Paul,van Hecke,Van Hecke,2,19,played,Jan Paul van Hecke,4.9
+252259,Brumtown bandits,louis,Doherty,5,115,5.0,6.0,yes,Maxim,De Cuyper,De Cuyper,2,5,played,Maxim De Cuyper,4.9
+252262,Forrest FC,Sam,Forrest,5,116,14.0,0.0,no,Lewis,Dunk,Dunk,2,5,benched,Lewis Dunk,4.5
+252266,seans team,sean,kelly,5,123,13.0,0.0,no,Jack,Hinshelwood,Hinshelwood,3,5,benched,Jack Hinshelwood,5.9
+252265,AL XI,Aaron,Long,5,124,7.0,14.0,yes,Pascal,Groß,Groß,3,5,played,Pascal Groß,5.7
+252263,Jack Austin,Jack,Austin,5,125,15.0,1.0,yes,Georginio,Rutter,Georginio,4,5,benched,Georginio Rutter,5.4
+252264,Jack Busst,Jack,Busst,5,127,8.0,8.0,yes,Diego,Gómez Amarilla,Gomez,3,5,played,Diego Gómez Amarilla,5.0
+252263,Jack Austin,Jack,Austin,5,136,11.0,2.0,yes,Danny,Welbeck,Welbeck,4,6,played,Danny Welbeck,5.9
+252260,selgar fc,Sam,Elgar,5,138,10.0,10.0,yes,Charalampos,Kostoulas,Kostoulas,4,5,played,Charalampos Kostoulas,5.5
+252263,Jack Austin,Jack,Austin,5,142,13.0,0.0,no,Reece,James,James,2,6,benched,Reece James,5.4
+252258,Paddy,Paddy,Farrell,5,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.3
+252263,Jack Austin,Jack,Austin,5,154,5.0,2.0,yes,Cole,Palmer,Palmer,3,6,played,Cole Palmer,9.7
+252259,Brumtown bandits,louis,Doherty,5,155,7.0,7.0,yes,Enzo,Fernández,Enzo,3,15,played,Enzo Fernández,6.9
+252258,Paddy,Paddy,Farrell,5,156,8.0,2.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
+252259,Brumtown bandits,louis,Doherty,5,162,15.0,0.0,no,Andrey,Nascimento dos Santos,Andrey Santos,3,16,benched,Andrey Nascimento dos Santos,4.8
+252349,Blaine,Blaine,Guiney,5,165,13.0,0.0,no,João Pedro,Junqueira de Jesus,João Pedro,4,6,benched,João Pedro Junqueira de Jesus,7.8
+252264,Jack Busst,Jack,Busst,5,166,11.0,6.0,yes,Nicolas,Jackson,N.Jackson,4,2,played,Nicolas Jackson,6.5
+252258,Paddy,Paddy,Farrell,5,167,10.0,1.0,yes,Liam,Delap,Delap,4,18,played,Liam Delap,5.5
+252259,Brumtown bandits,louis,Doherty,5,198,12.0,0.0,no,Dean,Henderson,Henderson,1,8,benched,Dean Henderson,5.0
+252262,Forrest FC,Sam,Forrest,5,200,3.0,3.0,yes,Maxence,Lacroix,Lacroix,2,6,played,Maxence Lacroix,6.0
+252266,seans team,sean,kelly,5,201,2.0,2.0,yes,Daniel,Muñoz Mejía,Muñoz,2,18,played,Daniel Muñoz Mejía,5.4
+252264,Jack Busst,Jack,Busst,5,204,2.0,7.0,yes,Tyrick,Mitchell,Mitchell,2,8,played,Tyrick Mitchell,4.5
+252349,Blaine,Blaine,Guiney,5,208,10.0,1.0,yes,Ismaïla,Sarr,Sarr,3,8,played,Ismaïla Sarr,6.2
+252259,Brumtown bandits,louis,Doherty,5,211,9.0,2.0,yes,Yéremy,Pino Santos,Yeremy,3,8,played,Yéremy Pino Santos,5.5
+252349,Blaine,Blaine,Guiney,5,222,11.0,2.0,yes,Jørgen,Strand Larsen,Strand Larsen,4,8,played,Jørgen Strand Larsen,6.0
+252349,Blaine,Blaine,Guiney,5,224,14.0,1.0,yes,Eddie,Nketiah,Nketiah,4,8,benched,Eddie Nketiah,5.5
+252266,seans team,sean,kelly,5,226,1.0,8.0,yes,Jordan,Pickford,Pickford,1,9,played,Jordan Pickford,5.5
+252266,seans team,sean,kelly,5,227,12.0,0.0,no,Mark,Travers,Travers,1,9,benched,Mark Travers,5.0
+252267,Jeeves,James,Reeves,5,229,3.0,14.0,yes,James,Tarkowski,Tarkowski,2,9,played,James Tarkowski,6.1
+252260,selgar fc,Sam,Elgar,5,230,4.0,8.0,yes,Jarrad,Branthwaite,Branthwaite,2,9,played,Jarrad Branthwaite,5.5
+252262,Forrest FC,Sam,Forrest,5,233,4.0,5.0,yes,Vitalii,Mykolenko,Mykolenko,2,9,played,Vitalii Mykolenko,4.5
+252262,Forrest FC,Sam,Forrest,5,236,5.0,3.0,yes,Kiernan,Dewsbury-Hall,Dewsbury-Hall,3,9,played,Kiernan Dewsbury-Hall,6.5
+252349,Blaine,Blaine,Guiney,5,237,8.0,5.0,yes,Iliman,Ndiaye,Ndiaye,3,15,played,Iliman Ndiaye,5.9
+252266,seans team,sean,kelly,5,238,8.0,3.0,yes,Jack,Grealish,Grealish,3,9,played,Jack Grealish,6.5
+252264,Jack Busst,Jack,Busst,5,249,10.0,6.0,yes,Thierno,Barry,Barry,4,9,played,Thierno Barry,5.6
+252267,Jeeves,James,Reeves,5,250,12.0,3.0,yes,Bernd,Leno,Leno,1,10,benched,Bernd Leno,4.5
+252263,Jack Austin,Jack,Austin,5,268,9.0,2.0,yes,Josh,King,King,3,10,played,Josh King,5.5
+252260,selgar fc,Sam,Elgar,5,279,14.0,1.0,yes,Semi,Ajayi,Ajayi,2,11,benched,Semi Ajayi,4.2
+252262,Forrest FC,Sam,Forrest,5,286,8.0,4.0,yes,Mohamed,Belloumi,Belloumi,3,11,played,Mohamed Belloumi,5.1
+252266,seans team,sean,kelly,5,295,9.0,1.0,yes,Oli,McBurnie,McBurnie,4,11,played,Oli McBurnie,5.5
+252265,AL XI,Aaron,Long,5,305,4.0,2.0,yes,Leif,Davis,Davis,2,12,played,Leif Davis,4.0
+252262,Forrest FC,Sam,Forrest,5,316,11.0,2.0,yes,Emersonn,Correia da Silva,Emersonn,4,12,played,Emersonn Correia da Silva,5.5
+252260,selgar fc,Sam,Elgar,5,330,2.0,5.0,yes,Jayden,Bogle,Bogle,2,13,played,Jayden Bogle,4.6
+252349,Blaine,Blaine,Guiney,5,332,5.0,8.0,yes,James,Justin,Justin,2,13,played,James Justin,4.5
+252265,AL XI,Aaron,Long,5,334,3.0,6.0,yes,Tarik,Muharemović,Muharemović,2,13,played,Tarik Muharemović,5.0
+252263,Jack Austin,Jack,Austin,5,335,8.0,5.0,yes,Anton,Stach,Stach,3,13,played,Anton Stach,6.0
+252263,Jack Austin,Jack,Austin,5,336,7.0,3.0,yes,Noah,Okafor,Okafor,3,13,played,Noah Okafor,5.8
+252266,seans team,sean,kelly,5,346,10.0,2.0,yes,Dominic,Calvert-Lewin,Calvert-Lewin,4,13,played,Dominic Calvert-Lewin,6.0
+252259,Brumtown bandits,louis,Doherty,5,347,10.0,1.0,yes,Lukas,Nmecha,Nmecha,4,13,played,Lukas Nmecha,5.4
+252265,AL XI,Aaron,Long,5,350,1.0,8.0,yes,Alisson,Becker,A.Becker,1,14,played,Alisson Becker,5.5
+252349,Blaine,Blaine,Guiney,5,356,2.0,8.0,yes,Virgil,van Dijk,Virgil,2,14,played,Virgil van Dijk,6.5
+252266,seans team,sean,kelly,5,358,3.0,6.0,yes,Milos,Kerkez,Kerkez,2,14,played,Milos Kerkez,5.4
+252264,Jack Busst,Jack,Busst,5,362,3.0,6.0,yes,Jeremy,Jacquet,Jacquet,2,14,played,Jeremy Jacquet,5.0
+252266,seans team,sean,kelly,5,366,6.0,6.0,yes,Florian,Wirtz,Wirtz,3,14,played,Florian Wirtz,7.3
+252267,Jeeves,James,Reeves,5,367,6.0,3.0,yes,Cody,Gakpo,Gakpo,3,14,played,Cody Gakpo,7.2
+252260,selgar fc,Sam,Elgar,5,368,6.0,2.0,yes,Dominik,Szoboszlai,Szoboszlai,3,14,played,Dominik Szoboszlai,7.0
+252262,Forrest FC,Sam,Forrest,5,377,13.0,1.0,yes,Victor,Munoz,Munoz,3,14,benched,Victor Munoz,6.5
+252265,AL XI,Aaron,Long,5,379,10.0,8.0,yes,Alexander,Isak,Isak,4,14,played,Alexander Isak,9.1
+252265,AL XI,Aaron,Long,5,380,15.0,0.0,no,Hugo,Ekitiké,Ekitiké,4,14,benched,Hugo Ekitiké,7.4
+252259,Brumtown bandits,louis,Doherty,5,384,1.0,2.0,yes,Gianluigi,Donnarumma,Donnarumma,1,15,played,Gianluigi Donnarumma,5.5
+252263,Jack Austin,Jack,Austin,5,385,1.0,10.0,yes,James,Trafford,Trafford,1,13,played,James Trafford,5.0
+252265,AL XI,Aaron,Long,5,387,2.0,1.0,yes,Nico,O'Reilly,O'Reilly,2,15,played,Nico O'Reilly,6.4
+252259,Brumtown bandits,louis,Doherty,5,388,2.0,4.0,yes,Marc,Guéhi,Guéhi,2,15,played,Marc Guéhi,6.0
+252264,Jack Busst,Jack,Busst,5,389,5.0,1.0,yes,Matheus,Nunes,Matheus N.,2,15,played,Matheus Nunes,5.9
+252349,Blaine,Blaine,Guiney,5,390,4.0,1.0,yes,Rúben,dos Santos Gato Alves Dias,Rúben,2,15,played,Rúben dos Santos Gato Alves Dias,5.5
+252258,Paddy,Paddy,Farrell,5,391,2.0,4.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.7
+252258,Paddy,Paddy,Farrell,5,393,14.0,0.0,no,Abdukodir,Khusanov,Khusanov,2,15,benched,Abdukodir Khusanov,5.4
+252266,seans team,sean,kelly,5,397,5.0,17.0,yes,Antoine,Semenyo,Semenyo,3,15,played,Antoine Semenyo,8.4
+252264,Jack Busst,Jack,Busst,5,398,14.0,0.0,no,Phil,Foden,Foden,3,15,benched,Phil Foden,6.9
+252267,Jeeves,James,Reeves,5,399,5.0,8.0,yes,Rayan,Cherki,Cherki,3,15,played,Rayan Cherki,7.8
+252264,Jack Busst,Jack,Busst,5,400,15.0,1.0,yes,Jérémy,Doku,Doku,3,15,benched,Jérémy Doku,7.4
+252267,Jeeves,James,Reeves,5,401,11.0,2.0,yes,Omar,Marmoush,Marmoush,4,19,played,Omar Marmoush,7.0
+252267,Jeeves,James,Reeves,5,403,8.0,2.0,yes,Sávio,Moreira de Oliveira,Sávio,3,19,played,Sávio Moreira de Oliveira,6.5
+252260,selgar fc,Sam,Elgar,5,411,11.0,6.0,yes,Erling,Haaland,Haaland,4,15,played,Erling Haaland,15.6
+252260,selgar fc,Sam,Elgar,5,412,12.0,4.0,yes,Senne,Lammens,Lammens,1,16,benched,Senne Lammens,4.9
+252266,seans team,sean,kelly,5,417,14.0,2.0,yes,Diogo,Dalot Teixeira,Dalot,2,16,benched,Diogo Dalot Teixeira,4.9
+252263,Jack Austin,Jack,Austin,5,418,4.0,2.0,yes,Harry,Maguire,Maguire,2,16,played,Harry Maguire,4.9
+252262,Forrest FC,Sam,Forrest,5,426,7.0,2.0,yes,Bruno,Borges Fernandes,B.Fernandes,3,16,played,Bruno Borges Fernandes,12.0
+252349,Blaine,Blaine,Guiney,5,427,6.0,2.0,yes,Bryan,Mbeumo,Mbeumo,3,16,played,Bryan Mbeumo,7.9
+252263,Jack Austin,Jack,Austin,5,428,6.0,10.0,yes,Matheus,Santos Carneiro da Cunha,Cunha,3,16,played,Matheus Santos Carneiro da Cunha,7.9
+252267,Jeeves,James,Reeves,5,429,9.0,2.0,yes,Marcus,Rashford,Rashford,3,16,played,Marcus Rashford,7.0
+252267,Jeeves,James,Reeves,5,439,13.0,0.0,no,Benjamin,Sesko,Šeško,4,16,benched,Benjamin Sesko,7.0
+252262,Forrest FC,Sam,Forrest,5,442,12.0,0.0,no,Nick,Pope,Pope,1,17,benched,Nick Pope,4.9
+252264,Jack Busst,Jack,Busst,5,447,4.0,4.0,yes,Sven,Botman,Botman,2,17,played,Sven Botman,5.0
+252266,seans team,sean,kelly,5,449,15.0,13.0,yes,Lewis,Hall,Hall,2,17,benched,Lewis Hall,5.2
+252260,selgar fc,Sam,Elgar,5,452,13.0,1.0,yes,Bruno,Guimarães Rodriguez Moura,Bruno G.,3,1,benched,Bruno Guimarães Rodriguez Moura,6.7
+252260,selgar fc,Sam,Elgar,5,453,8.0,9.0,yes,Harvey,Barnes,Barnes,3,17,played,Harvey Barnes,6.0
+252258,Paddy,Paddy,Farrell,5,461,9.0,1.0,yes,Bazoumana,Touré,Touré,3,17,played,Bazoumana Touré,5.8
+252267,Jeeves,James,Reeves,5,464,10.0,0.0,yes,Yoane,Wissa,Wissa,4,17,played,Yoane Wissa,6.2
+252264,Jack Busst,Jack,Busst,5,467,12.0,2.0,yes,Matz,Sels,Sels,1,18,benched,Matz Sels,5.0
+252259,Brumtown bandits,louis,Doherty,5,469,3.0,2.0,yes,Neco,Williams,N.Williams,2,18,played,Neco Williams,5.0
+252262,Forrest FC,Sam,Forrest,5,471,15.0,0.0,no,Nikola,Milenković,Milenković,2,18,benched,Nikola Milenković,5.5
+252260,selgar fc,Sam,Elgar,5,472,3.0,4.0,yes,Murillo,Costa dos Santos,Murillo,2,18,played,Murillo Costa dos Santos,5.5
+252263,Jack Austin,Jack,Austin,5,473,3.0,0.0,no,Ola,Aina,Aina,2,18,played,Ola Aina,4.5
+252264,Jack Busst,Jack,Busst,5,480,6.0,2.0,yes,Morgan,Gibbs-White,Gibbs-White,3,18,played,Morgan Gibbs-White,8.0
+252260,selgar fc,Sam,Elgar,5,481,5.0,2.0,yes,Elliot,Anderson,Anderson,3,15,played,Elliot Anderson,6.3
+252263,Jack Austin,Jack,Austin,5,491,10.0,1.0,yes,Igor Jesus,Maciel da Cruz,Igor Jesus,4,18,played,Igor Jesus Maciel da Cruz,5.8
+252349,Blaine,Blaine,Guiney,5,496,1.0,2.0,yes,Antonín,Kinský,Kinsky,1,19,played,Antonín Kinský,4.5
+252264,Jack Busst,Jack,Busst,5,499,13.0,1.0,yes,Pedro,Porro Sauceda,Pedro Porro,2,19,benched,Pedro Porro Sauceda,5.4
+252267,Jeeves,James,Reeves,5,502,14.0,4.0,yes,Andrew,Robertson,Robertson,2,19,benched,Andrew Robertson,4.4
+252258,Paddy,Paddy,Farrell,5,503,3.0,1.0,yes,Micky,van de Ven,Van de Ven,2,19,played,Micky van de Ven,5.0
+252349,Blaine,Blaine,Guiney,5,504,15.0,8.0,yes,Luka,Vušković,Vuskovic,2,5,benched,Luka Vušković,5.0
+252258,Paddy,Paddy,Farrell,5,525,7.0,1.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,5.8
+252264,Jack Busst,Jack,Busst,5,526,9.0,2.0,yes,Dominic,Solanke-Mitchell,Solanke,4,19,played,Dominic Solanke-Mitchell,5.8
+252258,Paddy,Paddy,Farrell,5,529,12.0,0.0,yes,Robin,Roefs,Roefs,1,20,benched,Robin Roefs,4.9
+252258,Paddy,Paddy,Farrell,5,533,4.0,0.0,yes,Nordi,Mukiele,Mukiele,2,20,played,Nordi Mukiele,5.4
+252265,AL XI,Aaron,Long,5,542,13.0,5.0,yes,Enzo,Le Fée,E.Le Fée,3,20,benched,Enzo Le Fée,5.8
+252258,Paddy,Paddy,Farrell,5,552,13.0,17.0,yes,Brian,Brobbey,Brobbey,4,20,benched,Brian Brobbey,5.8
+252258,Paddy,Paddy,Farrell,5,554,5.0,2.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
+252258,Paddy,Paddy,Farrell,5,556,6.0,0.0,yes,Mamadou,Sangaré,M.Sangaré,3,4,played,Matt Targett,4.0
+252264,Jack Busst,Jack,Busst,5,566,1.0,3.0,yes,Lukás,Hornícek,Horníček,1,17,played,António João Pereira de Albuquerque Tavares da Silva,5.0
+252260,selgar fc,Sam,Elgar,5,569,9.0,2.0,yes,Gonzalo,García,Gonzalo,4,10,played,Gonzalo García,6.0
+252265,AL XI,Aaron,Long,5,571,12.0,6.0,yes,Konstantinos,Tzolakis,Tzolakis,1,11,benched,Florentino Ibrain Morris Luís,4.9
+252265,AL XI,Aaron,Long,5,580,5.0,7.0,yes,Ronald,Araujo,Araujo,2,14,played,Shea Charles,5.0
+252259,Brumtown bandits,louis,Doherty,5,582,14.0,0.0,no,Brian,Madjo,Madjo,4,2,benched,Brian Madjo,5.4
+252259,Brumtown bandits,louis,Doherty,5,595,13.0,0.0,no,Amar,Dedic,Dedić,2,17,benched,Zavier Gozo,5.0
+252260,selgar fc,Sam,Elgar,5,597,1.0,2.0,yes,Zion,Suzuki,Suzuki,1,2,played,Zion Suzuki,5.0
+252263,Jack Austin,Jack,Austin,5,620,2.0,1.0,yes,El Hadji Malick,Diouf,Diouf,2,4,played,El Hadji Malick Diouf,4.5
+252265,AL XI,Aaron,Long,5,628,9.0,3.0,yes,Bradley,Barcola,Barcola,3,14,played,Allan Andrade Elias,6.0
+252267,Jeeves,James,Reeves,5,630,15.0,0.0,no,Taylor,Harwood-Bellis,Harwood-Bellis,2,2,benched,Taylor Harwood-Bellis,4.5
+252267,Jeeves,James,Reeves,5,631,7.0,1.0,yes,Ibrahim,Mbaye,Mbaye,3,2,played,Ibrahim Mbaye,6.0
+252266,seans team,sean,kelly,5,646,11.0,0.0,yes,Zian,Flemming,Flemming,4,12,played,Malick Fofana,5.5
+252265,AL XI,Aaron,Long,5,649,11.0,2.0,yes,Matias,Fernandez-Pardo,Fernandez-Pardo,4,17,played,Ainsley Maitland-Niles,4.5

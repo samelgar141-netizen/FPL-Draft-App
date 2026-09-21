@@ -1,27 +1,29 @@
 id,element_in,element_out,entry,event,kind,result,web_name_x,web_name_y,total_points_in,total_points_out
-1,166,492,252267,1,w,a,N.Jackson,Awoniyi,4.0,-2.0
-5,401,166,252267,1,f,a,Marmoush,N.Jackson,6.0,4.0
+1,166,492,252267,1,w,a,N.Jackson,Awoniyi,10.0,-2.0
+5,401,166,252267,1,f,a,Marmoush,N.Jackson,8.0,10.0
 9,151,533,252265,2,w,di,Acheampong,Mukiele,1.0,4.0
-10,166,194,252349,2,w,di,N.Jackson,Thomas-Asante,4.0,1.0
-12,166,136,252260,2,w,di,N.Jackson,Welbeck,4.0,0.0
-13,166,125,252263,2,w,di,N.Jackson,Georginio,4.0,0.0
-14,167,491,252263,2,w,di,Delap,Igor Jesus,8.0,9.0
-21,167,316,252262,2,w,di,Delap,Emersonn,8.0,15.0
-25,167,527,252266,2,w,di,Delap,Richarlison,8.0,0.0
-26,87,533,252265,2,f,a,Ajer,Mukiele,6.0,4.0
-28,238,41,252266,3,w,a,Grealish,Buendía,2.0,2.0
-32,628,53,252259,3,w,di,Barcola,Manzambi,4.0,1.0
-37,238,542,252265,3,w,di,Grealish,E.Le Fée,2.0,8.0
+10,166,194,252349,2,w,di,N.Jackson,Thomas-Asante,10.0,1.0
+12,166,136,252260,2,w,di,N.Jackson,Welbeck,10.0,2.0
+13,166,125,252263,2,w,di,N.Jackson,Georginio,10.0,1.0
+14,167,491,252263,2,w,di,Delap,Igor Jesus,9.0,10.0
+21,167,316,252262,2,w,di,Delap,Emersonn,9.0,17.0
+25,167,527,252266,2,w,di,Delap,Richarlison,9.0,0.0
+26,87,533,252265,2,f,a,Ajer,Mukiele,13.0,4.0
+28,238,41,252266,3,w,a,Grealish,Buendía,5.0,14.0
+32,628,53,252259,3,w,di,Barcola,Manzambi,7.0,14.0
+37,238,542,252265,3,w,di,Grealish,E.Le Fée,5.0,13.0
 40,595,6,252265,3,w,di,Dedić,Saliba,1.0,0.0
-43,628,208,252264,3,w,di,Barcola,Sarr,4.0,0.0
-44,377,208,252264,3,w,di,Munoz,Sarr,4.0,0.0
-45,127,208,252264,3,w,a,Gomez,Sarr,5.0,0.0
-47,124,208,252264,3,w,do,Groß,Sarr,18.0,0.0
-57,445,112,252262,3,w,a,Thiaw,Van Hecke,1.0,8.0
-58,628,67,252260,3,w,di,Barcola,Rayan,4.0,4.0
-63,556,481,252260,3,w,di,M.Sangaré,Anderson,4.0,8.0
-65,628,7,252263,3,w,di,Barcola,Lewis-Skelly,4.0,2.0
-66,628,371,252349,3,w,di,Barcola,Gravenberch,4.0,1.0
-67,238,371,252349,3,w,di,Grealish,Gravenberch,2.0,1.0
+43,628,208,252264,3,w,di,Barcola,Sarr,7.0,1.0
+44,377,208,252264,3,w,di,Munoz,Sarr,5.0,1.0
+45,127,208,252264,3,w,a,Gomez,Sarr,13.0,1.0
+47,124,208,252264,3,w,do,Groß,Sarr,32.0,1.0
+57,445,112,252262,3,w,a,Thiaw,Van Hecke,1.0,14.0
+58,628,67,252260,3,w,di,Barcola,Rayan,7.0,6.0
+59,138,136,252260,3,w,a,Kostoulas,Welbeck,22.0,2.0
+63,556,481,252260,3,w,di,M.Sangaré,Anderson,4.0,10.0
+65,628,7,252263,3,w,di,Barcola,Lewis-Skelly,7.0,2.0
+66,628,371,252349,3,w,di,Barcola,Gravenberch,7.0,1.0
+67,238,371,252349,3,w,di,Grealish,Gravenberch,5.0,1.0
 69,595,149,252349,3,w,di,Dedić,Colwill,1.0,0.0
-71,649,347,252259,4,w,di,Fernandez-Pardo,Nmecha,1.0,1.0
+71,649,347,252259,4,w,di,Fernandez-Pardo,Nmecha,3.0,2.0
+76,334,6,252265,4,w,a,Muharemović,Saliba,13.0,0.0

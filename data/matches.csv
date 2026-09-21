@@ -39,343 +39,343 @@ gw,finished,team,team_entry_id,team_name,team_player_first_name,team_player_last
 4,True,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,38,59,-21,Lose,0,135,162,4,8,7.5,3.0
 4,True,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,32,42,-10,Lose,0,128,164,3,9,10.0,4.5
 4,True,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,33,42,-9,Lose,0,169,224,1,10,9.0,4.5
-5,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,164,128,13,1,5.5,5.5
-5,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,208,169,11,2,5.5,5.5
-5,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,216,161,7,3,5.5,5.5
-5,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,152,7,4,5.5,5.5
-5,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,201,7,5,5.5,5.5
-5,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,146,147,7,6,5.5,5.5
-5,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,154,186,5,7,5.5,5.5
-5,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,135,162,5,8,5.5,5.5
-5,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,128,164,4,9,5.5,5.5
-5,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,169,224,2,10,5.5,5.5
-6,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,164,128,14,1,5.5,5.5
-6,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,208,169,12,2,5.5,5.5
-6,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,216,161,8,3,5.5,5.5
-6,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,152,8,4,5.5,5.5
-6,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,201,8,5,5.5,5.5
-6,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,146,147,8,6,5.5,5.5
-6,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,154,186,6,7,5.5,5.5
-6,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,135,162,6,8,5.5,5.5
-6,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,128,164,5,9,5.5,5.5
-6,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,169,224,3,10,5.5,5.5
-7,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,164,128,15,1,5.5,5.5
-7,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,208,169,13,2,5.5,5.5
-7,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,216,161,9,3,5.5,5.5
-7,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,152,9,4,5.5,5.5
-7,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,201,9,5,5.5,5.5
-7,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,146,147,9,6,5.5,5.5
-7,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,154,186,7,7,5.5,5.5
-7,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,135,162,7,8,5.5,5.5
-7,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,128,164,6,9,5.5,5.5
-7,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,169,224,4,10,5.5,5.5
-8,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,164,128,16,1,5.5,5.5
-8,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,208,169,14,2,5.5,5.5
-8,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,216,161,10,3,5.5,5.5
-8,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,152,10,4,5.5,5.5
-8,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,201,10,5,5.5,5.5
-8,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,146,147,10,6,5.5,5.5
-8,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,154,186,8,7,5.5,5.5
-8,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,135,162,8,8,5.5,5.5
-8,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,128,164,7,9,5.5,5.5
-8,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,169,224,5,10,5.5,5.5
-9,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,164,128,17,1,5.5,5.5
-9,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,208,169,15,2,5.5,5.5
-9,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,216,161,11,3,5.5,5.5
-9,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,152,11,4,5.5,5.5
-9,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,201,11,5,5.5,5.5
-9,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,146,147,11,6,5.5,5.5
-9,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,154,186,9,7,5.5,5.5
-9,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,135,162,9,8,5.5,5.5
-9,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,128,164,8,9,5.5,5.5
-9,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,169,224,6,10,5.5,5.5
-10,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,164,128,18,1,5.5,5.5
-10,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,208,169,16,2,5.5,5.5
-10,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,216,161,12,3,5.5,5.5
-10,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,152,12,4,5.5,5.5
-10,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,201,12,5,5.5,5.5
-10,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,146,147,12,6,5.5,5.5
-10,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,154,186,10,7,5.5,5.5
-10,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,135,162,10,8,5.5,5.5
-10,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,128,164,9,9,5.5,5.5
-10,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,169,224,7,10,5.5,5.5
-11,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,164,128,19,1,5.5,5.5
-11,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,208,169,17,2,5.5,5.5
-11,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,216,161,13,3,5.5,5.5
-11,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,152,13,4,5.5,5.5
-11,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,201,13,5,5.5,5.5
-11,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,146,147,13,6,5.5,5.5
-11,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,154,186,11,7,5.5,5.5
-11,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,135,162,11,8,5.5,5.5
-11,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,128,164,10,9,5.5,5.5
-11,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,169,224,8,10,5.5,5.5
-12,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,164,128,20,1,5.5,5.5
-12,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,208,169,18,2,5.5,5.5
-12,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,216,161,14,3,5.5,5.5
-12,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,187,152,14,4,5.5,5.5
-12,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,187,201,14,5,5.5,5.5
-12,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,146,147,14,6,5.5,5.5
-12,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,154,186,12,7,5.5,5.5
-12,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,135,162,12,8,5.5,5.5
-12,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,128,164,11,9,5.5,5.5
-12,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,169,224,9,10,5.5,5.5
-13,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,164,128,21,1,5.5,5.5
-13,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,208,169,19,2,5.5,5.5
-13,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,216,161,15,3,5.5,5.5
-13,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,152,15,4,5.5,5.5
-13,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,201,15,5,5.5,5.5
-13,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,146,147,15,6,5.5,5.5
-13,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,154,186,13,7,5.5,5.5
-13,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,135,162,13,8,5.5,5.5
-13,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,128,164,12,9,5.5,5.5
-13,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,169,224,10,10,5.5,5.5
-14,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,164,128,22,1,5.5,5.5
-14,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,208,169,20,2,5.5,5.5
-14,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,216,161,16,3,5.5,5.5
-14,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,152,16,4,5.5,5.5
-14,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,201,16,5,5.5,5.5
-14,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,146,147,16,6,5.5,5.5
-14,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,154,186,14,7,5.5,5.5
-14,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,135,162,14,8,5.5,5.5
-14,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,128,164,13,9,5.5,5.5
-14,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,169,224,11,10,5.5,5.5
-15,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,164,128,23,1,5.5,5.5
-15,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,208,169,21,2,5.5,5.5
-15,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,216,161,17,3,5.5,5.5
-15,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,152,17,4,5.5,5.5
-15,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,201,17,5,5.5,5.5
-15,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,146,147,17,6,5.5,5.5
-15,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,154,186,15,7,5.5,5.5
-15,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,135,162,15,8,5.5,5.5
-15,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,128,164,14,9,5.5,5.5
-15,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,169,224,12,10,5.5,5.5
-16,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,164,128,24,1,5.5,5.5
-16,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,208,169,22,2,5.5,5.5
-16,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,216,161,18,3,5.5,5.5
-16,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,152,18,4,5.5,5.5
-16,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,201,18,5,5.5,5.5
-16,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,146,147,18,6,5.5,5.5
-16,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,154,186,16,7,5.5,5.5
-16,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,135,162,16,8,5.5,5.5
-16,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,128,164,15,9,5.5,5.5
-16,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,169,224,13,10,5.5,5.5
-17,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,164,128,25,1,5.5,5.5
-17,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,208,169,23,2,5.5,5.5
-17,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,216,161,19,3,5.5,5.5
-17,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,152,19,4,5.5,5.5
-17,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,201,19,5,5.5,5.5
-17,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,146,147,19,6,5.5,5.5
-17,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,154,186,17,7,5.5,5.5
-17,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,135,162,17,8,5.5,5.5
-17,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,128,164,16,9,5.5,5.5
-17,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,169,224,14,10,5.5,5.5
-18,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,164,128,26,1,5.5,5.5
-18,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,208,169,24,2,5.5,5.5
-18,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,216,161,20,3,5.5,5.5
-18,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,152,20,4,5.5,5.5
-18,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,201,20,5,5.5,5.5
-18,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,146,147,20,6,5.5,5.5
-18,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,154,186,18,7,5.5,5.5
-18,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,135,162,18,8,5.5,5.5
-18,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,128,164,17,9,5.5,5.5
-18,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,169,224,15,10,5.5,5.5
-19,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,164,128,27,1,5.5,5.5
-19,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,208,169,25,2,5.5,5.5
-19,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,216,161,21,3,5.5,5.5
-19,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,152,21,4,5.5,5.5
-19,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,201,21,5,5.5,5.5
-19,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,146,147,21,6,5.5,5.5
-19,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,154,186,19,7,5.5,5.5
-19,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,135,162,19,8,5.5,5.5
-19,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,128,164,18,9,5.5,5.5
-19,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,169,224,16,10,5.5,5.5
-20,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,164,128,28,1,5.5,5.5
-20,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,208,169,26,2,5.5,5.5
-20,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,216,161,22,3,5.5,5.5
-20,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,152,22,4,5.5,5.5
-20,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,201,22,5,5.5,5.5
-20,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,146,147,22,6,5.5,5.5
-20,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,154,186,20,7,5.5,5.5
-20,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,135,162,20,8,5.5,5.5
-20,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,128,164,19,9,5.5,5.5
-20,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,169,224,17,10,5.5,5.5
-21,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,164,128,29,1,5.5,5.5
-21,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,208,169,27,2,5.5,5.5
-21,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,216,161,23,3,5.5,5.5
-21,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,187,152,23,4,5.5,5.5
-21,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,187,201,23,5,5.5,5.5
-21,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,146,147,23,6,5.5,5.5
-21,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,154,186,21,7,5.5,5.5
-21,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,135,162,21,8,5.5,5.5
-21,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,128,164,20,9,5.5,5.5
-21,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,169,224,18,10,5.5,5.5
-22,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,164,128,30,1,5.5,5.5
-22,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,208,169,28,2,5.5,5.5
-22,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,216,161,24,3,5.5,5.5
-22,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,152,24,4,5.5,5.5
-22,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,201,24,5,5.5,5.5
-22,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,146,147,24,6,5.5,5.5
-22,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,154,186,22,7,5.5,5.5
-22,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,135,162,22,8,5.5,5.5
-22,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,128,164,21,9,5.5,5.5
-22,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,169,224,19,10,5.5,5.5
-23,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,164,128,31,1,5.5,5.5
-23,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,208,169,29,2,5.5,5.5
-23,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,216,161,25,3,5.5,5.5
-23,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,152,25,4,5.5,5.5
-23,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,201,25,5,5.5,5.5
-23,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,146,147,25,6,5.5,5.5
-23,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,154,186,23,7,5.5,5.5
-23,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,135,162,23,8,5.5,5.5
-23,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,128,164,22,9,5.5,5.5
-23,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,169,224,20,10,5.5,5.5
-24,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,164,128,32,1,5.5,5.5
-24,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,208,169,30,2,5.5,5.5
-24,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,216,161,26,3,5.5,5.5
-24,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,152,26,4,5.5,5.5
-24,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,201,26,5,5.5,5.5
-24,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,146,147,26,6,5.5,5.5
-24,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,154,186,24,7,5.5,5.5
-24,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,135,162,24,8,5.5,5.5
-24,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,128,164,23,9,5.5,5.5
-24,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,169,224,21,10,5.5,5.5
-25,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,164,128,33,1,5.5,5.5
-25,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,208,169,31,2,5.5,5.5
-25,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,216,161,27,3,5.5,5.5
-25,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,152,27,4,5.5,5.5
-25,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,201,27,5,5.5,5.5
-25,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,146,147,27,6,5.5,5.5
-25,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,154,186,25,7,5.5,5.5
-25,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,135,162,25,8,5.5,5.5
-25,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,128,164,24,9,5.5,5.5
-25,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,169,224,22,10,5.5,5.5
-26,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,164,128,34,1,5.5,5.5
-26,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,208,169,32,2,5.5,5.5
-26,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,216,161,28,3,5.5,5.5
-26,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,152,28,4,5.5,5.5
-26,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,201,28,5,5.5,5.5
-26,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,146,147,28,6,5.5,5.5
-26,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,154,186,26,7,5.5,5.5
-26,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,135,162,26,8,5.5,5.5
-26,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,128,164,25,9,5.5,5.5
-26,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,169,224,23,10,5.5,5.5
-27,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,164,128,35,1,5.5,5.5
-27,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,208,169,33,2,5.5,5.5
-27,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,216,161,29,3,5.5,5.5
-27,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,152,29,4,5.5,5.5
-27,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,201,29,5,5.5,5.5
-27,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,146,147,29,6,5.5,5.5
-27,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,154,186,27,7,5.5,5.5
-27,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,135,162,27,8,5.5,5.5
-27,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,128,164,26,9,5.5,5.5
-27,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,169,224,24,10,5.5,5.5
-28,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,164,128,36,1,5.5,5.5
-28,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,208,169,34,2,5.5,5.5
-28,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,216,161,30,3,5.5,5.5
-28,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,152,30,4,5.5,5.5
-28,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,201,30,5,5.5,5.5
-28,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,146,147,30,6,5.5,5.5
-28,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,154,186,28,7,5.5,5.5
-28,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,135,162,28,8,5.5,5.5
-28,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,128,164,27,9,5.5,5.5
-28,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,169,224,25,10,5.5,5.5
-29,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,164,128,37,1,5.5,5.5
-29,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,208,169,35,2,5.5,5.5
-29,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,216,161,31,3,5.5,5.5
-29,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,152,31,4,5.5,5.5
-29,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,201,31,5,5.5,5.5
-29,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,146,147,31,6,5.5,5.5
-29,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,154,186,29,7,5.5,5.5
-29,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,135,162,29,8,5.5,5.5
-29,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,128,164,28,9,5.5,5.5
-29,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,169,224,26,10,5.5,5.5
-30,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,164,128,38,1,5.5,5.5
-30,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,208,169,36,2,5.5,5.5
-30,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,216,161,32,3,5.5,5.5
-30,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,187,152,32,4,5.5,5.5
-30,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,187,201,32,5,5.5,5.5
-30,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,146,147,32,6,5.5,5.5
-30,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,154,186,30,7,5.5,5.5
-30,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,135,162,30,8,5.5,5.5
-30,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,128,164,29,9,5.5,5.5
-30,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,169,224,27,10,5.5,5.5
-31,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,164,128,39,1,5.5,5.5
-31,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,208,169,37,2,5.5,5.5
-31,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,216,161,33,3,5.5,5.5
-31,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,152,33,4,5.5,5.5
-31,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,201,33,5,5.5,5.5
-31,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,146,147,33,6,5.5,5.5
-31,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,154,186,31,7,5.5,5.5
-31,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,135,162,31,8,5.5,5.5
-31,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,128,164,30,9,5.5,5.5
-31,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,169,224,28,10,5.5,5.5
-32,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,164,128,40,1,5.5,5.5
-32,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,208,169,38,2,5.5,5.5
-32,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,216,161,34,3,5.5,5.5
-32,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,152,34,4,5.5,5.5
-32,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,201,34,5,5.5,5.5
-32,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,146,147,34,6,5.5,5.5
-32,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,154,186,32,7,5.5,5.5
-32,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,135,162,32,8,5.5,5.5
-32,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,128,164,31,9,5.5,5.5
-32,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,169,224,29,10,5.5,5.5
-33,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,164,128,41,1,5.5,5.5
-33,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,208,169,39,2,5.5,5.5
-33,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,216,161,35,3,5.5,5.5
-33,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,152,35,4,5.5,5.5
-33,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,187,201,35,5,5.5,5.5
-33,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,146,147,35,6,5.5,5.5
-33,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,154,186,33,7,5.5,5.5
-33,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,135,162,33,8,5.5,5.5
-33,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,128,164,32,9,5.5,5.5
-33,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,169,224,30,10,5.5,5.5
-34,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,164,128,42,1,5.5,5.5
-34,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,208,169,40,2,5.5,5.5
-34,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,216,161,36,3,5.5,5.5
-34,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,152,36,4,5.5,5.5
-34,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,187,201,36,5,5.5,5.5
-34,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,146,147,36,6,5.5,5.5
-34,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,154,186,34,7,5.5,5.5
-34,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,135,162,34,8,5.5,5.5
-34,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,128,164,33,9,5.5,5.5
-34,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,169,224,31,10,5.5,5.5
-35,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,164,128,43,1,5.5,5.5
-35,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,208,169,41,2,5.5,5.5
-35,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,216,161,37,3,5.5,5.5
-35,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,152,37,4,5.5,5.5
-35,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,187,201,37,5,5.5,5.5
-35,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,146,147,37,6,5.5,5.5
-35,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,154,186,35,7,5.5,5.5
-35,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,135,162,35,8,5.5,5.5
-35,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,128,164,34,9,5.5,5.5
-35,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,169,224,32,10,5.5,5.5
-36,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,164,128,44,1,5.5,5.5
-36,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,208,169,42,2,5.5,5.5
-36,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,216,161,38,3,5.5,5.5
-36,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,152,38,4,5.5,5.5
-36,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,187,201,38,5,5.5,5.5
-36,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,146,147,38,6,5.5,5.5
-36,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,154,186,36,7,5.5,5.5
-36,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,135,162,36,8,5.5,5.5
-36,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,128,164,35,9,5.5,5.5
-36,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,169,224,33,10,5.5,5.5
-37,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,164,128,45,1,5.5,5.5
-37,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,208,169,43,2,5.5,5.5
-37,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,216,161,39,3,5.5,5.5
-37,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,187,152,39,4,5.5,5.5
-37,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,187,201,39,5,5.5,5.5
-37,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,146,147,39,6,5.5,5.5
-37,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,154,186,37,7,5.5,5.5
-37,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,135,162,37,8,5.5,5.5
-37,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,128,164,36,9,5.5,5.5
-37,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,169,224,34,10,5.5,5.5
-38,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,164,128,46,1,5.5,5.5
-38,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,208,169,44,2,5.5,5.5
-38,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,216,161,40,3,5.5,5.5
-38,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,187,152,40,4,5.5,5.5
-38,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,187,201,40,5,5.5,5.5
-38,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,146,147,40,6,5.5,5.5
-38,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,154,186,38,7,5.5,5.5
-38,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,135,162,38,8,5.5,5.5
-38,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,128,164,37,9,5.5,5.5
-38,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,169,224,35,10,5.5,5.5
+5,True,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,42,55,-13,Lose,0,206,183,12,1,5.0,2.0
+5,True,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,40,63,-23,Lose,0,248,232,10,2,6.0,1.0
+5,True,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,52,46,6,Win,3,268,207,9,3,3.0,4.0
+5,True,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,55,42,13,Win,3,242,194,9,4,2.0,5.0
+5,True,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,35,16,19,Win,3,222,217,9,5,8.5,10.0
+5,True,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,63,40,23,Win,3,198,202,7,6,1.0,6.0
+5,True,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,38,35,3,Win,3,192,221,7,7,7.0,8.5
+5,True,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,16,35,-19,Lose,0,162,182,6,8,10.0,8.5
+5,True,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,46,52,-6,Lose,0,174,216,3,9,4.0,3.0
+5,True,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,35,38,-3,Lose,0,204,262,1,10,8.5,7.0
+6,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,206,183,13,1,5.5,5.5
+6,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,248,232,11,2,5.5,5.5
+6,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,268,207,10,3,5.5,5.5
+6,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,242,194,10,4,5.5,5.5
+6,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,222,217,10,5,5.5,5.5
+6,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,198,202,8,6,5.5,5.5
+6,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,192,221,8,7,5.5,5.5
+6,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,162,182,7,8,5.5,5.5
+6,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,174,216,4,9,5.5,5.5
+6,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,204,262,2,10,5.5,5.5
+7,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,206,183,14,1,5.5,5.5
+7,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,248,232,12,2,5.5,5.5
+7,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,268,207,11,3,5.5,5.5
+7,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,242,194,11,4,5.5,5.5
+7,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,222,217,11,5,5.5,5.5
+7,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,198,202,9,6,5.5,5.5
+7,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,192,221,9,7,5.5,5.5
+7,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,162,182,8,8,5.5,5.5
+7,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,174,216,5,9,5.5,5.5
+7,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,204,262,3,10,5.5,5.5
+8,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,206,183,15,1,5.5,5.5
+8,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,248,232,13,2,5.5,5.5
+8,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,268,207,12,3,5.5,5.5
+8,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,242,194,12,4,5.5,5.5
+8,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,222,217,12,5,5.5,5.5
+8,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,198,202,10,6,5.5,5.5
+8,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,192,221,10,7,5.5,5.5
+8,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,162,182,9,8,5.5,5.5
+8,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,174,216,6,9,5.5,5.5
+8,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,204,262,4,10,5.5,5.5
+9,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,206,183,16,1,5.5,5.5
+9,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,248,232,14,2,5.5,5.5
+9,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,268,207,13,3,5.5,5.5
+9,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,242,194,13,4,5.5,5.5
+9,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,222,217,13,5,5.5,5.5
+9,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,198,202,11,6,5.5,5.5
+9,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,192,221,11,7,5.5,5.5
+9,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,162,182,10,8,5.5,5.5
+9,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,174,216,7,9,5.5,5.5
+9,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,204,262,5,10,5.5,5.5
+10,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,206,183,17,1,5.5,5.5
+10,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,248,232,15,2,5.5,5.5
+10,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,268,207,14,3,5.5,5.5
+10,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,242,194,14,4,5.5,5.5
+10,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,222,217,14,5,5.5,5.5
+10,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,198,202,12,6,5.5,5.5
+10,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,192,221,12,7,5.5,5.5
+10,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,162,182,11,8,5.5,5.5
+10,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,174,216,8,9,5.5,5.5
+10,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,204,262,6,10,5.5,5.5
+11,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,206,183,18,1,5.5,5.5
+11,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,248,232,16,2,5.5,5.5
+11,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,268,207,15,3,5.5,5.5
+11,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,242,194,15,4,5.5,5.5
+11,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,222,217,15,5,5.5,5.5
+11,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,198,202,13,6,5.5,5.5
+11,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,192,221,13,7,5.5,5.5
+11,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,162,182,12,8,5.5,5.5
+11,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,174,216,9,9,5.5,5.5
+11,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,204,262,7,10,5.5,5.5
+12,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,206,183,19,1,5.5,5.5
+12,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,248,232,17,2,5.5,5.5
+12,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,268,207,16,3,5.5,5.5
+12,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,242,194,16,4,5.5,5.5
+12,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,222,217,16,5,5.5,5.5
+12,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,198,202,14,6,5.5,5.5
+12,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,192,221,14,7,5.5,5.5
+12,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,162,182,13,8,5.5,5.5
+12,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,174,216,10,9,5.5,5.5
+12,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,204,262,8,10,5.5,5.5
+13,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,206,183,20,1,5.5,5.5
+13,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,248,232,18,2,5.5,5.5
+13,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,268,207,17,3,5.5,5.5
+13,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,242,194,17,4,5.5,5.5
+13,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,222,217,17,5,5.5,5.5
+13,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,198,202,15,6,5.5,5.5
+13,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,192,221,15,7,5.5,5.5
+13,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,162,182,14,8,5.5,5.5
+13,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,174,216,11,9,5.5,5.5
+13,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,204,262,9,10,5.5,5.5
+14,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,206,183,21,1,5.5,5.5
+14,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,248,232,19,2,5.5,5.5
+14,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,268,207,18,3,5.5,5.5
+14,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,242,194,18,4,5.5,5.5
+14,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,222,217,18,5,5.5,5.5
+14,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,198,202,16,6,5.5,5.5
+14,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,192,221,16,7,5.5,5.5
+14,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,162,182,15,8,5.5,5.5
+14,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,174,216,12,9,5.5,5.5
+14,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,204,262,10,10,5.5,5.5
+15,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,206,183,22,1,5.5,5.5
+15,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,248,232,20,2,5.5,5.5
+15,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,268,207,19,3,5.5,5.5
+15,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,242,194,19,4,5.5,5.5
+15,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,222,217,19,5,5.5,5.5
+15,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,198,202,17,6,5.5,5.5
+15,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,192,221,17,7,5.5,5.5
+15,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,162,182,16,8,5.5,5.5
+15,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,174,216,13,9,5.5,5.5
+15,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,204,262,11,10,5.5,5.5
+16,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,206,183,23,1,5.5,5.5
+16,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,248,232,21,2,5.5,5.5
+16,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,268,207,20,3,5.5,5.5
+16,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,242,194,20,4,5.5,5.5
+16,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,222,217,20,5,5.5,5.5
+16,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,198,202,18,6,5.5,5.5
+16,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,192,221,18,7,5.5,5.5
+16,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,162,182,17,8,5.5,5.5
+16,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,174,216,14,9,5.5,5.5
+16,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,204,262,12,10,5.5,5.5
+17,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,206,183,24,1,5.5,5.5
+17,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,248,232,22,2,5.5,5.5
+17,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,268,207,21,3,5.5,5.5
+17,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,242,194,21,4,5.5,5.5
+17,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,222,217,21,5,5.5,5.5
+17,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,198,202,19,6,5.5,5.5
+17,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,192,221,19,7,5.5,5.5
+17,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,162,182,18,8,5.5,5.5
+17,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,174,216,15,9,5.5,5.5
+17,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,204,262,13,10,5.5,5.5
+18,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,206,183,25,1,5.5,5.5
+18,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,248,232,23,2,5.5,5.5
+18,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,268,207,22,3,5.5,5.5
+18,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,242,194,22,4,5.5,5.5
+18,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,222,217,22,5,5.5,5.5
+18,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,198,202,20,6,5.5,5.5
+18,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,192,221,20,7,5.5,5.5
+18,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,162,182,19,8,5.5,5.5
+18,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,174,216,16,9,5.5,5.5
+18,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,204,262,14,10,5.5,5.5
+19,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,206,183,26,1,5.5,5.5
+19,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,248,232,24,2,5.5,5.5
+19,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,268,207,23,3,5.5,5.5
+19,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,242,194,23,4,5.5,5.5
+19,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,222,217,23,5,5.5,5.5
+19,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,198,202,21,6,5.5,5.5
+19,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,192,221,21,7,5.5,5.5
+19,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,162,182,20,8,5.5,5.5
+19,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,174,216,17,9,5.5,5.5
+19,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,204,262,15,10,5.5,5.5
+20,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,206,183,27,1,5.5,5.5
+20,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,248,232,25,2,5.5,5.5
+20,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,268,207,24,3,5.5,5.5
+20,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,242,194,24,4,5.5,5.5
+20,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,222,217,24,5,5.5,5.5
+20,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,198,202,22,6,5.5,5.5
+20,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,192,221,22,7,5.5,5.5
+20,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,162,182,21,8,5.5,5.5
+20,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,174,216,18,9,5.5,5.5
+20,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,204,262,16,10,5.5,5.5
+21,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,206,183,28,1,5.5,5.5
+21,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,248,232,26,2,5.5,5.5
+21,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,268,207,25,3,5.5,5.5
+21,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,242,194,25,4,5.5,5.5
+21,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,222,217,25,5,5.5,5.5
+21,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,198,202,23,6,5.5,5.5
+21,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,192,221,23,7,5.5,5.5
+21,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,162,182,22,8,5.5,5.5
+21,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,174,216,19,9,5.5,5.5
+21,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,204,262,17,10,5.5,5.5
+22,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,206,183,29,1,5.5,5.5
+22,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,248,232,27,2,5.5,5.5
+22,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,268,207,26,3,5.5,5.5
+22,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,242,194,26,4,5.5,5.5
+22,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,222,217,26,5,5.5,5.5
+22,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,198,202,24,6,5.5,5.5
+22,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,192,221,24,7,5.5,5.5
+22,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,162,182,23,8,5.5,5.5
+22,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,174,216,20,9,5.5,5.5
+22,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,204,262,18,10,5.5,5.5
+23,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,206,183,30,1,5.5,5.5
+23,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,248,232,28,2,5.5,5.5
+23,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,268,207,27,3,5.5,5.5
+23,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,242,194,27,4,5.5,5.5
+23,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,222,217,27,5,5.5,5.5
+23,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,198,202,25,6,5.5,5.5
+23,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,192,221,25,7,5.5,5.5
+23,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,162,182,24,8,5.5,5.5
+23,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,174,216,21,9,5.5,5.5
+23,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,204,262,19,10,5.5,5.5
+24,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,206,183,31,1,5.5,5.5
+24,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,248,232,29,2,5.5,5.5
+24,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,268,207,28,3,5.5,5.5
+24,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,242,194,28,4,5.5,5.5
+24,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,222,217,28,5,5.5,5.5
+24,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,198,202,26,6,5.5,5.5
+24,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,192,221,26,7,5.5,5.5
+24,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,162,182,25,8,5.5,5.5
+24,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,174,216,22,9,5.5,5.5
+24,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,204,262,20,10,5.5,5.5
+25,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,206,183,32,1,5.5,5.5
+25,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,248,232,30,2,5.5,5.5
+25,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,268,207,29,3,5.5,5.5
+25,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,242,194,29,4,5.5,5.5
+25,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,222,217,29,5,5.5,5.5
+25,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,198,202,27,6,5.5,5.5
+25,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,192,221,27,7,5.5,5.5
+25,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,162,182,26,8,5.5,5.5
+25,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,174,216,23,9,5.5,5.5
+25,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,204,262,21,10,5.5,5.5
+26,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,206,183,33,1,5.5,5.5
+26,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,248,232,31,2,5.5,5.5
+26,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,268,207,30,3,5.5,5.5
+26,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,242,194,30,4,5.5,5.5
+26,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,222,217,30,5,5.5,5.5
+26,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,198,202,28,6,5.5,5.5
+26,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,192,221,28,7,5.5,5.5
+26,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,162,182,27,8,5.5,5.5
+26,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,174,216,24,9,5.5,5.5
+26,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,204,262,22,10,5.5,5.5
+27,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,206,183,34,1,5.5,5.5
+27,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,248,232,32,2,5.5,5.5
+27,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,268,207,31,3,5.5,5.5
+27,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,242,194,31,4,5.5,5.5
+27,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,222,217,31,5,5.5,5.5
+27,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,198,202,29,6,5.5,5.5
+27,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,192,221,29,7,5.5,5.5
+27,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,162,182,28,8,5.5,5.5
+27,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,174,216,25,9,5.5,5.5
+27,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,204,262,23,10,5.5,5.5
+28,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,206,183,35,1,5.5,5.5
+28,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,248,232,33,2,5.5,5.5
+28,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,268,207,32,3,5.5,5.5
+28,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,242,194,32,4,5.5,5.5
+28,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,222,217,32,5,5.5,5.5
+28,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,198,202,30,6,5.5,5.5
+28,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,192,221,30,7,5.5,5.5
+28,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,162,182,29,8,5.5,5.5
+28,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,174,216,26,9,5.5,5.5
+28,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,204,262,24,10,5.5,5.5
+29,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,206,183,36,1,5.5,5.5
+29,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,248,232,34,2,5.5,5.5
+29,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,268,207,33,3,5.5,5.5
+29,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,242,194,33,4,5.5,5.5
+29,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,222,217,33,5,5.5,5.5
+29,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,198,202,31,6,5.5,5.5
+29,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,192,221,31,7,5.5,5.5
+29,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,162,182,30,8,5.5,5.5
+29,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,174,216,27,9,5.5,5.5
+29,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,204,262,25,10,5.5,5.5
+30,False,254462,252259,Brumtown bandits,louis,Doherty,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,206,183,37,1,5.5,5.5
+30,False,254552,252349,Blaine,Blaine,Guiney,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,248,232,35,2,5.5,5.5
+30,False,254463,252260,selgar fc,Sam,Elgar,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,268,207,34,3,5.5,5.5
+30,False,254468,252265,AL XI,Aaron,Long,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,242,194,34,4,5.5,5.5
+30,False,254470,252267,Jeeves,James,Reeves,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,222,217,34,5,5.5,5.5
+30,False,254469,252266,seans team,sean,kelly,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,198,202,32,6,5.5,5.5
+30,False,254466,252263,Jack Austin,Jack,Austin,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,192,221,32,7,5.5,5.5
+30,False,254461,252258,Paddy,Paddy,Farrell,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,162,182,31,8,5.5,5.5
+30,False,254467,252264,Jack Busst,Jack,Busst,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,174,216,28,9,5.5,5.5
+30,False,254465,252262,Forrest FC,Sam,Forrest,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,204,262,26,10,5.5,5.5
+31,False,254462,252259,Brumtown bandits,louis,Doherty,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,206,183,38,1,5.5,5.5
+31,False,254552,252349,Blaine,Blaine,Guiney,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,248,232,36,2,5.5,5.5
+31,False,254463,252260,selgar fc,Sam,Elgar,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,268,207,35,3,5.5,5.5
+31,False,254468,252265,AL XI,Aaron,Long,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,242,194,35,4,5.5,5.5
+31,False,254470,252267,Jeeves,James,Reeves,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,222,217,35,5,5.5,5.5
+31,False,254469,252266,seans team,sean,kelly,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,198,202,33,6,5.5,5.5
+31,False,254466,252263,Jack Austin,Jack,Austin,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,192,221,33,7,5.5,5.5
+31,False,254461,252258,Paddy,Paddy,Farrell,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,162,182,32,8,5.5,5.5
+31,False,254467,252264,Jack Busst,Jack,Busst,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,174,216,29,9,5.5,5.5
+31,False,254465,252262,Forrest FC,Sam,Forrest,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,204,262,27,10,5.5,5.5
+32,False,254462,252259,Brumtown bandits,louis,Doherty,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,206,183,39,1,5.5,5.5
+32,False,254552,252349,Blaine,Blaine,Guiney,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,248,232,37,2,5.5,5.5
+32,False,254463,252260,selgar fc,Sam,Elgar,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,268,207,36,3,5.5,5.5
+32,False,254468,252265,AL XI,Aaron,Long,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,242,194,36,4,5.5,5.5
+32,False,254470,252267,Jeeves,James,Reeves,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,222,217,36,5,5.5,5.5
+32,False,254469,252266,seans team,sean,kelly,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,198,202,34,6,5.5,5.5
+32,False,254466,252263,Jack Austin,Jack,Austin,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,192,221,34,7,5.5,5.5
+32,False,254461,252258,Paddy,Paddy,Farrell,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,162,182,33,8,5.5,5.5
+32,False,254467,252264,Jack Busst,Jack,Busst,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,174,216,30,9,5.5,5.5
+32,False,254465,252262,Forrest FC,Sam,Forrest,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,204,262,28,10,5.5,5.5
+33,False,254462,252259,Brumtown bandits,louis,Doherty,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,206,183,40,1,5.5,5.5
+33,False,254552,252349,Blaine,Blaine,Guiney,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,248,232,38,2,5.5,5.5
+33,False,254463,252260,selgar fc,Sam,Elgar,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,268,207,37,3,5.5,5.5
+33,False,254468,252265,AL XI,Aaron,Long,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,242,194,37,4,5.5,5.5
+33,False,254470,252267,Jeeves,James,Reeves,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,222,217,37,5,5.5,5.5
+33,False,254469,252266,seans team,sean,kelly,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,198,202,35,6,5.5,5.5
+33,False,254466,252263,Jack Austin,Jack,Austin,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,192,221,35,7,5.5,5.5
+33,False,254461,252258,Paddy,Paddy,Farrell,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,162,182,34,8,5.5,5.5
+33,False,254467,252264,Jack Busst,Jack,Busst,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,174,216,31,9,5.5,5.5
+33,False,254465,252262,Forrest FC,Sam,Forrest,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,204,262,29,10,5.5,5.5
+34,False,254462,252259,Brumtown bandits,louis,Doherty,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,206,183,41,1,5.5,5.5
+34,False,254552,252349,Blaine,Blaine,Guiney,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,248,232,39,2,5.5,5.5
+34,False,254463,252260,selgar fc,Sam,Elgar,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,268,207,38,3,5.5,5.5
+34,False,254468,252265,AL XI,Aaron,Long,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,242,194,38,4,5.5,5.5
+34,False,254470,252267,Jeeves,James,Reeves,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,222,217,38,5,5.5,5.5
+34,False,254469,252266,seans team,sean,kelly,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,198,202,36,6,5.5,5.5
+34,False,254466,252263,Jack Austin,Jack,Austin,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,192,221,36,7,5.5,5.5
+34,False,254461,252258,Paddy,Paddy,Farrell,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,162,182,35,8,5.5,5.5
+34,False,254467,252264,Jack Busst,Jack,Busst,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,174,216,32,9,5.5,5.5
+34,False,254465,252262,Forrest FC,Sam,Forrest,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,204,262,30,10,5.5,5.5
+35,False,254462,252259,Brumtown bandits,louis,Doherty,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,206,183,42,1,5.5,5.5
+35,False,254552,252349,Blaine,Blaine,Guiney,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,248,232,40,2,5.5,5.5
+35,False,254463,252260,selgar fc,Sam,Elgar,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,268,207,39,3,5.5,5.5
+35,False,254468,252265,AL XI,Aaron,Long,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,242,194,39,4,5.5,5.5
+35,False,254470,252267,Jeeves,James,Reeves,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,222,217,39,5,5.5,5.5
+35,False,254469,252266,seans team,sean,kelly,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,198,202,37,6,5.5,5.5
+35,False,254466,252263,Jack Austin,Jack,Austin,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,192,221,37,7,5.5,5.5
+35,False,254461,252258,Paddy,Paddy,Farrell,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,162,182,36,8,5.5,5.5
+35,False,254467,252264,Jack Busst,Jack,Busst,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,174,216,33,9,5.5,5.5
+35,False,254465,252262,Forrest FC,Sam,Forrest,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,204,262,31,10,5.5,5.5
+36,False,254462,252259,Brumtown bandits,louis,Doherty,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,206,183,43,1,5.5,5.5
+36,False,254552,252349,Blaine,Blaine,Guiney,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,248,232,41,2,5.5,5.5
+36,False,254463,252260,selgar fc,Sam,Elgar,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,268,207,40,3,5.5,5.5
+36,False,254468,252265,AL XI,Aaron,Long,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,242,194,40,4,5.5,5.5
+36,False,254470,252267,Jeeves,James,Reeves,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,222,217,40,5,5.5,5.5
+36,False,254469,252266,seans team,sean,kelly,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,198,202,38,6,5.5,5.5
+36,False,254466,252263,Jack Austin,Jack,Austin,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,192,221,38,7,5.5,5.5
+36,False,254461,252258,Paddy,Paddy,Farrell,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,162,182,37,8,5.5,5.5
+36,False,254467,252264,Jack Busst,Jack,Busst,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,174,216,34,9,5.5,5.5
+36,False,254465,252262,Forrest FC,Sam,Forrest,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,204,262,32,10,5.5,5.5
+37,False,254462,252259,Brumtown bandits,louis,Doherty,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,206,183,44,1,5.5,5.5
+37,False,254552,252349,Blaine,Blaine,Guiney,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,248,232,42,2,5.5,5.5
+37,False,254463,252260,selgar fc,Sam,Elgar,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,268,207,41,3,5.5,5.5
+37,False,254468,252265,AL XI,Aaron,Long,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,242,194,41,4,5.5,5.5
+37,False,254470,252267,Jeeves,James,Reeves,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,222,217,41,5,5.5,5.5
+37,False,254469,252266,seans team,sean,kelly,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,198,202,39,6,5.5,5.5
+37,False,254466,252263,Jack Austin,Jack,Austin,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,192,221,39,7,5.5,5.5
+37,False,254461,252258,Paddy,Paddy,Farrell,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,162,182,38,8,5.5,5.5
+37,False,254467,252264,Jack Busst,Jack,Busst,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,174,216,35,9,5.5,5.5
+37,False,254465,252262,Forrest FC,Sam,Forrest,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,204,262,33,10,5.5,5.5
+38,False,254462,252259,Brumtown bandits,louis,Doherty,254461,252258,Paddy,Paddy,Farrell,0,0,0,Draw,1,206,183,45,1,5.5,5.5
+38,False,254552,252349,Blaine,Blaine,Guiney,254463,252260,selgar fc,Sam,Elgar,0,0,0,Draw,1,248,232,43,2,5.5,5.5
+38,False,254463,252260,selgar fc,Sam,Elgar,254552,252349,Blaine,Blaine,Guiney,0,0,0,Draw,1,268,207,42,3,5.5,5.5
+38,False,254468,252265,AL XI,Aaron,Long,254467,252264,Jack Busst,Jack,Busst,0,0,0,Draw,1,242,194,42,4,5.5,5.5
+38,False,254470,252267,Jeeves,James,Reeves,254465,252262,Forrest FC,Sam,Forrest,0,0,0,Draw,1,222,217,42,5,5.5,5.5
+38,False,254469,252266,seans team,sean,kelly,254466,252263,Jack Austin,Jack,Austin,0,0,0,Draw,1,198,202,40,6,5.5,5.5
+38,False,254466,252263,Jack Austin,Jack,Austin,254469,252266,seans team,sean,kelly,0,0,0,Draw,1,192,221,40,7,5.5,5.5
+38,False,254461,252258,Paddy,Paddy,Farrell,254462,252259,Brumtown bandits,louis,Doherty,0,0,0,Draw,1,162,182,39,8,5.5,5.5
+38,False,254467,252264,Jack Busst,Jack,Busst,254468,252265,AL XI,Aaron,Long,0,0,0,Draw,1,174,216,36,9,5.5,5.5
+38,False,254465,252262,Forrest FC,Sam,Forrest,254470,252267,Jeeves,James,Reeves,0,0,0,Draw,1,204,262,34,10,5.5,5.5
