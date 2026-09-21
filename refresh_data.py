@@ -25,11 +25,15 @@ os.makedirs(DATA_DIR, exist_ok=True)
 FPL_COOKIE = os.environ.get("FPL_COOKIE", "")
 FPL_TOKEN  = os.environ.get("FPL_TOKEN", "")
 
-if not FPL_COOKIE or not FPL_TOKEN:
+if not FPL_COOKIE:
     raise SystemExit(
-        "ERROR: FPL_COOKIE and FPL_TOKEN environment variables must be set.\n"
-        "Set them as GitHub repository secrets, or export them locally before running."
+        "ERROR: FPL_COOKIE environment variable must be set.\n"
+        "Set it as a GitHub repository secret, or export it locally before running."
     )
+
+if not FPL_TOKEN:
+    print("WARNING: FPL_TOKEN not set. Some endpoints may require it — will use cookie-only auth.")
+    print("         The Bearer token expires every ~8 hours. Update the FPL_TOKEN secret when needed.")
 
 # ── Auth patch: inject credentials into every requests.get call ───────────────
 _orig_get = requests.get
@@ -259,7 +263,21 @@ def fetch_team_and_player_scores(teams, grouped_player_stats_by_gw, elements_df_
 
 def process_draft_picks(draft_league_id, elements_df):
     url = f"https://draft.premierleague.com/api/draft/{draft_league_id}/choices"
-    choices_data = requests.get(url).json()
+    r = requests.get(url)
+    choices_data = r.json() if r.status_code == 200 else {}
+
+    if "choices" not in choices_data:
+        # Bearer token likely expired — draft picks never change after the draft,
+        # so fall back to the cached file if it exists.
+        cached_path = f"{DATA_DIR}/draft_picks.json"
+        if os.path.exists(cached_path):
+            print(f"  Choices API unavailable (HTTP {r.status_code}) — using cached draft_picks.json (safe: draft picks never change).")
+            return pd.read_json(cached_path)
+        raise RuntimeError(
+            f"Choices API returned HTTP {r.status_code} and no cached draft_picks.json exists.\n"
+            "Update the FPL_TOKEN secret with a fresh Bearer token and re-run."
+        )
+
     choices_df = pd.DataFrame(choices_data["choices"])
     choices_df["element"] = choices_df["element"].astype(str)
     elements_df = elements_df.copy()
