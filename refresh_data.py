@@ -299,7 +299,19 @@ def process_draft_picks(draft_league_id, elements_df):
 
 def get_transfers(draft_league_id, elements_df_tidy, team_player_scores_with_cost):
     url = f"https://draft.premierleague.com/api/draft/league/{draft_league_id}/transactions"
-    transfers_data = requests.get(url).json()
+    r = requests.get(url)
+    transfers_data = r.json() if r.status_code == 200 else {}
+
+    if "transactions" not in transfers_data:
+        cached_path = f"{DATA_DIR}/transfers.json"
+        if os.path.exists(cached_path):
+            print(f"  Transactions API unavailable (HTTP {r.status_code}) — using cached transfers.json.")
+            return pd.read_json(cached_path)
+        raise RuntimeError(
+            f"Transactions API returned HTTP {r.status_code} and no cached transfers.json exists.\n"
+            "Update the FPL_COOKIE secret with a fresh cookie and re-run."
+        )
+
     transfers_df = pd.DataFrame(transfers_data["transactions"])
     transfers_df["element_in"]  = transfers_df["element_in"].astype(str)
     transfers_df["element_out"] = transfers_df["element_out"].astype(str)
