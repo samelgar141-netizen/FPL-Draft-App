@@ -1,76 +1,61 @@
 team_id,entry_name,player_first_name,player_last_name,gw,number,position,total_points,minutes_played,first_name,second_name,web_name,element_type,team,status,Player Name,Price
-252258,Paddy,Paddy,Farrell,1,14,8.0,1.0,yes,Eberechi,Eze,Eze,3,1,played,Eberechi Eze,6.5
-252258,Paddy,Paddy,Farrell,1,26,10.0,6.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.5
-252258,Paddy,Paddy,Farrell,1,28,12.0,0.0,no,Emiliano,Martínez Romero,Martinez,1,6,benched,Emiliano Martínez Romero,5.0
-252258,Paddy,Paddy,Farrell,1,55,13.0,0.0,no,Ollie,Watkins,Watkins,4,2,benched,Ollie Watkins,8.0
-252258,Paddy,Paddy,Farrell,1,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.5
-252258,Paddy,Paddy,Farrell,1,156,7.0,1.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
-252258,Paddy,Paddy,Farrell,1,391,2.0,9.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.5
-252258,Paddy,Paddy,Farrell,1,393,3.0,2.0,yes,Abdukodir,Khusanov,Khusanov,2,15,played,Abdukodir Khusanov,5.5
-252258,Paddy,Paddy,Farrell,1,503,14.0,0.0,no,Micky,van de Ven,Van de Ven,2,19,benched,Micky van de Ven,5.0
-252258,Paddy,Paddy,Farrell,1,515,9.0,1.0,yes,James,Maddison,Maddison,3,19,played,James Maddison,6.5
-252258,Paddy,Paddy,Farrell,1,525,6.0,1.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,6.0
-252258,Paddy,Paddy,Farrell,1,529,1.0,1.0,yes,Robin,Roefs,Roefs,1,20,played,Robin Roefs,5.0
-252258,Paddy,Paddy,Farrell,1,532,4.0,0.0,yes,Daniel,Ballard,Ballard,2,20,played,Daniel Ballard,5.0
-252258,Paddy,Paddy,Farrell,1,552,11.0,2.0,yes,Brian,Brobbey,Brobbey,4,20,played,Brian Brobbey,6.0
-252258,Paddy,Paddy,Farrell,1,554,5.0,6.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
-252258,Paddy,Paddy,Farrell,2,14,9.0,1.0,yes,Eberechi,Eze,Eze,3,1,played,Eberechi Eze,6.5
-252258,Paddy,Paddy,Farrell,2,26,11.0,2.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.5
-252258,Paddy,Paddy,Farrell,2,28,12.0,2.0,yes,Emiliano,Martínez Romero,Martinez,1,6,benched,Emiliano Martínez Romero,5.0
-252258,Paddy,Paddy,Farrell,2,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.5
-252258,Paddy,Paddy,Farrell,2,156,8.0,7.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
-252258,Paddy,Paddy,Farrell,2,167,13.0,1.0,yes,Liam,Delap,Delap,4,18,benched,Liam Delap,5.5
-252258,Paddy,Paddy,Farrell,2,391,2.0,5.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.5
-252258,Paddy,Paddy,Farrell,2,393,5.0,2.0,yes,Abdukodir,Khusanov,Khusanov,2,15,played,Abdukodir Khusanov,5.5
-252258,Paddy,Paddy,Farrell,2,503,3.0,0.0,yes,Micky,van de Ven,Van de Ven,2,19,played,Micky van de Ven,5.0
-252258,Paddy,Paddy,Farrell,2,515,14.0,0.0,no,James,Maddison,Maddison,3,19,benched,James Maddison,6.5
-252258,Paddy,Paddy,Farrell,2,525,7.0,2.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,6.0
-252258,Paddy,Paddy,Farrell,2,529,1.0,6.0,yes,Robin,Roefs,Roefs,1,20,played,Robin Roefs,5.0
-252258,Paddy,Paddy,Farrell,2,532,4.0,8.0,yes,Daniel,Ballard,Ballard,2,20,played,Daniel Ballard,5.0
-252258,Paddy,Paddy,Farrell,2,552,10.0,2.0,yes,Brian,Brobbey,Brobbey,4,20,played,Brian Brobbey,6.0
-252258,Paddy,Paddy,Farrell,2,554,6.0,0.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
-252258,Paddy,Paddy,Farrell,3,14,14.0,0.0,no,Eberechi,Eze,Eze,3,1,benched,Eberechi Eze,6.4
-252258,Paddy,Paddy,Farrell,3,26,11.0,8.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.5
-252258,Paddy,Paddy,Farrell,3,28,12.0,3.0,yes,Emiliano,Martínez Romero,Martinez,1,6,benched,Emiliano Martínez Romero,5.0
-252258,Paddy,Paddy,Farrell,3,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.4
-252258,Paddy,Paddy,Farrell,3,156,7.0,2.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
-252258,Paddy,Paddy,Farrell,3,167,9.0,2.0,yes,Liam,Delap,Delap,4,18,played,Liam Delap,5.5
-252258,Paddy,Paddy,Farrell,3,391,2.0,8.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.6
-252258,Paddy,Paddy,Farrell,3,393,4.0,5.0,yes,Abdukodir,Khusanov,Khusanov,2,15,played,Abdukodir Khusanov,5.5
-252258,Paddy,Paddy,Farrell,3,503,3.0,9.0,yes,Micky,van de Ven,Van de Ven,2,19,played,Micky van de Ven,5.0
-252258,Paddy,Paddy,Farrell,3,525,6.0,0.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,5.9
-252258,Paddy,Paddy,Farrell,3,529,1.0,2.0,yes,Robin,Roefs,Roefs,1,20,played,Robin Roefs,5.0
-252258,Paddy,Paddy,Farrell,3,533,13.0,4.0,yes,Nordi,Mukiele,Mukiele,2,20,benched,Nordi Mukiele,5.5
-252258,Paddy,Paddy,Farrell,3,552,10.0,2.0,yes,Brian,Brobbey,Brobbey,4,20,played,Brian Brobbey,5.9
-252258,Paddy,Paddy,Farrell,3,554,5.0,5.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
-252258,Paddy,Paddy,Farrell,3,556,8.0,0.0,yes,Mamadou,Sangaré,M.Sangaré,3,4,played,Matt Targett,4.0
-252258,Paddy,Paddy,Farrell,4,14,14.0,1.0,yes,Eberechi,Eze,Eze,3,1,benched,Eberechi Eze,6.3
-252258,Paddy,Paddy,Farrell,4,26,10.0,1.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.5
-252258,Paddy,Paddy,Farrell,4,28,1.0,2.0,yes,Emiliano,Martínez Romero,Martinez,1,6,played,Emiliano Martínez Romero,5.0
-252258,Paddy,Paddy,Farrell,4,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.4
-252258,Paddy,Paddy,Farrell,4,156,8.0,2.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
-252258,Paddy,Paddy,Farrell,4,167,9.0,5.0,yes,Liam,Delap,Delap,4,18,played,Liam Delap,5.5
-252258,Paddy,Paddy,Farrell,4,391,2.0,11.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.6
-252258,Paddy,Paddy,Farrell,4,393,13.0,0.0,no,Abdukodir,Khusanov,Khusanov,2,15,benched,Abdukodir Khusanov,5.5
-252258,Paddy,Paddy,Farrell,4,503,3.0,6.0,yes,Micky,van de Ven,Van de Ven,2,19,played,Micky van de Ven,5.0
-252258,Paddy,Paddy,Farrell,4,525,7.0,3.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,5.8
-252258,Paddy,Paddy,Farrell,4,529,12.0,2.0,yes,Robin,Roefs,Roefs,1,20,benched,Robin Roefs,5.0
-252258,Paddy,Paddy,Farrell,4,533,4.0,0.0,yes,Nordi,Mukiele,Mukiele,2,20,played,Nordi Mukiele,5.5
-252258,Paddy,Paddy,Farrell,4,552,11.0,1.0,yes,Brian,Brobbey,Brobbey,4,20,played,Brian Brobbey,5.8
-252258,Paddy,Paddy,Farrell,4,554,5.0,3.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
-252258,Paddy,Paddy,Farrell,4,556,6.0,4.0,yes,Mamadou,Sangaré,M.Sangaré,3,4,played,Matt Targett,4.0
-252258,Paddy,Paddy,Farrell,5,26,11.0,2.0,yes,Kai,Havertz,Havertz,4,1,played,Kai Havertz,7.6
-252258,Paddy,Paddy,Farrell,5,28,1.0,2.0,yes,Emiliano,Martínez Romero,Martinez,1,6,played,Emiliano Martínez Romero,5.0
-252258,Paddy,Paddy,Farrell,5,152,15.0,0.0,no,Marco,Palestra,Palestra,2,6,benched,Marco Palestra,5.3
-252258,Paddy,Paddy,Farrell,5,156,8.0,2.0,yes,Pedro,Lomba Neto,Neto,3,6,played,Pedro Lomba Neto,6.5
-252258,Paddy,Paddy,Farrell,5,167,10.0,1.0,yes,Liam,Delap,Delap,4,18,played,Liam Delap,5.5
-252258,Paddy,Paddy,Farrell,5,391,2.0,4.0,yes,Joško,Gvardiol,Gvardiol,2,15,played,Joško Gvardiol,5.7
-252258,Paddy,Paddy,Farrell,5,393,14.0,0.0,no,Abdukodir,Khusanov,Khusanov,2,15,benched,Abdukodir Khusanov,5.4
-252258,Paddy,Paddy,Farrell,5,461,9.0,1.0,yes,Bazoumana,Touré,Touré,3,17,played,Bazoumana Touré,5.8
-252258,Paddy,Paddy,Farrell,5,503,3.0,1.0,yes,Micky,van de Ven,Van de Ven,2,19,played,Micky van de Ven,5.0
-252258,Paddy,Paddy,Farrell,5,525,7.0,1.0,yes,Mateus,Fernandes,Fernandes,3,19,played,Mateus Fernandes,5.8
-252258,Paddy,Paddy,Farrell,5,529,12.0,0.0,yes,Robin,Roefs,Roefs,1,20,benched,Robin Roefs,4.9
-252258,Paddy,Paddy,Farrell,5,533,4.0,0.0,yes,Nordi,Mukiele,Mukiele,2,20,played,Nordi Mukiele,5.4
-252258,Paddy,Paddy,Farrell,5,552,13.0,17.0,yes,Brian,Brobbey,Brobbey,4,20,benched,Brian Brobbey,5.8
-252258,Paddy,Paddy,Farrell,5,554,5.0,2.0,yes,Christos,Tzolis,Tzolis,3,1,played,Kayne van Oevelen,4.5
-252258,Paddy,Paddy,Farrell,5,556,6.0,0.0,yes,Mamadou,Sangaré,M.Sangaré,3,4,played,Matt Targett,4.0
+252267,Jeeves,James,Reeves,1,1,1.0,6.0,yes,David,Raya Martín,Raya,1,1,played,David Raya Martín,6.0
+252267,Jeeves,James,Reeves,1,4,2.0,5.0,yes,Gabriel,dos Santos Magalhães,Gabriel,2,1,played,Gabriel dos Santos Magalhães,8.0
+252267,Jeeves,James,Reeves,1,9,5.0,1.0,yes,Piero,Hincapié,Hincapie,2,1,played,Piero Hincapié,5.5
+252267,Jeeves,James,Reeves,1,31,15.0,0.0,no,Ezri,Konsa Ngoyo,Konsa,2,1,benched,Ezri Konsa Ngoyo,4.5
+252267,Jeeves,James,Reeves,1,160,8.0,1.0,yes,Alejandro,Garnacho Ferreyra,Garnacho,3,2,played,Alejandro Garnacho Ferreyra,6.0
+252267,Jeeves,James,Reeves,1,229,3.0,6.0,yes,James,Tarkowski,Tarkowski,2,9,played,James Tarkowski,6.0
+252267,Jeeves,James,Reeves,1,250,12.0,2.0,yes,Bernd,Leno,Leno,1,10,benched,Bernd Leno,4.5
+252267,Jeeves,James,Reeves,1,357,4.0,0.0,yes,Jeremie,Frimpong,Frimpong,2,14,played,Jeremie Frimpong,5.5
+252267,Jeeves,James,Reeves,1,367,7.0,12.0,yes,Cody,Gakpo,Gakpo,3,14,played,Cody Gakpo,7.0
+252267,Jeeves,James,Reeves,1,399,6.0,8.0,yes,Rayan,Cherki,Cherki,3,15,played,Rayan Cherki,7.5
+252267,Jeeves,James,Reeves,1,401,14.0,0.0,no,Omar,Marmoush,Marmoush,4,19,benched,Omar Marmoush,7.0
+252267,Jeeves,James,Reeves,1,403,13.0,0.0,no,Sávio,Moreira de Oliveira,Sávio,3,19,benched,Sávio Moreira de Oliveira,6.5
+252267,Jeeves,James,Reeves,1,429,9.0,1.0,yes,Marcus,Rashford,Rashford,3,16,played,Marcus Rashford,7.0
+252267,Jeeves,James,Reeves,1,439,10.0,1.0,yes,Benjamin,Sesko,Šeško,4,16,played,Benjamin Sesko,7.0
+252267,Jeeves,James,Reeves,1,464,11.0,4.0,yes,Yoane,Wissa,Wissa,4,17,played,Yoane Wissa,6.0
+252267,Jeeves,James,Reeves,2,1,1.0,6.0,yes,David,Raya Martín,Raya,1,1,played,David Raya Martín,6.0
+252267,Jeeves,James,Reeves,2,4,2.0,8.0,yes,Gabriel,dos Santos Magalhães,Gabriel,2,1,played,Gabriel dos Santos Magalhães,8.0
+252267,Jeeves,James,Reeves,2,9,15.0,0.0,no,Piero,Hincapié,Hincapie,2,1,benched,Piero Hincapié,5.4
+252267,Jeeves,James,Reeves,2,31,5.0,1.0,yes,Ezri,Konsa Ngoyo,Konsa,2,1,played,Ezri Konsa Ngoyo,4.5
+252267,Jeeves,James,Reeves,2,160,14.0,1.0,yes,Alejandro,Garnacho Ferreyra,Garnacho,3,2,benched,Alejandro Garnacho Ferreyra,6.0
+252267,Jeeves,James,Reeves,2,229,3.0,12.0,yes,James,Tarkowski,Tarkowski,2,9,played,James Tarkowski,6.0
+252267,Jeeves,James,Reeves,2,250,12.0,3.0,yes,Bernd,Leno,Leno,1,10,benched,Bernd Leno,4.5
+252267,Jeeves,James,Reeves,2,357,4.0,1.0,yes,Jeremie,Frimpong,Frimpong,2,14,played,Jeremie Frimpong,5.5
+252267,Jeeves,James,Reeves,2,367,7.0,5.0,yes,Cody,Gakpo,Gakpo,3,14,played,Cody Gakpo,7.0
+252267,Jeeves,James,Reeves,2,399,6.0,14.0,yes,Rayan,Cherki,Cherki,3,15,played,Rayan Cherki,7.5
+252267,Jeeves,James,Reeves,2,401,11.0,2.0,yes,Omar,Marmoush,Marmoush,4,19,played,Omar Marmoush,7.0
+252267,Jeeves,James,Reeves,2,403,13.0,0.0,no,Sávio,Moreira de Oliveira,Sávio,3,19,benched,Sávio Moreira de Oliveira,6.5
+252267,Jeeves,James,Reeves,2,429,8.0,2.0,yes,Marcus,Rashford,Rashford,3,16,played,Marcus Rashford,7.0
+252267,Jeeves,James,Reeves,2,439,9.0,1.0,yes,Benjamin,Sesko,Šeško,4,16,played,Benjamin Sesko,7.0
+252267,Jeeves,James,Reeves,2,464,10.0,8.0,yes,Yoane,Wissa,Wissa,4,17,played,Yoane Wissa,6.0
+252267,Jeeves,James,Reeves,3,1,1.0,3.0,yes,David,Raya Martín,Raya,1,1,played,David Raya Martín,6.0
+252267,Jeeves,James,Reeves,3,4,2.0,2.0,yes,Gabriel,dos Santos Magalhães,Gabriel,2,1,played,Gabriel dos Santos Magalhães,8.0
+252267,Jeeves,James,Reeves,3,31,4.0,4.0,yes,Ezri,Konsa Ngoyo,Konsa,2,1,played,Ezri Konsa Ngoyo,4.4
+252267,Jeeves,James,Reeves,3,229,3.0,3.0,yes,James,Tarkowski,Tarkowski,2,9,played,James Tarkowski,6.0
+252267,Jeeves,James,Reeves,3,250,12.0,1.0,yes,Bernd,Leno,Leno,1,10,benched,Bernd Leno,4.5
+252267,Jeeves,James,Reeves,3,357,13.0,0.0,no,Jeremie,Frimpong,Frimpong,2,14,benched,Jeremie Frimpong,5.5
+252267,Jeeves,James,Reeves,3,367,7.0,11.0,yes,Cody,Gakpo,Gakpo,3,14,played,Cody Gakpo,7.1
+252267,Jeeves,James,Reeves,3,399,6.0,3.0,yes,Rayan,Cherki,Cherki,3,15,played,Rayan Cherki,7.7
+252267,Jeeves,James,Reeves,3,401,11.0,2.0,yes,Omar,Marmoush,Marmoush,4,19,played,Omar Marmoush,7.0
+252267,Jeeves,James,Reeves,3,403,5.0,3.0,yes,Sávio,Moreira de Oliveira,Sávio,3,19,played,Sávio Moreira de Oliveira,6.5
+252267,Jeeves,James,Reeves,3,429,8.0,3.0,yes,Marcus,Rashford,Rashford,3,16,played,Marcus Rashford,7.0
+252267,Jeeves,James,Reeves,3,439,9.0,5.0,yes,Benjamin,Sesko,Šeško,4,16,played,Benjamin Sesko,7.0
+252267,Jeeves,James,Reeves,3,464,10.0,1.0,yes,Yoane,Wissa,Wissa,4,17,played,Yoane Wissa,6.1
+252267,Jeeves,James,Reeves,3,630,14.0,0.0,no,Taylor,Harwood-Bellis,Harwood-Bellis,2,2,benched,Taylor Harwood-Bellis,4.5
+252267,Jeeves,James,Reeves,3,631,15.0,0.0,no,Ibrahim,Mbaye,Mbaye,3,2,benched,Ibrahim Mbaye,6.0
+252267,Jeeves,James,Reeves,4,1,1.0,14.0,yes,David,Raya Martín,Raya,1,1,played,David Raya Martín,6.0
+252267,Jeeves,James,Reeves,4,4,2.0,9.0,yes,Gabriel,dos Santos Magalhães,Gabriel,2,1,played,Gabriel dos Santos Magalhães,8.0
+252267,Jeeves,James,Reeves,4,31,4.0,6.0,yes,Ezri,Konsa Ngoyo,Konsa,2,1,played,Ezri Konsa Ngoyo,4.5
+252267,Jeeves,James,Reeves,4,229,14.0,8.0,yes,James,Tarkowski,Tarkowski,2,9,benched,James Tarkowski,6.0
+252267,Jeeves,James,Reeves,4,250,12.0,9.0,yes,Bernd,Leno,Leno,1,10,benched,Bernd Leno,4.5
+252267,Jeeves,James,Reeves,4,357,3.0,1.0,yes,Jeremie,Frimpong,Frimpong,2,14,played,Jeremie Frimpong,5.4
+252267,Jeeves,James,Reeves,4,367,5.0,1.0,yes,Cody,Gakpo,Gakpo,3,14,played,Cody Gakpo,7.2
+252267,Jeeves,James,Reeves,4,399,6.0,1.0,yes,Rayan,Cherki,Cherki,3,15,played,Rayan Cherki,7.8
+252267,Jeeves,James,Reeves,4,401,9.0,2.0,yes,Omar,Marmoush,Marmoush,4,19,played,Omar Marmoush,7.0
+252267,Jeeves,James,Reeves,4,403,7.0,3.0,yes,Sávio,Moreira de Oliveira,Sávio,3,19,played,Sávio Moreira de Oliveira,6.5
+252267,Jeeves,James,Reeves,4,429,8.0,2.0,yes,Marcus,Rashford,Rashford,3,16,played,Marcus Rashford,7.0
+252267,Jeeves,James,Reeves,4,439,10.0,1.0,yes,Benjamin,Sesko,Šeško,4,16,played,Benjamin Sesko,7.0
+252267,Jeeves,James,Reeves,4,464,11.0,2.0,yes,Yoane,Wissa,Wissa,4,17,played,Yoane Wissa,6.2
+252267,Jeeves,James,Reeves,4,630,15.0,0.0,no,Taylor,Harwood-Bellis,Harwood-Bellis,2,2,benched,Taylor Harwood-Bellis,4.5
+252267,Jeeves,James,Reeves,4,631,13.0,1.0,yes,Ibrahim,Mbaye,Mbaye,3,2,benched,Ibrahim Mbaye,6.0
